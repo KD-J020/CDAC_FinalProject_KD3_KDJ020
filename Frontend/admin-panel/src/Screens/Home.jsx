@@ -1,11 +1,12 @@
-import Sidebar from "../Components/Sidebar"
+import Navbar from "../Components/Navbar";
+
 
 function Home()
 {
     return (
         <div>
             <div className="row">
-                
+                <Navbar/>
             </div>
             <div className="row">
               <div className="col3">
@@ -19,5 +20,6 @@ function Home()
            
         </div>
     )
+
 }
-export default  Home
+export default Home;

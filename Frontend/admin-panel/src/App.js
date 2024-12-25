@@ -1,6 +1,8 @@
-import logo from './logo.svg';
+
 import './App.css';
+
 import Home from './Screens/Home';
+
 import Login from './Screens/Login';
 import Ticket from './Screens/Ticket';
 import Customer from './Screens/Customer';
@@ -22,6 +24,8 @@ function App() {
         </Route>
       </Routes>
 
+
+      
 
 
     </div>
