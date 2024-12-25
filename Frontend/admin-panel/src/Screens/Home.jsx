@@ -5,6 +5,9 @@ function Home()
     return (
         <div>
             <div className="row">
+                
+            </div>
+            <div className="row">
               <div className="col3">
               <Sidebar/>
               </div>
@@ -12,6 +15,7 @@ function Home()
              <h1>welcom to admin</h1>
               </div>
             </div>
+           
            
         </div>
     )
