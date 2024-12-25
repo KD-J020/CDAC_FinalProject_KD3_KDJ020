@@ -1,25 +1,20 @@
+import { Outlet } from "react-router-dom";
 import Navbar from "../Components/Navbar";
-
-
-function Home()
-{
-    return (
-        <div>
-            <div className="row">
-                <Navbar/>
-            </div>
-            <div className="row">
-              <div className="col3">
-              <Sidebar/>
-              </div>
-              <div className="col9">
-             <h1>welcom to admin</h1>
-              </div>
-            </div>
-           
-           
+import Sidebar from "../Components/Sidebar";
+function Home() {
+  return (
+    <div>
+      <Navbar />
+      <div className="d-flex">
+        <div className="sidebar">
+          <Sidebar />
         </div>
-    )
-
+        <div className="content flex-grow-1">
+          <Outlet />
+        </div>
+      </div>
+    </div>
+  );
 }
+
 export default Home;

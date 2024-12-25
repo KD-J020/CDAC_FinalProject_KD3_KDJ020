@@ -10,9 +10,8 @@ function Navbar() {
         style={{ backgroundColor: "#438a84" }}
       >
         <div className="container-fluid w-100">
-          <a className="navbar-brand" href="#">
-            CRM
-          </a>
+          <h1 className="ml-2">CRM</h1>
+
           <button
             className="navbar-toggler"
             type="button"
