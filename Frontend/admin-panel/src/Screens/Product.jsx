@@ -22,6 +22,7 @@ function Product() {
 
   return (
     <div>
+
       <div className="container">
         <h2 className="header">Products</h2>
 
@@ -61,6 +62,7 @@ function Product() {
           </table>
         )}
       </div>
+
     </div>
   );
 }
