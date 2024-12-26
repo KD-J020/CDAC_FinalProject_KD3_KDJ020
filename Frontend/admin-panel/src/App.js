@@ -9,6 +9,7 @@ import Customer from './Screens/Customer';
 import Product from './Screens/Product';
 import { Routes, Route } from 'react-router-dom';
 import Feedback from './Screens/Feedback';
+import AddProduct from './Components/AddProduct';
 function App() {
   return (
     <div>
@@ -21,6 +22,7 @@ function App() {
           <Route path='customer' element={<Customer/>}/>
           <Route path='ticket' element={<Ticket/>}/>
           <Route path='feddback' element={<Feedback/>}/>
+          <Route path='add-product' element={<AddProduct/>}/>
         </Route>
       </Routes>
 
