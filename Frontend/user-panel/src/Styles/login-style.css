@@ -1,0 +1,7 @@
+.login-page{
+       height: 100vh;
+       background-color: #438a84;
+       display: flex;
+       justify-content: center;
+       align-items: center;
+}
