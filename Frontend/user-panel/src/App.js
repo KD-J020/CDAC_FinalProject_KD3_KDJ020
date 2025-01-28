@@ -6,6 +6,8 @@ import { Route, Routes } from "react-router-dom";
 import Register from "./Screens/Register";
 import Login from "./Screens/Login";
 import Home from "./Screens/Home";
+import PurchaseHistory from "./Screens/PurchasedHistory";
+import RaiseTicket from "./Screens/RaiseTicket";
 
 function App() {
   return (
@@ -15,6 +17,8 @@ function App() {
         <Route path="login" element={<Login />} />
         <Route path="Register" element={<Register />} />
         <Route path="home" element={<Home />}>
+          <Route path='newticket' element={<RaiseTicket/>}/>
+          <Route path="history/purchases" element={<PurchaseHistory />} />
         </Route>
       </Routes>
       <ToastContainer />
