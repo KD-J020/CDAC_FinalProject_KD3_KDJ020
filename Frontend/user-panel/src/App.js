@@ -10,9 +10,10 @@ import Home from "./Screens/Home";
 import NewArrivals from "./Screens/NewArrival";
 import ProductDetail from "./Screens/ProductDetail";
 
-import PurchaseHistory from "./Screens/PurchasedHistory";
+
 import RaiseTicket from "./Screens/RaiseTicket";
 import Inquiry from "./Screens/Inquiry";
+import PurchaseHistory from "./Screens/PurchasedHistrory";
 
 function App() {
   return (
@@ -27,7 +28,7 @@ function App() {
           <Route path="product/:id" element={<ProductDetail />} />
             
           <Route path='newticket' element={<RaiseTicket/>}/>
-           <Route path="history/purchases" element={<PurchaseHistory />} />
+          <Route path="history/purchases" element={<PurchaseHistory />} />
           <Route path='inquiry' element={<Inquiry/>}/>
         </Route>
       </Routes>
