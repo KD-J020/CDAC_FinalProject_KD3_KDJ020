@@ -12,7 +12,7 @@ import ProductDetail from "./Screens/ProductDetail";
 
 import PurchaseHistory from "./Screens/PurchasedHistory";
 import RaiseTicket from "./Screens/RaiseTicket";
-
+import Inquiry from "./Screens/Inquiry";
 
 function App() {
   return (
@@ -25,10 +25,10 @@ function App() {
 
           <Route path="NewArrival" element={<NewArrivals />} />
           <Route path="product/:id" element={<ProductDetail />} />
-
+            
           <Route path='newticket' element={<RaiseTicket/>}/>
-          <Route path="history/purchases" element={<PurchaseHistory />} />
-
+           <Route path="history/purchases" element={<PurchaseHistory />} />
+          <Route path='inquiry' element={<Inquiry/>}/>
         </Route>
       </Routes>
       <ToastContainer />
