@@ -1331,3 +1331,565 @@ Caused by: org.eclipse.core.runtime.CoreException: Cannot determine URI for '/Ad
 2025-01-28 15:00:42,723 [Worker-21: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource from src\main\resources to target\classes
 2025-01-28 15:00:42,739 [Worker-21: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource from src\main\resources to target\classes
 2025-01-28 15:00:42,746 [Worker-21: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory C:\Users\mayur\OneDrive\Desktop\CDAC_PROJECT\CDAC_FinalProject_KD3_KDJ020\Backend\Admin-Panel\src\test\resources
+2025-01-28 15:34:03,401 [Worker-4: Loading available Gradle versions] INFO  o.e.b.c.i.u.g.PublishedGradleVersions - Gradle version information cache is up-to-date. Trying to read.
+2025-01-28 15:34:38,931 [Worker-3: Importing Maven projects] INFO  o.e.m.c.i.l.LifecycleMappingFactory - Using org.eclipse.m2e.jdt.JarLifecycleMapping lifecycle mapping for MavenProject: com.cdac.project:Admin-Panel:0.0.1-SNAPSHOT @ C:\Users\mayur\OneDrive\Desktop\CDAC_PROJECT\CDAC_FinalProject_KD3_KDJ020\Backend\Admin-Panel\pom.xml.
+2025-01-28 15:34:44,533 [Worker-3: Importing Maven projects] INFO  o.e.m.j.i.AbstractJavaProjectConfigurator - Adding source folder /Admin-Panel/src/main/java
+2025-01-28 15:34:44,539 [Worker-3: Importing Maven projects] INFO  o.e.m.j.i.AbstractJavaProjectConfigurator - Adding resource folder /Admin-Panel/src/main/resources
+2025-01-28 15:34:44,543 [Worker-3: Importing Maven projects] INFO  o.e.m.j.i.AbstractJavaProjectConfigurator - Adding resource folder /Admin-Panel/src/main/resources
+2025-01-28 15:34:44,546 [Worker-3: Importing Maven projects] INFO  o.e.m.j.i.AbstractJavaProjectConfigurator - Adding source folder /Admin-Panel/src/test/java
+2025-01-28 15:34:44,550 [Worker-3: Importing Maven projects] INFO  o.e.m.j.i.AbstractJavaProjectConfigurator - Adding resource folder /Admin-Panel/src/test/resources
+2025-01-28 15:34:45,902 [Worker-3: Importing Maven projects] INFO  o.e.m.c.i.p.ProjectConfigurationManager - Imported and configured 1 project(s) in 10 sec
+2025-01-28 15:34:49,140 [Worker-8: Updating Maven Project] INFO  o.e.m.c.i.p.ProjectConfigurationManager - Update started
+2025-01-28 15:34:50,773 [Worker-8: Updating Maven Project] INFO  o.e.m.c.i.l.LifecycleMappingFactory - Using org.eclipse.m2e.jdt.JarLifecycleMapping lifecycle mapping for MavenProject: com.cdac.project:Admin-Panel:0.0.1-SNAPSHOT @ C:\Users\mayur\OneDrive\Desktop\CDAC_PROJECT\CDAC_FinalProject_KD3_KDJ020\Backend\Admin-Panel\pom.xml.
+2025-01-28 15:34:53,849 [Worker-8: Updating Maven Project] INFO  o.e.m.j.i.AbstractJavaProjectConfigurator - Adding source folder /Admin-Panel/src/main/java
+2025-01-28 15:34:53,852 [Worker-8: Updating Maven Project] INFO  o.e.m.j.i.AbstractJavaProjectConfigurator - Adding resource folder /Admin-Panel/src/main/resources
+2025-01-28 15:34:53,855 [Worker-8: Updating Maven Project] INFO  o.e.m.j.i.AbstractJavaProjectConfigurator - Adding resource folder /Admin-Panel/src/main/resources
+2025-01-28 15:34:53,856 [Worker-8: Updating Maven Project] INFO  o.e.m.j.i.AbstractJavaProjectConfigurator - Adding source folder /Admin-Panel/src/test/java
+2025-01-28 15:34:53,859 [Worker-8: Updating Maven Project] INFO  o.e.m.j.i.AbstractJavaProjectConfigurator - Adding resource folder /Admin-Panel/src/test/resources
+2025-01-28 15:34:55,526 [Worker-8: Updating Maven Project] INFO  o.e.m.c.i.p.ProjectConfigurationManager - Update completed for 1 poms: local refresh takes 0.00 sec, refresh facades takes 4.00 sec, update config takes 1.00 sec 
+2025-01-28 15:34:59,795 [Worker-7: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource from src\main\resources to target\classes
+2025-01-28 15:34:59,827 [Worker-7: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource from src\main\resources to target\classes
+2025-01-28 15:34:59,837 [Worker-7: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory C:\Users\mayur\OneDrive\Desktop\CDAC_PROJECT\CDAC_FinalProject_KD3_KDJ020\Backend\Admin-Panel\src\test\resources
+2025-01-28 15:39:18,569 [Worker-9: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource from src\main\resources to target\classes
+2025-01-28 15:39:18,783 [Worker-9: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource from src\main\resources to target\classes
+2025-01-28 15:39:18,791 [Worker-9: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory C:\Users\mayur\OneDrive\Desktop\CDAC_PROJECT\CDAC_FinalProject_KD3_KDJ020\Backend\Admin-Panel\src\test\resources
+2025-01-28 15:43:49,534 [Worker-6: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource from src\main\resources to target\classes
+2025-01-28 15:43:49,619 [Worker-6: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource from src\main\resources to target\classes
+2025-01-28 15:43:49,629 [Worker-6: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory C:\Users\mayur\OneDrive\Desktop\CDAC_PROJECT\CDAC_FinalProject_KD3_KDJ020\Backend\Admin-Panel\src\test\resources
+2025-01-28 15:44:07,743 [Worker-14: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource from src\main\resources to target\classes
+2025-01-28 15:44:08,117 [Worker-14: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource from src\main\resources to target\classes
+2025-01-28 15:44:08,129 [Worker-14: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory C:\Users\mayur\OneDrive\Desktop\CDAC_PROJECT\CDAC_FinalProject_KD3_KDJ020\Backend\Admin-Panel\src\test\resources
+2025-01-28 15:45:57,342 [Worker-6: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource from src\main\resources to target\classes
+2025-01-28 15:45:57,644 [Worker-6: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource from src\main\resources to target\classes
+2025-01-28 15:45:57,654 [Worker-6: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory C:\Users\mayur\OneDrive\Desktop\CDAC_PROJECT\CDAC_FinalProject_KD3_KDJ020\Backend\Admin-Panel\src\test\resources
+2025-01-28 15:46:58,549 [Worker-6: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource from src\main\resources to target\classes
+2025-01-28 15:46:58,659 [Worker-6: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource from src\main\resources to target\classes
+2025-01-28 15:46:58,667 [Worker-6: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory C:\Users\mayur\OneDrive\Desktop\CDAC_PROJECT\CDAC_FinalProject_KD3_KDJ020\Backend\Admin-Panel\src\test\resources
+2025-01-28 15:47:36,694 [Worker-14: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource from src\main\resources to target\classes
+2025-01-28 15:47:36,702 [Worker-14: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource from src\main\resources to target\classes
+2025-01-28 15:47:36,706 [Worker-14: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory C:\Users\mayur\OneDrive\Desktop\CDAC_PROJECT\CDAC_FinalProject_KD3_KDJ020\Backend\Admin-Panel\src\test\resources
+2025-01-28 15:47:45,121 [Worker-15: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource from src\main\resources to target\classes
+2025-01-28 15:47:45,150 [Worker-15: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource from src\main\resources to target\classes
+2025-01-28 15:47:45,153 [Worker-15: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory C:\Users\mayur\OneDrive\Desktop\CDAC_PROJECT\CDAC_FinalProject_KD3_KDJ020\Backend\Admin-Panel\src\test\resources
+2025-01-28 15:48:29,670 [Worker-14: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource from src\main\resources to target\classes
+2025-01-28 15:48:29,735 [Worker-14: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource from src\main\resources to target\classes
+2025-01-28 15:48:29,744 [Worker-14: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory C:\Users\mayur\OneDrive\Desktop\CDAC_PROJECT\CDAC_FinalProject_KD3_KDJ020\Backend\Admin-Panel\src\test\resources
+2025-01-28 15:49:35,428 [Worker-15: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource from src\main\resources to target\classes
+2025-01-28 15:49:35,501 [Worker-15: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource from src\main\resources to target\classes
+2025-01-28 15:49:35,510 [Worker-15: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory C:\Users\mayur\OneDrive\Desktop\CDAC_PROJECT\CDAC_FinalProject_KD3_KDJ020\Backend\Admin-Panel\src\test\resources
+2025-01-28 15:52:54,725 [Worker-6: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource from src\main\resources to target\classes
+2025-01-28 15:52:54,851 [Worker-6: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource from src\main\resources to target\classes
+2025-01-28 15:52:54,856 [Worker-6: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory C:\Users\mayur\OneDrive\Desktop\CDAC_PROJECT\CDAC_FinalProject_KD3_KDJ020\Backend\Admin-Panel\src\test\resources
+2025-01-28 15:52:56,551 [Worker-13: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource from src\main\resources to target\classes
+2025-01-28 15:52:56,581 [Worker-13: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource from src\main\resources to target\classes
+2025-01-28 15:52:56,589 [Worker-13: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory C:\Users\mayur\OneDrive\Desktop\CDAC_PROJECT\CDAC_FinalProject_KD3_KDJ020\Backend\Admin-Panel\src\test\resources
+2025-01-28 15:53:35,792 [main] INFO  o.e.m2e.actions.ExecutePomAction - Creating new launch configuration
+2025-01-28 15:53:45,497 [Worker-14: Launching Admin-Panel (3)] INFO  o.eclipse.m2e.core.internal.Bundles - getClasspathEntries(Bundle=org.eclipse.m2e.maven.runtime_3.9.900.20240824-1409 [364])
+2025-01-28 15:53:45,502 [Worker-14: Launching Admin-Panel (3)] INFO  o.eclipse.m2e.core.internal.Bundles - 	Entry: C:\Users\mayur\Downloads\Windows\sts-4.27.0.RELEASE\plugins\org.eclipse.m2e.maven.runtime_3.9.900.20240824-1409
+2025-01-28 15:53:45,504 [Worker-14: Launching Admin-Panel (3)] INFO  o.eclipse.m2e.core.internal.Bundles - 	Entry: C:\Users\mayur\Downloads\Windows\sts-4.27.0.RELEASE\plugins\org.eclipse.m2e.maven.runtime_3.9.900.20240824-1409\jars\aopalliance-1.0.jar
+2025-01-28 15:53:45,504 [Worker-14: Launching Admin-Panel (3)] INFO  o.eclipse.m2e.core.internal.Bundles - 	Entry: C:\Users\mayur\Downloads\Windows\sts-4.27.0.RELEASE\plugins\org.eclipse.m2e.maven.runtime_3.9.900.20240824-1409\jars\guice-5.1.0.jar
+2025-01-28 15:53:45,505 [Worker-14: Launching Admin-Panel (3)] INFO  o.eclipse.m2e.core.internal.Bundles - 	Entry: C:\Users\mayur\Downloads\Windows\sts-4.27.0.RELEASE\plugins\org.eclipse.m2e.maven.runtime_3.9.900.20240824-1409\jars\httpclient-4.5.14.jar
+2025-01-28 15:53:45,505 [Worker-14: Launching Admin-Panel (3)] INFO  o.eclipse.m2e.core.internal.Bundles - 	Entry: C:\Users\mayur\Downloads\Windows\sts-4.27.0.RELEASE\plugins\org.eclipse.m2e.maven.runtime_3.9.900.20240824-1409\jars\httpcore-4.4.16.jar
+2025-01-28 15:53:45,506 [Worker-14: Launching Admin-Panel (3)] INFO  o.eclipse.m2e.core.internal.Bundles - 	Entry: C:\Users\mayur\Downloads\Windows\sts-4.27.0.RELEASE\plugins\org.eclipse.m2e.maven.runtime_3.9.900.20240824-1409\jars\jansi-2.4.1.jar
+2025-01-28 15:53:45,506 [Worker-14: Launching Admin-Panel (3)] INFO  o.eclipse.m2e.core.internal.Bundles - 	Entry: C:\Users\mayur\Downloads\Windows\sts-4.27.0.RELEASE\plugins\org.eclipse.m2e.maven.runtime_3.9.900.20240824-1409\jars\jcl-over-slf4j-1.7.36.jar
+2025-01-28 15:53:45,506 [Worker-14: Launching Admin-Panel (3)] INFO  o.eclipse.m2e.core.internal.Bundles - 	Entry: C:\Users\mayur\Downloads\Windows\sts-4.27.0.RELEASE\plugins\org.eclipse.m2e.maven.runtime_3.9.900.20240824-1409\jars\maven-artifact-3.9.9.jar
+2025-01-28 15:53:45,507 [Worker-14: Launching Admin-Panel (3)] INFO  o.eclipse.m2e.core.internal.Bundles - 	Entry: C:\Users\mayur\Downloads\Windows\sts-4.27.0.RELEASE\plugins\org.eclipse.m2e.maven.runtime_3.9.900.20240824-1409\jars\maven-builder-support-3.9.9.jar
+2025-01-28 15:53:45,508 [Worker-14: Launching Admin-Panel (3)] INFO  o.eclipse.m2e.core.internal.Bundles - 	Entry: C:\Users\mayur\Downloads\Windows\sts-4.27.0.RELEASE\plugins\org.eclipse.m2e.maven.runtime_3.9.900.20240824-1409\jars\maven-compat-3.9.9.jar
+2025-01-28 15:53:45,508 [Worker-14: Launching Admin-Panel (3)] INFO  o.eclipse.m2e.core.internal.Bundles - 	Entry: C:\Users\mayur\Downloads\Windows\sts-4.27.0.RELEASE\plugins\org.eclipse.m2e.maven.runtime_3.9.900.20240824-1409\jars\maven-core-3.9.9.jar
+2025-01-28 15:53:45,509 [Worker-14: Launching Admin-Panel (3)] INFO  o.eclipse.m2e.core.internal.Bundles - 	Entry: C:\Users\mayur\Downloads\Windows\sts-4.27.0.RELEASE\plugins\org.eclipse.m2e.maven.runtime_3.9.900.20240824-1409\jars\maven-embedder-3.9.9.jar
+2025-01-28 15:53:45,509 [Worker-14: Launching Admin-Panel (3)] INFO  o.eclipse.m2e.core.internal.Bundles - 	Entry: C:\Users\mayur\Downloads\Windows\sts-4.27.0.RELEASE\plugins\org.eclipse.m2e.maven.runtime_3.9.900.20240824-1409\jars\maven-model-3.9.9.jar
+2025-01-28 15:53:45,510 [Worker-14: Launching Admin-Panel (3)] INFO  o.eclipse.m2e.core.internal.Bundles - 	Entry: C:\Users\mayur\Downloads\Windows\sts-4.27.0.RELEASE\plugins\org.eclipse.m2e.maven.runtime_3.9.900.20240824-1409\jars\maven-model-builder-3.9.9.jar
+2025-01-28 15:53:45,510 [Worker-14: Launching Admin-Panel (3)] INFO  o.eclipse.m2e.core.internal.Bundles - 	Entry: C:\Users\mayur\Downloads\Windows\sts-4.27.0.RELEASE\plugins\org.eclipse.m2e.maven.runtime_3.9.900.20240824-1409\jars\maven-plugin-api-3.9.9.jar
+2025-01-28 15:53:45,511 [Worker-14: Launching Admin-Panel (3)] INFO  o.eclipse.m2e.core.internal.Bundles - 	Entry: C:\Users\mayur\Downloads\Windows\sts-4.27.0.RELEASE\plugins\org.eclipse.m2e.maven.runtime_3.9.900.20240824-1409\jars\maven-repository-metadata-3.9.9.jar
+2025-01-28 15:53:45,511 [Worker-14: Launching Admin-Panel (3)] INFO  o.eclipse.m2e.core.internal.Bundles - 	Entry: C:\Users\mayur\Downloads\Windows\sts-4.27.0.RELEASE\plugins\org.eclipse.m2e.maven.runtime_3.9.900.20240824-1409\jars\maven-resolver-api-1.9.22.jar
+2025-01-28 15:53:45,511 [Worker-14: Launching Admin-Panel (3)] INFO  o.eclipse.m2e.core.internal.Bundles - 	Entry: C:\Users\mayur\Downloads\Windows\sts-4.27.0.RELEASE\plugins\org.eclipse.m2e.maven.runtime_3.9.900.20240824-1409\jars\maven-resolver-connector-basic-1.9.22.jar
+2025-01-28 15:53:45,511 [Worker-14: Launching Admin-Panel (3)] INFO  o.eclipse.m2e.core.internal.Bundles - 	Entry: C:\Users\mayur\Downloads\Windows\sts-4.27.0.RELEASE\plugins\org.eclipse.m2e.maven.runtime_3.9.900.20240824-1409\jars\maven-resolver-impl-1.9.22.jar
+2025-01-28 15:53:45,513 [Worker-14: Launching Admin-Panel (3)] INFO  o.eclipse.m2e.core.internal.Bundles - 	Entry: C:\Users\mayur\Downloads\Windows\sts-4.27.0.RELEASE\plugins\org.eclipse.m2e.maven.runtime_3.9.900.20240824-1409\jars\maven-resolver-named-locks-1.9.22.jar
+2025-01-28 15:53:45,513 [Worker-14: Launching Admin-Panel (3)] INFO  o.eclipse.m2e.core.internal.Bundles - 	Entry: C:\Users\mayur\Downloads\Windows\sts-4.27.0.RELEASE\plugins\org.eclipse.m2e.maven.runtime_3.9.900.20240824-1409\jars\maven-resolver-provider-3.9.9.jar
+2025-01-28 15:53:45,514 [Worker-14: Launching Admin-Panel (3)] INFO  o.eclipse.m2e.core.internal.Bundles - 	Entry: C:\Users\mayur\Downloads\Windows\sts-4.27.0.RELEASE\plugins\org.eclipse.m2e.maven.runtime_3.9.900.20240824-1409\jars\maven-resolver-spi-1.9.22.jar
+2025-01-28 15:53:45,514 [Worker-14: Launching Admin-Panel (3)] INFO  o.eclipse.m2e.core.internal.Bundles - 	Entry: C:\Users\mayur\Downloads\Windows\sts-4.27.0.RELEASE\plugins\org.eclipse.m2e.maven.runtime_3.9.900.20240824-1409\jars\maven-resolver-transport-file-1.9.22.jar
+2025-01-28 15:53:45,515 [Worker-14: Launching Admin-Panel (3)] INFO  o.eclipse.m2e.core.internal.Bundles - 	Entry: C:\Users\mayur\Downloads\Windows\sts-4.27.0.RELEASE\plugins\org.eclipse.m2e.maven.runtime_3.9.900.20240824-1409\jars\maven-resolver-transport-http-1.9.22.jar
+2025-01-28 15:53:45,515 [Worker-14: Launching Admin-Panel (3)] INFO  o.eclipse.m2e.core.internal.Bundles - 	Entry: C:\Users\mayur\Downloads\Windows\sts-4.27.0.RELEASE\plugins\org.eclipse.m2e.maven.runtime_3.9.900.20240824-1409\jars\maven-resolver-transport-wagon-1.9.22.jar
+2025-01-28 15:53:45,515 [Worker-14: Launching Admin-Panel (3)] INFO  o.eclipse.m2e.core.internal.Bundles - 	Entry: C:\Users\mayur\Downloads\Windows\sts-4.27.0.RELEASE\plugins\org.eclipse.m2e.maven.runtime_3.9.900.20240824-1409\jars\maven-resolver-util-1.9.22.jar
+2025-01-28 15:53:45,516 [Worker-14: Launching Admin-Panel (3)] INFO  o.eclipse.m2e.core.internal.Bundles - 	Entry: C:\Users\mayur\Downloads\Windows\sts-4.27.0.RELEASE\plugins\org.eclipse.m2e.maven.runtime_3.9.900.20240824-1409\jars\maven-settings-3.9.9.jar
+2025-01-28 15:53:45,516 [Worker-14: Launching Admin-Panel (3)] INFO  o.eclipse.m2e.core.internal.Bundles - 	Entry: C:\Users\mayur\Downloads\Windows\sts-4.27.0.RELEASE\plugins\org.eclipse.m2e.maven.runtime_3.9.900.20240824-1409\jars\maven-settings-builder-3.9.9.jar
+2025-01-28 15:53:45,517 [Worker-14: Launching Admin-Panel (3)] INFO  o.eclipse.m2e.core.internal.Bundles - 	Entry: C:\Users\mayur\Downloads\Windows\sts-4.27.0.RELEASE\plugins\org.eclipse.m2e.maven.runtime_3.9.900.20240824-1409\jars\maven-shared-utils-3.4.2.jar
+2025-01-28 15:53:45,517 [Worker-14: Launching Admin-Panel (3)] INFO  o.eclipse.m2e.core.internal.Bundles - 	Entry: C:\Users\mayur\Downloads\Windows\sts-4.27.0.RELEASE\plugins\org.eclipse.m2e.maven.runtime_3.9.900.20240824-1409\jars\org.eclipse.sisu.inject-0.9.0.M3.jar
+2025-01-28 15:53:45,518 [Worker-14: Launching Admin-Panel (3)] INFO  o.eclipse.m2e.core.internal.Bundles - 	Entry: C:\Users\mayur\Downloads\Windows\sts-4.27.0.RELEASE\plugins\org.eclipse.m2e.maven.runtime_3.9.900.20240824-1409\jars\org.eclipse.sisu.plexus-0.9.0.M3.jar
+2025-01-28 15:53:45,518 [Worker-14: Launching Admin-Panel (3)] INFO  o.eclipse.m2e.core.internal.Bundles - 	Entry: C:\Users\mayur\Downloads\Windows\sts-4.27.0.RELEASE\plugins\org.eclipse.m2e.maven.runtime_3.9.900.20240824-1409\jars\plexus-build-api-0.0.7.jar
+2025-01-28 15:53:45,518 [Worker-14: Launching Admin-Panel (3)] INFO  o.eclipse.m2e.core.internal.Bundles - 	Entry: C:\Users\mayur\Downloads\Windows\sts-4.27.0.RELEASE\plugins\org.eclipse.m2e.maven.runtime_3.9.900.20240824-1409\jars\plexus-build-api-1.2.0.jar
+2025-01-28 15:53:45,519 [Worker-14: Launching Admin-Panel (3)] INFO  o.eclipse.m2e.core.internal.Bundles - 	Entry: C:\Users\mayur\Downloads\Windows\sts-4.27.0.RELEASE\plugins\org.eclipse.m2e.maven.runtime_3.9.900.20240824-1409\jars\plexus-cipher-2.0.jar
+2025-01-28 15:53:45,519 [Worker-14: Launching Admin-Panel (3)] INFO  o.eclipse.m2e.core.internal.Bundles - 	Entry: C:\Users\mayur\Downloads\Windows\sts-4.27.0.RELEASE\plugins\org.eclipse.m2e.maven.runtime_3.9.900.20240824-1409\jars\plexus-classworlds-2.8.0.jar
+2025-01-28 15:53:45,519 [Worker-14: Launching Admin-Panel (3)] INFO  o.eclipse.m2e.core.internal.Bundles - 	Entry: C:\Users\mayur\Downloads\Windows\sts-4.27.0.RELEASE\plugins\org.eclipse.m2e.maven.runtime_3.9.900.20240824-1409\jars\plexus-component-annotations-2.1.0.jar
+2025-01-28 15:53:45,520 [Worker-14: Launching Admin-Panel (3)] INFO  o.eclipse.m2e.core.internal.Bundles - 	Entry: C:\Users\mayur\Downloads\Windows\sts-4.27.0.RELEASE\plugins\org.eclipse.m2e.maven.runtime_3.9.900.20240824-1409\jars\plexus-interpolation-1.27.jar
+2025-01-28 15:53:45,520 [Worker-14: Launching Admin-Panel (3)] INFO  o.eclipse.m2e.core.internal.Bundles - 	Entry: C:\Users\mayur\Downloads\Windows\sts-4.27.0.RELEASE\plugins\org.eclipse.m2e.maven.runtime_3.9.900.20240824-1409\jars\plexus-sec-dispatcher-2.0.jar
+2025-01-28 15:53:45,520 [Worker-14: Launching Admin-Panel (3)] INFO  o.eclipse.m2e.core.internal.Bundles - 	Entry: C:\Users\mayur\Downloads\Windows\sts-4.27.0.RELEASE\plugins\org.eclipse.m2e.maven.runtime_3.9.900.20240824-1409\jars\plexus-utils-3.5.1.jar
+2025-01-28 15:53:45,521 [Worker-14: Launching Admin-Panel (3)] INFO  o.eclipse.m2e.core.internal.Bundles - 	Entry: C:\Users\mayur\Downloads\Windows\sts-4.27.0.RELEASE\plugins\org.eclipse.m2e.maven.runtime_3.9.900.20240824-1409\jars\plexus-xml-3.0.1.jar
+2025-01-28 15:53:45,521 [Worker-14: Launching Admin-Panel (3)] INFO  o.eclipse.m2e.core.internal.Bundles - 	Entry: C:\Users\mayur\Downloads\Windows\sts-4.27.0.RELEASE\plugins\org.eclipse.m2e.maven.runtime_3.9.900.20240824-1409\jars\wagon-file-3.5.3.jar
+2025-01-28 15:53:45,521 [Worker-14: Launching Admin-Panel (3)] INFO  o.eclipse.m2e.core.internal.Bundles - 	Entry: C:\Users\mayur\Downloads\Windows\sts-4.27.0.RELEASE\plugins\org.eclipse.m2e.maven.runtime_3.9.900.20240824-1409\jars\wagon-http-3.5.3.jar
+2025-01-28 15:53:45,521 [Worker-14: Launching Admin-Panel (3)] INFO  o.eclipse.m2e.core.internal.Bundles - 	Entry: C:\Users\mayur\Downloads\Windows\sts-4.27.0.RELEASE\plugins\org.eclipse.m2e.maven.runtime_3.9.900.20240824-1409\jars\wagon-http-shared-3.5.3.jar
+2025-01-28 15:53:45,521 [Worker-14: Launching Admin-Panel (3)] INFO  o.eclipse.m2e.core.internal.Bundles - 	Entry: C:\Users\mayur\Downloads\Windows\sts-4.27.0.RELEASE\plugins\org.eclipse.m2e.maven.runtime_3.9.900.20240824-1409\jars\wagon-provider-api-3.5.3.jar
+2025-01-28 15:53:45,524 [Worker-14: Launching Admin-Panel (3)] INFO  o.eclipse.m2e.core.internal.Bundles - getClasspathEntries(Bundle=com.google.guava_33.3.1.jre [29])
+2025-01-28 15:53:45,525 [Worker-14: Launching Admin-Panel (3)] INFO  o.eclipse.m2e.core.internal.Bundles - 	Entry: C:\Users\mayur\Downloads\Windows\sts-4.27.0.RELEASE\plugins\com.google.guava_33.3.1.jre.jar
+2025-01-28 15:53:45,526 [Worker-14: Launching Admin-Panel (3)] INFO  o.eclipse.m2e.core.internal.Bundles - getClasspathEntries(Bundle=slf4j.api_2.0.16 [615])
+2025-01-28 15:53:45,526 [Worker-14: Launching Admin-Panel (3)] INFO  o.eclipse.m2e.core.internal.Bundles - 	Entry: C:\Users\mayur\Downloads\Windows\sts-4.27.0.RELEASE\plugins\slf4j.api_2.0.16.jar
+2025-01-28 15:53:45,526 [Worker-14: Launching Admin-Panel (3)] INFO  o.eclipse.m2e.core.internal.Bundles - getClasspathEntries(Bundle=jakarta.inject.jakarta.inject-api_1.0.5 [45])
+2025-01-28 15:53:45,527 [Worker-14: Launching Admin-Panel (3)] INFO  o.eclipse.m2e.core.internal.Bundles - 	Entry: C:\Users\mayur\Downloads\Windows\sts-4.27.0.RELEASE\plugins\jakarta.inject.jakarta.inject-api_1.0.5.jar
+2025-01-28 15:53:45,527 [Worker-14: Launching Admin-Panel (3)] INFO  o.eclipse.m2e.core.internal.Bundles - getClasspathEntries(Bundle=jakarta.annotation-api_1.3.5 [41])
+2025-01-28 15:53:45,528 [Worker-14: Launching Admin-Panel (3)] INFO  o.eclipse.m2e.core.internal.Bundles - 	Entry: C:\Users\mayur\Downloads\Windows\sts-4.27.0.RELEASE\plugins\jakarta.annotation-api_1.3.5.jar
+2025-01-28 15:53:45,528 [Worker-14: Launching Admin-Panel (3)] INFO  o.eclipse.m2e.core.internal.Bundles - getClasspathEntries(Bundle=org.apache.commons.cli_1.9.0 [78])
+2025-01-28 15:53:45,529 [Worker-14: Launching Admin-Panel (3)] INFO  o.eclipse.m2e.core.internal.Bundles - 	Entry: C:\Users\mayur\Downloads\Windows\sts-4.27.0.RELEASE\plugins\org.apache.commons.cli_1.9.0.jar
+2025-01-28 15:53:45,529 [Worker-14: Launching Admin-Panel (3)] INFO  o.eclipse.m2e.core.internal.Bundles - getClasspathEntries(Bundle=org.apache.commons.commons-codec_1.16.0 [81])
+2025-01-28 15:53:45,530 [Worker-14: Launching Admin-Panel (3)] INFO  o.eclipse.m2e.core.internal.Bundles - 	Entry: C:\Users\mayur\Downloads\Windows\sts-4.27.0.RELEASE\plugins\org.apache.commons.commons-codec_1.16.0.jar
+2025-01-28 15:53:45,530 [Worker-14: Launching Admin-Panel (3)] INFO  o.eclipse.m2e.core.internal.Bundles - getClasspathEntries(Bundle=com.google.guava.failureaccess_1.0.2 [30])
+2025-01-28 15:53:45,531 [Worker-14: Launching Admin-Panel (3)] INFO  o.eclipse.m2e.core.internal.Bundles - 	Entry: C:\Users\mayur\Downloads\Windows\sts-4.27.0.RELEASE\plugins\com.google.guava.failureaccess_1.0.2.jar
+2025-01-28 15:53:45,537 [Worker-14: Launching Admin-Panel (3)] INFO  o.e.m.i.launch.MavenLaunchDelegate - Run build in "C:\Users\mayur\OneDrive\Desktop\CDAC_PROJECT\CDAC_FinalProject_KD3_KDJ020\Backend\Admin-Panel":
+2025-01-28 15:53:45,548 [Worker-14: Launching Admin-Panel (3)] INFO  o.e.m.i.launch.MavenLaunchDelegate -  mvn  -B -Dstyle.color=always clean compile
+2025-01-28 16:00:42,060 [Worker-13: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource from src\main\resources to target\classes
+2025-01-28 16:00:42,330 [Worker-13: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource from src\main\resources to target\classes
+2025-01-28 16:00:42,339 [Worker-13: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory C:\Users\mayur\OneDrive\Desktop\CDAC_PROJECT\CDAC_FinalProject_KD3_KDJ020\Backend\Admin-Panel\src\test\resources
+2025-01-28 16:02:44,859 [Worker-12: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource from src\main\resources to target\classes
+2025-01-28 16:02:44,998 [Worker-12: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource from src\main\resources to target\classes
+2025-01-28 16:02:45,008 [Worker-12: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory C:\Users\mayur\OneDrive\Desktop\CDAC_PROJECT\CDAC_FinalProject_KD3_KDJ020\Backend\Admin-Panel\src\test\resources
+2025-01-28 16:04:01,412 [Worker-15: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource from src\main\resources to target\classes
+2025-01-28 16:04:01,495 [Worker-15: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource from src\main\resources to target\classes
+2025-01-28 16:04:01,502 [Worker-15: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory C:\Users\mayur\OneDrive\Desktop\CDAC_PROJECT\CDAC_FinalProject_KD3_KDJ020\Backend\Admin-Panel\src\test\resources
+2025-01-28 16:07:19,261 [Worker-12: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource from src\main\resources to target\classes
+2025-01-28 16:07:19,288 [Worker-12: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource from src\main\resources to target\classes
+2025-01-28 16:07:19,293 [Worker-12: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory C:\Users\mayur\OneDrive\Desktop\CDAC_PROJECT\CDAC_FinalProject_KD3_KDJ020\Backend\Admin-Panel\src\test\resources
+2025-01-28 16:07:27,260 [Worker-16: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource from src\main\resources to target\classes
+2025-01-28 16:07:27,269 [Worker-16: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource from src\main\resources to target\classes
+2025-01-28 16:07:27,278 [Worker-16: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory C:\Users\mayur\OneDrive\Desktop\CDAC_PROJECT\CDAC_FinalProject_KD3_KDJ020\Backend\Admin-Panel\src\test\resources
+2025-01-28 16:08:53,622 [Worker-19: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource from src\main\resources to target\classes
+2025-01-28 16:08:53,668 [Worker-19: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource from src\main\resources to target\classes
+2025-01-28 16:08:53,674 [Worker-19: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory C:\Users\mayur\OneDrive\Desktop\CDAC_PROJECT\CDAC_FinalProject_KD3_KDJ020\Backend\Admin-Panel\src\test\resources
+2025-01-28 16:10:29,811 [Worker-16: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource from src\main\resources to target\classes
+2025-01-28 16:10:29,830 [Worker-16: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource from src\main\resources to target\classes
+2025-01-28 16:10:29,833 [Worker-16: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory C:\Users\mayur\OneDrive\Desktop\CDAC_PROJECT\CDAC_FinalProject_KD3_KDJ020\Backend\Admin-Panel\src\test\resources
+2025-01-28 16:11:05,483 [Worker-16: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource from src\main\resources to target\classes
+2025-01-28 16:11:05,557 [Worker-16: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource from src\main\resources to target\classes
+2025-01-28 16:11:05,564 [Worker-16: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory C:\Users\mayur\OneDrive\Desktop\CDAC_PROJECT\CDAC_FinalProject_KD3_KDJ020\Backend\Admin-Panel\src\test\resources
+2025-01-28 16:11:21,510 [Worker-21: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource from src\main\resources to target\classes
+2025-01-28 16:11:21,518 [Worker-21: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource from src\main\resources to target\classes
+2025-01-28 16:11:21,525 [Worker-21: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory C:\Users\mayur\OneDrive\Desktop\CDAC_PROJECT\CDAC_FinalProject_KD3_KDJ020\Backend\Admin-Panel\src\test\resources
+2025-01-28 16:14:30,325 [Worker-16: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource from src\main\resources to target\classes
+2025-01-28 16:14:30,420 [Worker-16: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource from src\main\resources to target\classes
+2025-01-28 16:14:30,430 [Worker-16: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory C:\Users\mayur\OneDrive\Desktop\CDAC_PROJECT\CDAC_FinalProject_KD3_KDJ020\Backend\Admin-Panel\src\test\resources
+2025-01-28 16:15:00,443 [Worker-16: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource from src\main\resources to target\classes
+2025-01-28 16:15:00,579 [Worker-16: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource from src\main\resources to target\classes
+2025-01-28 16:15:00,586 [Worker-16: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory C:\Users\mayur\OneDrive\Desktop\CDAC_PROJECT\CDAC_FinalProject_KD3_KDJ020\Backend\Admin-Panel\src\test\resources
+2025-01-28 16:15:04,375 [Worker-16: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource from src\main\resources to target\classes
+2025-01-28 16:15:04,460 [Worker-16: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource from src\main\resources to target\classes
+2025-01-28 16:15:04,471 [Worker-16: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory C:\Users\mayur\OneDrive\Desktop\CDAC_PROJECT\CDAC_FinalProject_KD3_KDJ020\Backend\Admin-Panel\src\test\resources
+2025-01-28 16:15:22,152 [Worker-20: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource from src\main\resources to target\classes
+2025-01-28 16:15:22,201 [Worker-20: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource from src\main\resources to target\classes
+2025-01-28 16:15:22,206 [Worker-20: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory C:\Users\mayur\OneDrive\Desktop\CDAC_PROJECT\CDAC_FinalProject_KD3_KDJ020\Backend\Admin-Panel\src\test\resources
+2025-01-28 16:15:32,005 [Worker-22: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource from src\main\resources to target\classes
+2025-01-28 16:15:32,025 [Worker-22: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource from src\main\resources to target\classes
+2025-01-28 16:15:32,029 [Worker-22: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory C:\Users\mayur\OneDrive\Desktop\CDAC_PROJECT\CDAC_FinalProject_KD3_KDJ020\Backend\Admin-Panel\src\test\resources
+2025-01-28 16:17:21,449 [Worker-21: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource from src\main\resources to target\classes
+2025-01-28 16:17:21,481 [Worker-21: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource from src\main\resources to target\classes
+2025-01-28 16:17:21,486 [Worker-21: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory C:\Users\mayur\OneDrive\Desktop\CDAC_PROJECT\CDAC_FinalProject_KD3_KDJ020\Backend\Admin-Panel\src\test\resources
+2025-01-28 16:17:40,961 [Worker-16: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource from src\main\resources to target\classes
+2025-01-28 16:17:41,049 [Worker-16: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource from src\main\resources to target\classes
+2025-01-28 16:17:41,053 [Worker-16: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory C:\Users\mayur\OneDrive\Desktop\CDAC_PROJECT\CDAC_FinalProject_KD3_KDJ020\Backend\Admin-Panel\src\test\resources
+2025-01-28 16:18:03,718 [Worker-22: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource from src\main\resources to target\classes
+2025-01-28 16:18:03,809 [Worker-22: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource from src\main\resources to target\classes
+2025-01-28 16:18:03,815 [Worker-22: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory C:\Users\mayur\OneDrive\Desktop\CDAC_PROJECT\CDAC_FinalProject_KD3_KDJ020\Backend\Admin-Panel\src\test\resources
+2025-01-28 16:18:11,117 [Worker-20: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource from src\main\resources to target\classes
+2025-01-28 16:18:11,122 [Worker-20: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource from src\main\resources to target\classes
+2025-01-28 16:18:11,128 [Worker-20: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory C:\Users\mayur\OneDrive\Desktop\CDAC_PROJECT\CDAC_FinalProject_KD3_KDJ020\Backend\Admin-Panel\src\test\resources
+2025-01-28 16:19:00,500 [Worker-21: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource from src\main\resources to target\classes
+2025-01-28 16:19:00,510 [Worker-21: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource from src\main\resources to target\classes
+2025-01-28 16:19:00,517 [Worker-21: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory C:\Users\mayur\OneDrive\Desktop\CDAC_PROJECT\CDAC_FinalProject_KD3_KDJ020\Backend\Admin-Panel\src\test\resources
+2025-01-28 16:20:18,442 [Worker-26: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource from src\main\resources to target\classes
+2025-01-28 16:20:18,608 [Worker-26: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource from src\main\resources to target\classes
+2025-01-28 16:20:18,615 [Worker-26: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory C:\Users\mayur\OneDrive\Desktop\CDAC_PROJECT\CDAC_FinalProject_KD3_KDJ020\Backend\Admin-Panel\src\test\resources
+2025-01-28 16:20:26,830 [Worker-21: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource from src\main\resources to target\classes
+2025-01-28 16:20:26,841 [Worker-21: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource from src\main\resources to target\classes
+2025-01-28 16:20:26,844 [Worker-21: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory C:\Users\mayur\OneDrive\Desktop\CDAC_PROJECT\CDAC_FinalProject_KD3_KDJ020\Backend\Admin-Panel\src\test\resources
+2025-01-28 16:21:06,972 [Worker-25: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource from src\main\resources to target\classes
+2025-01-28 16:21:06,996 [Worker-25: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource from src\main\resources to target\classes
+2025-01-28 16:21:07,003 [Worker-25: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory C:\Users\mayur\OneDrive\Desktop\CDAC_PROJECT\CDAC_FinalProject_KD3_KDJ020\Backend\Admin-Panel\src\test\resources
+2025-01-28 16:23:04,611 [Worker-28: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource from src\main\resources to target\classes
+2025-01-28 16:23:04,658 [Worker-28: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource from src\main\resources to target\classes
+2025-01-28 16:23:04,663 [Worker-28: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory C:\Users\mayur\OneDrive\Desktop\CDAC_PROJECT\CDAC_FinalProject_KD3_KDJ020\Backend\Admin-Panel\src\test\resources
+2025-01-28 16:32:21,560 [Worker-34: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource from src\main\resources to target\classes
+2025-01-28 16:32:21,618 [Worker-34: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource from src\main\resources to target\classes
+2025-01-28 16:32:21,626 [Worker-34: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory C:\Users\mayur\OneDrive\Desktop\CDAC_PROJECT\CDAC_FinalProject_KD3_KDJ020\Backend\Admin-Panel\src\test\resources
+2025-01-28 16:32:41,560 [Worker-35: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource from src\main\resources to target\classes
+2025-01-28 16:32:41,811 [Worker-35: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource from src\main\resources to target\classes
+2025-01-28 16:32:41,822 [Worker-35: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory C:\Users\mayur\OneDrive\Desktop\CDAC_PROJECT\CDAC_FinalProject_KD3_KDJ020\Backend\Admin-Panel\src\test\resources
+2025-01-28 16:33:54,978 [Worker-36: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource from src\main\resources to target\classes
+2025-01-28 16:33:55,154 [Worker-36: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource from src\main\resources to target\classes
+2025-01-28 16:33:55,163 [Worker-36: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory C:\Users\mayur\OneDrive\Desktop\CDAC_PROJECT\CDAC_FinalProject_KD3_KDJ020\Backend\Admin-Panel\src\test\resources
+2025-01-28 16:34:06,139 [Worker-35: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource from src\main\resources to target\classes
+2025-01-28 16:34:06,240 [Worker-35: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource from src\main\resources to target\classes
+2025-01-28 16:34:06,245 [Worker-35: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory C:\Users\mayur\OneDrive\Desktop\CDAC_PROJECT\CDAC_FinalProject_KD3_KDJ020\Backend\Admin-Panel\src\test\resources
+2025-01-28 16:34:43,077 [Worker-34: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource from src\main\resources to target\classes
+2025-01-28 16:34:43,262 [Worker-34: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource from src\main\resources to target\classes
+2025-01-28 16:34:43,269 [Worker-34: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory C:\Users\mayur\OneDrive\Desktop\CDAC_PROJECT\CDAC_FinalProject_KD3_KDJ020\Backend\Admin-Panel\src\test\resources
+2025-01-28 16:34:49,667 [Worker-36: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource from src\main\resources to target\classes
+2025-01-28 16:34:49,685 [Worker-36: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource from src\main\resources to target\classes
+2025-01-28 16:34:49,688 [Worker-36: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory C:\Users\mayur\OneDrive\Desktop\CDAC_PROJECT\CDAC_FinalProject_KD3_KDJ020\Backend\Admin-Panel\src\test\resources
+2025-01-28 16:38:55,236 [Worker-31: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource from src\main\resources to target\classes
+2025-01-28 16:38:55,258 [Worker-31: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource from src\main\resources to target\classes
+2025-01-28 16:38:55,263 [Worker-31: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory C:\Users\mayur\OneDrive\Desktop\CDAC_PROJECT\CDAC_FinalProject_KD3_KDJ020\Backend\Admin-Panel\src\test\resources
+2025-01-28 16:39:04,445 [Worker-31: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource from src\main\resources to target\classes
+2025-01-28 16:39:04,464 [Worker-31: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource from src\main\resources to target\classes
+2025-01-28 16:39:04,467 [Worker-31: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory C:\Users\mayur\OneDrive\Desktop\CDAC_PROJECT\CDAC_FinalProject_KD3_KDJ020\Backend\Admin-Panel\src\test\resources
+2025-01-28 16:39:39,423 [Worker-38: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource from src\main\resources to target\classes
+2025-01-28 16:39:39,555 [Worker-38: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource from src\main\resources to target\classes
+2025-01-28 16:39:39,562 [Worker-38: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory C:\Users\mayur\OneDrive\Desktop\CDAC_PROJECT\CDAC_FinalProject_KD3_KDJ020\Backend\Admin-Panel\src\test\resources
+2025-01-28 16:39:47,658 [Worker-39: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource from src\main\resources to target\classes
+2025-01-28 16:39:47,800 [Worker-39: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource from src\main\resources to target\classes
+2025-01-28 16:39:47,805 [Worker-39: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory C:\Users\mayur\OneDrive\Desktop\CDAC_PROJECT\CDAC_FinalProject_KD3_KDJ020\Backend\Admin-Panel\src\test\resources
+2025-01-28 16:42:05,060 [Worker-40: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource from src\main\resources to target\classes
+2025-01-28 16:42:05,079 [Worker-40: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource from src\main\resources to target\classes
+2025-01-28 16:42:05,083 [Worker-40: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory C:\Users\mayur\OneDrive\Desktop\CDAC_PROJECT\CDAC_FinalProject_KD3_KDJ020\Backend\Admin-Panel\src\test\resources
+2025-01-28 16:42:19,273 [Worker-38: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource from src\main\resources to target\classes
+2025-01-28 16:42:19,279 [Worker-38: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource from src\main\resources to target\classes
+2025-01-28 16:42:19,284 [Worker-38: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory C:\Users\mayur\OneDrive\Desktop\CDAC_PROJECT\CDAC_FinalProject_KD3_KDJ020\Backend\Admin-Panel\src\test\resources
+2025-01-28 16:42:50,236 [Worker-31: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource from src\main\resources to target\classes
+2025-01-28 16:42:50,242 [Worker-31: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource from src\main\resources to target\classes
+2025-01-28 16:42:50,246 [Worker-31: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory C:\Users\mayur\OneDrive\Desktop\CDAC_PROJECT\CDAC_FinalProject_KD3_KDJ020\Backend\Admin-Panel\src\test\resources
+2025-01-28 16:43:28,891 [Worker-36: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource from src\main\resources to target\classes
+2025-01-28 16:43:28,906 [Worker-36: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource from src\main\resources to target\classes
+2025-01-28 16:43:28,909 [Worker-36: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory C:\Users\mayur\OneDrive\Desktop\CDAC_PROJECT\CDAC_FinalProject_KD3_KDJ020\Backend\Admin-Panel\src\test\resources
+2025-01-28 16:43:53,399 [Worker-38: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource from src\main\resources to target\classes
+2025-01-28 16:43:53,405 [Worker-38: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource from src\main\resources to target\classes
+2025-01-28 16:43:53,410 [Worker-38: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory C:\Users\mayur\OneDrive\Desktop\CDAC_PROJECT\CDAC_FinalProject_KD3_KDJ020\Backend\Admin-Panel\src\test\resources
+2025-01-28 16:44:12,556 [Worker-41: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource from src\main\resources to target\classes
+2025-01-28 16:44:12,566 [Worker-41: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource from src\main\resources to target\classes
+2025-01-28 16:44:12,568 [Worker-41: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory C:\Users\mayur\OneDrive\Desktop\CDAC_PROJECT\CDAC_FinalProject_KD3_KDJ020\Backend\Admin-Panel\src\test\resources
+2025-01-28 16:44:38,918 [Worker-38: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource from src\main\resources to target\classes
+2025-01-28 16:44:38,933 [Worker-38: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource from src\main\resources to target\classes
+2025-01-28 16:44:38,938 [Worker-38: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory C:\Users\mayur\OneDrive\Desktop\CDAC_PROJECT\CDAC_FinalProject_KD3_KDJ020\Backend\Admin-Panel\src\test\resources
+2025-01-28 16:44:41,612 [Worker-41: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource from src\main\resources to target\classes
+2025-01-28 16:44:41,712 [Worker-41: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource from src\main\resources to target\classes
+2025-01-28 16:44:41,715 [Worker-41: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory C:\Users\mayur\OneDrive\Desktop\CDAC_PROJECT\CDAC_FinalProject_KD3_KDJ020\Backend\Admin-Panel\src\test\resources
+2025-01-28 16:45:31,073 [Worker-41: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource from src\main\resources to target\classes
+2025-01-28 16:45:31,091 [Worker-41: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource from src\main\resources to target\classes
+2025-01-28 16:45:31,095 [Worker-41: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory C:\Users\mayur\OneDrive\Desktop\CDAC_PROJECT\CDAC_FinalProject_KD3_KDJ020\Backend\Admin-Panel\src\test\resources
+2025-01-28 16:45:35,352 [Worker-38: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource from src\main\resources to target\classes
+2025-01-28 16:45:35,390 [Worker-38: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource from src\main\resources to target\classes
+2025-01-28 16:45:35,395 [Worker-38: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory C:\Users\mayur\OneDrive\Desktop\CDAC_PROJECT\CDAC_FinalProject_KD3_KDJ020\Backend\Admin-Panel\src\test\resources
+2025-01-28 16:48:04,700 [Worker-31: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource from src\main\resources to target\classes
+2025-01-28 16:48:04,760 [Worker-31: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource from src\main\resources to target\classes
+2025-01-28 16:48:04,765 [Worker-31: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory C:\Users\mayur\OneDrive\Desktop\CDAC_PROJECT\CDAC_FinalProject_KD3_KDJ020\Backend\Admin-Panel\src\test\resources
+2025-01-28 16:48:17,211 [Worker-36: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource from src\main\resources to target\classes
+2025-01-28 16:48:17,250 [Worker-36: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource from src\main\resources to target\classes
+2025-01-28 16:48:17,253 [Worker-36: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory C:\Users\mayur\OneDrive\Desktop\CDAC_PROJECT\CDAC_FinalProject_KD3_KDJ020\Backend\Admin-Panel\src\test\resources
+2025-01-28 16:48:20,517 [Worker-36: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource from src\main\resources to target\classes
+2025-01-28 16:48:20,556 [Worker-36: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource from src\main\resources to target\classes
+2025-01-28 16:48:20,562 [Worker-36: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory C:\Users\mayur\OneDrive\Desktop\CDAC_PROJECT\CDAC_FinalProject_KD3_KDJ020\Backend\Admin-Panel\src\test\resources
+2025-01-28 16:48:52,012 [Worker-38: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource from src\main\resources to target\classes
+2025-01-28 16:48:52,050 [Worker-38: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource from src\main\resources to target\classes
+2025-01-28 16:48:52,053 [Worker-38: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory C:\Users\mayur\OneDrive\Desktop\CDAC_PROJECT\CDAC_FinalProject_KD3_KDJ020\Backend\Admin-Panel\src\test\resources
+2025-01-28 16:49:53,542 [Worker-39: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource from src\main\resources to target\classes
+2025-01-28 16:49:53,633 [Worker-39: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource from src\main\resources to target\classes
+2025-01-28 16:49:53,640 [Worker-39: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory C:\Users\mayur\OneDrive\Desktop\CDAC_PROJECT\CDAC_FinalProject_KD3_KDJ020\Backend\Admin-Panel\src\test\resources
+2025-01-28 16:50:01,601 [Worker-39: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource from src\main\resources to target\classes
+2025-01-28 16:50:01,641 [Worker-39: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource from src\main\resources to target\classes
+2025-01-28 16:50:01,644 [Worker-39: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory C:\Users\mayur\OneDrive\Desktop\CDAC_PROJECT\CDAC_FinalProject_KD3_KDJ020\Backend\Admin-Panel\src\test\resources
+2025-01-28 16:50:22,086 [Worker-39: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource from src\main\resources to target\classes
+2025-01-28 16:50:22,123 [Worker-39: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource from src\main\resources to target\classes
+2025-01-28 16:50:22,131 [Worker-39: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory C:\Users\mayur\OneDrive\Desktop\CDAC_PROJECT\CDAC_FinalProject_KD3_KDJ020\Backend\Admin-Panel\src\test\resources
+2025-01-28 16:50:31,135 [Worker-40: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource from src\main\resources to target\classes
+2025-01-28 16:50:31,248 [Worker-40: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource from src\main\resources to target\classes
+2025-01-28 16:50:31,255 [Worker-40: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory C:\Users\mayur\OneDrive\Desktop\CDAC_PROJECT\CDAC_FinalProject_KD3_KDJ020\Backend\Admin-Panel\src\test\resources
+2025-01-28 16:53:49,705 [Worker-39: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource from src\main\resources to target\classes
+2025-01-28 16:53:49,824 [Worker-39: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource from src\main\resources to target\classes
+2025-01-28 16:53:49,847 [Worker-39: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory C:\Users\mayur\OneDrive\Desktop\CDAC_PROJECT\CDAC_FinalProject_KD3_KDJ020\Backend\Admin-Panel\src\test\resources
+2025-01-28 16:53:51,074 [Worker-40: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource from src\main\resources to target\classes
+2025-01-28 16:53:51,255 [Worker-40: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource from src\main\resources to target\classes
+2025-01-28 16:53:51,260 [Worker-40: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory C:\Users\mayur\OneDrive\Desktop\CDAC_PROJECT\CDAC_FinalProject_KD3_KDJ020\Backend\Admin-Panel\src\test\resources
+2025-01-28 16:53:58,902 [Worker-31: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource from src\main\resources to target\classes
+2025-01-28 16:53:58,928 [Worker-31: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource from src\main\resources to target\classes
+2025-01-28 16:53:58,932 [Worker-31: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory C:\Users\mayur\OneDrive\Desktop\CDAC_PROJECT\CDAC_FinalProject_KD3_KDJ020\Backend\Admin-Panel\src\test\resources
+2025-01-28 16:54:29,403 [Worker-39: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource from src\main\resources to target\classes
+2025-01-28 16:54:29,412 [Worker-39: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource from src\main\resources to target\classes
+2025-01-28 16:54:29,415 [Worker-39: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory C:\Users\mayur\OneDrive\Desktop\CDAC_PROJECT\CDAC_FinalProject_KD3_KDJ020\Backend\Admin-Panel\src\test\resources
+2025-01-28 16:54:55,124 [Worker-36: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource from src\main\resources to target\classes
+2025-01-28 16:54:55,475 [Worker-36: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource from src\main\resources to target\classes
+2025-01-28 16:54:55,482 [Worker-36: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory C:\Users\mayur\OneDrive\Desktop\CDAC_PROJECT\CDAC_FinalProject_KD3_KDJ020\Backend\Admin-Panel\src\test\resources
+2025-01-28 16:55:05,030 [Worker-39: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource from src\main\resources to target\classes
+2025-01-28 16:55:05,074 [Worker-39: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource from src\main\resources to target\classes
+2025-01-28 16:55:05,079 [Worker-39: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory C:\Users\mayur\OneDrive\Desktop\CDAC_PROJECT\CDAC_FinalProject_KD3_KDJ020\Backend\Admin-Panel\src\test\resources
+2025-01-28 16:56:13,853 [Worker-40: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource from src\main\resources to target\classes
+2025-01-28 16:56:13,869 [Worker-40: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource from src\main\resources to target\classes
+2025-01-28 16:56:13,874 [Worker-40: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory C:\Users\mayur\OneDrive\Desktop\CDAC_PROJECT\CDAC_FinalProject_KD3_KDJ020\Backend\Admin-Panel\src\test\resources
+2025-01-28 16:56:21,198 [Worker-38: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource from src\main\resources to target\classes
+2025-01-28 16:56:21,248 [Worker-38: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource from src\main\resources to target\classes
+2025-01-28 16:56:21,254 [Worker-38: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory C:\Users\mayur\OneDrive\Desktop\CDAC_PROJECT\CDAC_FinalProject_KD3_KDJ020\Backend\Admin-Panel\src\test\resources
+2025-01-28 16:56:25,813 [Worker-43: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource from src\main\resources to target\classes
+2025-01-28 16:56:25,825 [Worker-43: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource from src\main\resources to target\classes
+2025-01-28 16:56:25,828 [Worker-43: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory C:\Users\mayur\OneDrive\Desktop\CDAC_PROJECT\CDAC_FinalProject_KD3_KDJ020\Backend\Admin-Panel\src\test\resources
+2025-01-28 16:57:44,756 [Worker-38: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource from src\main\resources to target\classes
+2025-01-28 16:57:44,767 [Worker-38: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource from src\main\resources to target\classes
+2025-01-28 16:57:44,770 [Worker-38: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory C:\Users\mayur\OneDrive\Desktop\CDAC_PROJECT\CDAC_FinalProject_KD3_KDJ020\Backend\Admin-Panel\src\test\resources
+2025-01-28 16:57:52,884 [Worker-44: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource from src\main\resources to target\classes
+2025-01-28 16:57:52,889 [Worker-44: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource from src\main\resources to target\classes
+2025-01-28 16:57:52,892 [Worker-44: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory C:\Users\mayur\OneDrive\Desktop\CDAC_PROJECT\CDAC_FinalProject_KD3_KDJ020\Backend\Admin-Panel\src\test\resources
+2025-01-28 16:57:58,049 [Worker-39: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource from src\main\resources to target\classes
+2025-01-28 16:57:58,054 [Worker-39: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource from src\main\resources to target\classes
+2025-01-28 16:57:58,058 [Worker-39: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory C:\Users\mayur\OneDrive\Desktop\CDAC_PROJECT\CDAC_FinalProject_KD3_KDJ020\Backend\Admin-Panel\src\test\resources
+2025-01-28 16:58:02,097 [Worker-40: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource from src\main\resources to target\classes
+2025-01-28 16:58:02,103 [Worker-40: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource from src\main\resources to target\classes
+2025-01-28 16:58:02,106 [Worker-40: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory C:\Users\mayur\OneDrive\Desktop\CDAC_PROJECT\CDAC_FinalProject_KD3_KDJ020\Backend\Admin-Panel\src\test\resources
+2025-01-28 16:58:07,954 [Worker-31: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource from src\main\resources to target\classes
+2025-01-28 16:58:07,960 [Worker-31: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource from src\main\resources to target\classes
+2025-01-28 16:58:07,964 [Worker-31: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory C:\Users\mayur\OneDrive\Desktop\CDAC_PROJECT\CDAC_FinalProject_KD3_KDJ020\Backend\Admin-Panel\src\test\resources
+2025-01-28 16:58:19,238 [Worker-45: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource from src\main\resources to target\classes
+2025-01-28 16:58:19,243 [Worker-45: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource from src\main\resources to target\classes
+2025-01-28 16:58:19,245 [Worker-45: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory C:\Users\mayur\OneDrive\Desktop\CDAC_PROJECT\CDAC_FinalProject_KD3_KDJ020\Backend\Admin-Panel\src\test\resources
+2025-01-28 16:58:27,081 [Worker-39: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource from src\main\resources to target\classes
+2025-01-28 16:58:27,086 [Worker-39: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource from src\main\resources to target\classes
+2025-01-28 16:58:27,090 [Worker-39: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory C:\Users\mayur\OneDrive\Desktop\CDAC_PROJECT\CDAC_FinalProject_KD3_KDJ020\Backend\Admin-Panel\src\test\resources
+2025-01-28 16:58:36,287 [Worker-44: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource from src\main\resources to target\classes
+2025-01-28 16:58:36,294 [Worker-44: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource from src\main\resources to target\classes
+2025-01-28 16:58:36,297 [Worker-44: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory C:\Users\mayur\OneDrive\Desktop\CDAC_PROJECT\CDAC_FinalProject_KD3_KDJ020\Backend\Admin-Panel\src\test\resources
+2025-01-28 16:59:11,865 [Worker-44: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource from src\main\resources to target\classes
+2025-01-28 16:59:11,872 [Worker-44: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource from src\main\resources to target\classes
+2025-01-28 16:59:11,875 [Worker-44: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory C:\Users\mayur\OneDrive\Desktop\CDAC_PROJECT\CDAC_FinalProject_KD3_KDJ020\Backend\Admin-Panel\src\test\resources
+2025-01-28 16:59:58,640 [Worker-45: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource from src\main\resources to target\classes
+2025-01-28 16:59:58,647 [Worker-45: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource from src\main\resources to target\classes
+2025-01-28 16:59:58,650 [Worker-45: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory C:\Users\mayur\OneDrive\Desktop\CDAC_PROJECT\CDAC_FinalProject_KD3_KDJ020\Backend\Admin-Panel\src\test\resources
+2025-01-28 17:00:21,534 [Worker-40: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource from src\main\resources to target\classes
+2025-01-28 17:00:21,541 [Worker-40: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource from src\main\resources to target\classes
+2025-01-28 17:00:21,544 [Worker-40: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory C:\Users\mayur\OneDrive\Desktop\CDAC_PROJECT\CDAC_FinalProject_KD3_KDJ020\Backend\Admin-Panel\src\test\resources
+2025-01-28 17:00:26,753 [Worker-40: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource from src\main\resources to target\classes
+2025-01-28 17:00:26,758 [Worker-40: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource from src\main\resources to target\classes
+2025-01-28 17:00:26,761 [Worker-40: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory C:\Users\mayur\OneDrive\Desktop\CDAC_PROJECT\CDAC_FinalProject_KD3_KDJ020\Backend\Admin-Panel\src\test\resources
+2025-01-28 17:00:34,036 [Worker-46: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource from src\main\resources to target\classes
+2025-01-28 17:00:34,102 [Worker-46: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource from src\main\resources to target\classes
+2025-01-28 17:00:34,108 [Worker-46: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory C:\Users\mayur\OneDrive\Desktop\CDAC_PROJECT\CDAC_FinalProject_KD3_KDJ020\Backend\Admin-Panel\src\test\resources
+2025-01-28 17:11:25,056 [Worker-45: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource from src\main\resources to target\classes
+2025-01-28 17:11:25,122 [Worker-45: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource from src\main\resources to target\classes
+2025-01-28 17:11:25,140 [Worker-45: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory C:\Users\mayur\OneDrive\Desktop\CDAC_PROJECT\CDAC_FinalProject_KD3_KDJ020\Backend\Admin-Panel\src\test\resources
+2025-01-28 17:12:01,999 [Worker-48: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource from src\main\resources to target\classes
+2025-01-28 17:12:02,086 [Worker-48: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource from src\main\resources to target\classes
+2025-01-28 17:12:02,092 [Worker-48: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory C:\Users\mayur\OneDrive\Desktop\CDAC_PROJECT\CDAC_FinalProject_KD3_KDJ020\Backend\Admin-Panel\src\test\resources
+2025-01-28 17:12:38,104 [Worker-31: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource from src\main\resources to target\classes
+2025-01-28 17:12:38,113 [Worker-31: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource from src\main\resources to target\classes
+2025-01-28 17:12:38,118 [Worker-31: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory C:\Users\mayur\OneDrive\Desktop\CDAC_PROJECT\CDAC_FinalProject_KD3_KDJ020\Backend\Admin-Panel\src\test\resources
+2025-01-28 17:12:43,729 [Worker-38: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource from src\main\resources to target\classes
+2025-01-28 17:12:43,753 [Worker-38: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource from src\main\resources to target\classes
+2025-01-28 17:12:43,757 [Worker-38: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory C:\Users\mayur\OneDrive\Desktop\CDAC_PROJECT\CDAC_FinalProject_KD3_KDJ020\Backend\Admin-Panel\src\test\resources
+2025-01-28 17:12:46,223 [Worker-39: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource from src\main\resources to target\classes
+2025-01-28 17:12:46,236 [Worker-39: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource from src\main\resources to target\classes
+2025-01-28 17:12:46,240 [Worker-39: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory C:\Users\mayur\OneDrive\Desktop\CDAC_PROJECT\CDAC_FinalProject_KD3_KDJ020\Backend\Admin-Panel\src\test\resources
+2025-01-28 17:14:21,801 [Worker-39: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource from src\main\resources to target\classes
+2025-01-28 17:14:21,823 [Worker-39: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource from src\main\resources to target\classes
+2025-01-28 17:14:21,842 [Worker-39: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory C:\Users\mayur\OneDrive\Desktop\CDAC_PROJECT\CDAC_FinalProject_KD3_KDJ020\Backend\Admin-Panel\src\test\resources
+2025-01-28 17:15:24,215 [Worker-45: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource from src\main\resources to target\classes
+2025-01-28 17:15:24,258 [Worker-45: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource from src\main\resources to target\classes
+2025-01-28 17:15:24,263 [Worker-45: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory C:\Users\mayur\OneDrive\Desktop\CDAC_PROJECT\CDAC_FinalProject_KD3_KDJ020\Backend\Admin-Panel\src\test\resources
+2025-01-28 17:15:28,125 [Worker-31: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource from src\main\resources to target\classes
+2025-01-28 17:15:28,154 [Worker-31: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource from src\main\resources to target\classes
+2025-01-28 17:15:28,156 [Worker-31: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory C:\Users\mayur\OneDrive\Desktop\CDAC_PROJECT\CDAC_FinalProject_KD3_KDJ020\Backend\Admin-Panel\src\test\resources
+2025-01-28 17:15:44,824 [Worker-39: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource from src\main\resources to target\classes
+2025-01-28 17:15:44,827 [Worker-39: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource from src\main\resources to target\classes
+2025-01-28 17:15:44,830 [Worker-39: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory C:\Users\mayur\OneDrive\Desktop\CDAC_PROJECT\CDAC_FinalProject_KD3_KDJ020\Backend\Admin-Panel\src\test\resources
+2025-01-28 17:16:40,609 [Worker-40: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource from src\main\resources to target\classes
+2025-01-28 17:16:40,615 [Worker-40: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource from src\main\resources to target\classes
+2025-01-28 17:16:40,618 [Worker-40: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory C:\Users\mayur\OneDrive\Desktop\CDAC_PROJECT\CDAC_FinalProject_KD3_KDJ020\Backend\Admin-Panel\src\test\resources
+2025-01-28 17:17:32,782 [Worker-31: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource from src\main\resources to target\classes
+2025-01-28 17:17:32,788 [Worker-31: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource from src\main\resources to target\classes
+2025-01-28 17:17:32,792 [Worker-31: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory C:\Users\mayur\OneDrive\Desktop\CDAC_PROJECT\CDAC_FinalProject_KD3_KDJ020\Backend\Admin-Panel\src\test\resources
+2025-01-28 17:17:40,841 [Worker-49: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource from src\main\resources to target\classes
+2025-01-28 17:17:40,848 [Worker-49: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource from src\main\resources to target\classes
+2025-01-28 17:17:40,851 [Worker-49: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory C:\Users\mayur\OneDrive\Desktop\CDAC_PROJECT\CDAC_FinalProject_KD3_KDJ020\Backend\Admin-Panel\src\test\resources
+2025-01-28 17:17:44,712 [Worker-45: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource from src\main\resources to target\classes
+2025-01-28 17:17:44,724 [Worker-45: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource from src\main\resources to target\classes
+2025-01-28 17:17:44,728 [Worker-45: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory C:\Users\mayur\OneDrive\Desktop\CDAC_PROJECT\CDAC_FinalProject_KD3_KDJ020\Backend\Admin-Panel\src\test\resources
+2025-01-28 17:18:08,621 [Worker-45: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource from src\main\resources to target\classes
+2025-01-28 17:18:08,629 [Worker-45: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource from src\main\resources to target\classes
+2025-01-28 17:18:08,633 [Worker-45: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory C:\Users\mayur\OneDrive\Desktop\CDAC_PROJECT\CDAC_FinalProject_KD3_KDJ020\Backend\Admin-Panel\src\test\resources
+2025-01-28 17:18:17,820 [Worker-31: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource from src\main\resources to target\classes
+2025-01-28 17:18:17,825 [Worker-31: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource from src\main\resources to target\classes
+2025-01-28 17:18:17,828 [Worker-31: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory C:\Users\mayur\OneDrive\Desktop\CDAC_PROJECT\CDAC_FinalProject_KD3_KDJ020\Backend\Admin-Panel\src\test\resources
+2025-01-28 17:25:09,471 [Worker-40: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource from src\main\resources to target\classes
+2025-01-28 17:25:09,505 [Worker-40: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource from src\main\resources to target\classes
+2025-01-28 17:25:09,510 [Worker-40: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory C:\Users\mayur\OneDrive\Desktop\CDAC_PROJECT\CDAC_FinalProject_KD3_KDJ020\Backend\Admin-Panel\src\test\resources
+2025-01-28 17:25:19,821 [Worker-31: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource from src\main\resources to target\classes
+2025-01-28 17:25:19,830 [Worker-31: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource from src\main\resources to target\classes
+2025-01-28 17:25:19,835 [Worker-31: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory C:\Users\mayur\OneDrive\Desktop\CDAC_PROJECT\CDAC_FinalProject_KD3_KDJ020\Backend\Admin-Panel\src\test\resources
+2025-01-28 17:25:40,202 [Worker-40: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource from src\main\resources to target\classes
+2025-01-28 17:25:40,238 [Worker-40: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource from src\main\resources to target\classes
+2025-01-28 17:25:40,242 [Worker-40: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory C:\Users\mayur\OneDrive\Desktop\CDAC_PROJECT\CDAC_FinalProject_KD3_KDJ020\Backend\Admin-Panel\src\test\resources
+2025-01-28 17:26:00,875 [Worker-38: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource from src\main\resources to target\classes
+2025-01-28 17:26:00,890 [Worker-38: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource from src\main\resources to target\classes
+2025-01-28 17:26:00,895 [Worker-38: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory C:\Users\mayur\OneDrive\Desktop\CDAC_PROJECT\CDAC_FinalProject_KD3_KDJ020\Backend\Admin-Panel\src\test\resources
+2025-01-28 17:26:11,236 [Worker-49: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource from src\main\resources to target\classes
+2025-01-28 17:26:11,287 [Worker-49: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource from src\main\resources to target\classes
+2025-01-28 17:26:11,292 [Worker-49: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory C:\Users\mayur\OneDrive\Desktop\CDAC_PROJECT\CDAC_FinalProject_KD3_KDJ020\Backend\Admin-Panel\src\test\resources
+2025-01-28 17:26:17,793 [Worker-49: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource from src\main\resources to target\classes
+2025-01-28 17:26:17,822 [Worker-49: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource from src\main\resources to target\classes
+2025-01-28 17:26:17,826 [Worker-49: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory C:\Users\mayur\OneDrive\Desktop\CDAC_PROJECT\CDAC_FinalProject_KD3_KDJ020\Backend\Admin-Panel\src\test\resources
+2025-01-28 17:26:25,600 [Worker-31: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource from src\main\resources to target\classes
+2025-01-28 17:26:25,817 [Worker-31: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource from src\main\resources to target\classes
+2025-01-28 17:26:25,824 [Worker-31: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory C:\Users\mayur\OneDrive\Desktop\CDAC_PROJECT\CDAC_FinalProject_KD3_KDJ020\Backend\Admin-Panel\src\test\resources
+2025-01-28 17:26:35,009 [Worker-31: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource from src\main\resources to target\classes
+2025-01-28 17:26:35,075 [Worker-31: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource from src\main\resources to target\classes
+2025-01-28 17:26:35,082 [Worker-31: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory C:\Users\mayur\OneDrive\Desktop\CDAC_PROJECT\CDAC_FinalProject_KD3_KDJ020\Backend\Admin-Panel\src\test\resources
+2025-01-28 17:26:44,569 [Worker-38: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource from src\main\resources to target\classes
+2025-01-28 17:26:44,586 [Worker-38: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource from src\main\resources to target\classes
+2025-01-28 17:26:44,593 [Worker-38: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory C:\Users\mayur\OneDrive\Desktop\CDAC_PROJECT\CDAC_FinalProject_KD3_KDJ020\Backend\Admin-Panel\src\test\resources
+2025-01-28 17:26:56,314 [Worker-31: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource from src\main\resources to target\classes
+2025-01-28 17:26:56,325 [Worker-31: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource from src\main\resources to target\classes
+2025-01-28 17:26:56,333 [Worker-31: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory C:\Users\mayur\OneDrive\Desktop\CDAC_PROJECT\CDAC_FinalProject_KD3_KDJ020\Backend\Admin-Panel\src\test\resources
+2025-01-28 17:27:07,519 [Worker-45: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource from src\main\resources to target\classes
+2025-01-28 17:27:07,533 [Worker-45: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource from src\main\resources to target\classes
+2025-01-28 17:27:07,538 [Worker-45: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory C:\Users\mayur\OneDrive\Desktop\CDAC_PROJECT\CDAC_FinalProject_KD3_KDJ020\Backend\Admin-Panel\src\test\resources
+2025-01-28 17:27:30,133 [Worker-31: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource from src\main\resources to target\classes
+2025-01-28 17:27:30,183 [Worker-31: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource from src\main\resources to target\classes
+2025-01-28 17:27:30,189 [Worker-31: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory C:\Users\mayur\OneDrive\Desktop\CDAC_PROJECT\CDAC_FinalProject_KD3_KDJ020\Backend\Admin-Panel\src\test\resources
+2025-01-28 17:27:37,985 [Worker-40: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource from src\main\resources to target\classes
+2025-01-28 17:27:37,997 [Worker-40: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource from src\main\resources to target\classes
+2025-01-28 17:27:38,003 [Worker-40: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory C:\Users\mayur\OneDrive\Desktop\CDAC_PROJECT\CDAC_FinalProject_KD3_KDJ020\Backend\Admin-Panel\src\test\resources
+2025-01-28 17:27:48,851 [Worker-48: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource from src\main\resources to target\classes
+2025-01-28 17:27:48,861 [Worker-48: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource from src\main\resources to target\classes
+2025-01-28 17:27:48,868 [Worker-48: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory C:\Users\mayur\OneDrive\Desktop\CDAC_PROJECT\CDAC_FinalProject_KD3_KDJ020\Backend\Admin-Panel\src\test\resources
+2025-01-28 17:28:08,730 [Worker-40: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource from src\main\resources to target\classes
+2025-01-28 17:28:08,743 [Worker-40: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource from src\main\resources to target\classes
+2025-01-28 17:28:08,746 [Worker-40: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory C:\Users\mayur\OneDrive\Desktop\CDAC_PROJECT\CDAC_FinalProject_KD3_KDJ020\Backend\Admin-Panel\src\test\resources
+2025-01-28 17:30:08,562 [Worker-38: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource from src\main\resources to target\classes
+2025-01-28 17:30:08,568 [Worker-38: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource from src\main\resources to target\classes
+2025-01-28 17:30:08,570 [Worker-38: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory C:\Users\mayur\OneDrive\Desktop\CDAC_PROJECT\CDAC_FinalProject_KD3_KDJ020\Backend\Admin-Panel\src\test\resources
+2025-01-28 17:32:09,527 [Worker-38: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource from src\main\resources to target\classes
+2025-01-28 17:32:09,534 [Worker-38: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource from src\main\resources to target\classes
+2025-01-28 17:32:09,539 [Worker-38: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory C:\Users\mayur\OneDrive\Desktop\CDAC_PROJECT\CDAC_FinalProject_KD3_KDJ020\Backend\Admin-Panel\src\test\resources
+2025-01-28 17:32:20,338 [Worker-48: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource from src\main\resources to target\classes
+2025-01-28 17:32:20,481 [Worker-48: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource from src\main\resources to target\classes
+2025-01-28 17:32:20,485 [Worker-48: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory C:\Users\mayur\OneDrive\Desktop\CDAC_PROJECT\CDAC_FinalProject_KD3_KDJ020\Backend\Admin-Panel\src\test\resources
+2025-01-28 17:32:29,201 [Worker-50: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource from src\main\resources to target\classes
+2025-01-28 17:32:29,207 [Worker-50: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource from src\main\resources to target\classes
+2025-01-28 17:32:29,210 [Worker-50: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory C:\Users\mayur\OneDrive\Desktop\CDAC_PROJECT\CDAC_FinalProject_KD3_KDJ020\Backend\Admin-Panel\src\test\resources
+2025-01-28 17:32:38,634 [Worker-31: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource from src\main\resources to target\classes
+2025-01-28 17:32:38,717 [Worker-31: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource from src\main\resources to target\classes
+2025-01-28 17:32:38,721 [Worker-31: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory C:\Users\mayur\OneDrive\Desktop\CDAC_PROJECT\CDAC_FinalProject_KD3_KDJ020\Backend\Admin-Panel\src\test\resources
+2025-01-28 17:32:46,074 [Worker-49: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource from src\main\resources to target\classes
+2025-01-28 17:32:46,165 [Worker-49: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource from src\main\resources to target\classes
+2025-01-28 17:32:46,170 [Worker-49: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory C:\Users\mayur\OneDrive\Desktop\CDAC_PROJECT\CDAC_FinalProject_KD3_KDJ020\Backend\Admin-Panel\src\test\resources
+2025-01-28 17:32:53,202 [Worker-31: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource from src\main\resources to target\classes
+2025-01-28 17:32:53,208 [Worker-31: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource from src\main\resources to target\classes
+2025-01-28 17:32:53,211 [Worker-31: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory C:\Users\mayur\OneDrive\Desktop\CDAC_PROJECT\CDAC_FinalProject_KD3_KDJ020\Backend\Admin-Panel\src\test\resources
+2025-01-28 17:33:12,512 [Worker-31: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource from src\main\resources to target\classes
+2025-01-28 17:33:12,522 [Worker-31: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource from src\main\resources to target\classes
+2025-01-28 17:33:12,525 [Worker-31: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory C:\Users\mayur\OneDrive\Desktop\CDAC_PROJECT\CDAC_FinalProject_KD3_KDJ020\Backend\Admin-Panel\src\test\resources
+2025-01-28 17:33:20,316 [Worker-50: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource from src\main\resources to target\classes
+2025-01-28 17:33:20,324 [Worker-50: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource from src\main\resources to target\classes
+2025-01-28 17:33:20,327 [Worker-50: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory C:\Users\mayur\OneDrive\Desktop\CDAC_PROJECT\CDAC_FinalProject_KD3_KDJ020\Backend\Admin-Panel\src\test\resources
+2025-01-29 10:40:22,067 [Worker-2: Loading available Gradle versions] INFO  o.e.b.c.i.u.g.PublishedGradleVersions - Gradle version information cache is up-to-date. Trying to read.
+2025-01-29 10:42:07,742 [Worker-0: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource from src\main\resources to target\classes
+2025-01-29 10:42:07,760 [Worker-0: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource from src\main\resources to target\classes
+2025-01-29 10:42:07,766 [Worker-0: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory C:\Users\mayur\OneDrive\Desktop\CDAC_PROJECT\CDAC_FinalProject_KD3_KDJ020\Backend\Admin-Panel\src\test\resources
+2025-01-29 10:42:23,850 [Worker-2: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource from src\main\resources to target\classes
+2025-01-29 10:42:23,856 [Worker-2: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource from src\main\resources to target\classes
+2025-01-29 10:42:23,861 [Worker-2: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory C:\Users\mayur\OneDrive\Desktop\CDAC_PROJECT\CDAC_FinalProject_KD3_KDJ020\Backend\Admin-Panel\src\test\resources
+2025-01-29 10:42:41,194 [Worker-8: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource from src\main\resources to target\classes
+2025-01-29 10:42:41,198 [Worker-8: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource from src\main\resources to target\classes
+2025-01-29 10:42:41,203 [Worker-8: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory C:\Users\mayur\OneDrive\Desktop\CDAC_PROJECT\CDAC_FinalProject_KD3_KDJ020\Backend\Admin-Panel\src\test\resources
+2025-01-29 10:43:05,774 [Worker-8: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource from src\main\resources to target\classes
+2025-01-29 10:43:05,780 [Worker-8: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource from src\main\resources to target\classes
+2025-01-29 10:43:05,785 [Worker-8: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory C:\Users\mayur\OneDrive\Desktop\CDAC_PROJECT\CDAC_FinalProject_KD3_KDJ020\Backend\Admin-Panel\src\test\resources
+2025-01-29 10:43:13,135 [Worker-4: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource from src\main\resources to target\classes
+2025-01-29 10:43:13,138 [Worker-4: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource from src\main\resources to target\classes
+2025-01-29 10:43:13,142 [Worker-4: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory C:\Users\mayur\OneDrive\Desktop\CDAC_PROJECT\CDAC_FinalProject_KD3_KDJ020\Backend\Admin-Panel\src\test\resources
+2025-01-29 10:43:20,214 [Worker-6: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource from src\main\resources to target\classes
+2025-01-29 10:43:20,218 [Worker-6: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource from src\main\resources to target\classes
+2025-01-29 10:43:20,222 [Worker-6: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory C:\Users\mayur\OneDrive\Desktop\CDAC_PROJECT\CDAC_FinalProject_KD3_KDJ020\Backend\Admin-Panel\src\test\resources
+2025-01-29 10:44:21,168 [Worker-9: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource from src\main\resources to target\classes
+2025-01-29 10:44:21,178 [Worker-9: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource from src\main\resources to target\classes
+2025-01-29 10:44:21,187 [Worker-9: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory C:\Users\mayur\OneDrive\Desktop\CDAC_PROJECT\CDAC_FinalProject_KD3_KDJ020\Backend\Admin-Panel\src\test\resources
+2025-01-29 10:44:30,313 [Worker-12: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource from src\main\resources to target\classes
+2025-01-29 10:44:30,318 [Worker-12: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource from src\main\resources to target\classes
+2025-01-29 10:44:30,323 [Worker-12: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory C:\Users\mayur\OneDrive\Desktop\CDAC_PROJECT\CDAC_FinalProject_KD3_KDJ020\Backend\Admin-Panel\src\test\resources
+2025-01-29 10:44:41,476 [Worker-12: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource from src\main\resources to target\classes
+2025-01-29 10:44:41,490 [Worker-12: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource from src\main\resources to target\classes
+2025-01-29 10:44:41,497 [Worker-12: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory C:\Users\mayur\OneDrive\Desktop\CDAC_PROJECT\CDAC_FinalProject_KD3_KDJ020\Backend\Admin-Panel\src\test\resources
+2025-01-29 10:45:10,181 [Worker-2: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource from src\main\resources to target\classes
+2025-01-29 10:45:10,186 [Worker-2: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource from src\main\resources to target\classes
+2025-01-29 10:45:10,190 [Worker-2: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory C:\Users\mayur\OneDrive\Desktop\CDAC_PROJECT\CDAC_FinalProject_KD3_KDJ020\Backend\Admin-Panel\src\test\resources
+2025-01-29 10:45:20,743 [Worker-1: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource from src\main\resources to target\classes
+2025-01-29 10:45:20,758 [Worker-1: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource from src\main\resources to target\classes
+2025-01-29 10:45:20,765 [Worker-1: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory C:\Users\mayur\OneDrive\Desktop\CDAC_PROJECT\CDAC_FinalProject_KD3_KDJ020\Backend\Admin-Panel\src\test\resources
+2025-01-29 10:48:34,126 [Worker-9: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource from src\main\resources to target\classes
+2025-01-29 10:48:34,180 [Worker-9: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource from src\main\resources to target\classes
+2025-01-29 10:48:34,184 [Worker-9: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory C:\Users\mayur\OneDrive\Desktop\CDAC_PROJECT\CDAC_FinalProject_KD3_KDJ020\Backend\Admin-Panel\src\test\resources
+2025-01-29 10:48:42,845 [Worker-7: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource from src\main\resources to target\classes
+2025-01-29 10:48:42,857 [Worker-7: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource from src\main\resources to target\classes
+2025-01-29 10:48:42,861 [Worker-7: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory C:\Users\mayur\OneDrive\Desktop\CDAC_PROJECT\CDAC_FinalProject_KD3_KDJ020\Backend\Admin-Panel\src\test\resources
+2025-01-29 10:49:14,493 [Worker-12: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource from src\main\resources to target\classes
+2025-01-29 10:49:14,503 [Worker-12: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource from src\main\resources to target\classes
+2025-01-29 10:49:14,507 [Worker-12: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory C:\Users\mayur\OneDrive\Desktop\CDAC_PROJECT\CDAC_FinalProject_KD3_KDJ020\Backend\Admin-Panel\src\test\resources
+2025-01-29 10:49:27,731 [Worker-3: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource from src\main\resources to target\classes
+2025-01-29 10:49:27,736 [Worker-3: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource from src\main\resources to target\classes
+2025-01-29 10:49:27,740 [Worker-3: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory C:\Users\mayur\OneDrive\Desktop\CDAC_PROJECT\CDAC_FinalProject_KD3_KDJ020\Backend\Admin-Panel\src\test\resources
+2025-01-29 10:49:48,065 [Worker-11: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource from src\main\resources to target\classes
+2025-01-29 10:49:48,071 [Worker-11: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource from src\main\resources to target\classes
+2025-01-29 10:49:48,075 [Worker-11: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory C:\Users\mayur\OneDrive\Desktop\CDAC_PROJECT\CDAC_FinalProject_KD3_KDJ020\Backend\Admin-Panel\src\test\resources
+2025-01-29 10:50:49,314 [Worker-4: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource from src\main\resources to target\classes
+2025-01-29 10:50:49,321 [Worker-4: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource from src\main\resources to target\classes
+2025-01-29 10:50:49,327 [Worker-4: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory C:\Users\mayur\OneDrive\Desktop\CDAC_PROJECT\CDAC_FinalProject_KD3_KDJ020\Backend\Admin-Panel\src\test\resources
+2025-01-29 10:50:56,927 [Worker-9: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource from src\main\resources to target\classes
+2025-01-29 10:50:56,935 [Worker-9: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource from src\main\resources to target\classes
+2025-01-29 10:50:56,942 [Worker-9: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory C:\Users\mayur\OneDrive\Desktop\CDAC_PROJECT\CDAC_FinalProject_KD3_KDJ020\Backend\Admin-Panel\src\test\resources
+2025-01-29 10:51:14,993 [Worker-12: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource from src\main\resources to target\classes
+2025-01-29 10:51:14,999 [Worker-12: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource from src\main\resources to target\classes
+2025-01-29 10:51:15,004 [Worker-12: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory C:\Users\mayur\OneDrive\Desktop\CDAC_PROJECT\CDAC_FinalProject_KD3_KDJ020\Backend\Admin-Panel\src\test\resources
+2025-01-29 10:51:32,494 [Worker-11: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource from src\main\resources to target\classes
+2025-01-29 10:51:32,501 [Worker-11: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource from src\main\resources to target\classes
+2025-01-29 10:51:32,506 [Worker-11: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory C:\Users\mayur\OneDrive\Desktop\CDAC_PROJECT\CDAC_FinalProject_KD3_KDJ020\Backend\Admin-Panel\src\test\resources
+2025-01-29 10:51:46,037 [Worker-10: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource from src\main\resources to target\classes
+2025-01-29 10:51:46,040 [Worker-10: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource from src\main\resources to target\classes
+2025-01-29 10:51:46,044 [Worker-10: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory C:\Users\mayur\OneDrive\Desktop\CDAC_PROJECT\CDAC_FinalProject_KD3_KDJ020\Backend\Admin-Panel\src\test\resources
+2025-01-29 10:51:55,535 [Worker-12: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource from src\main\resources to target\classes
+2025-01-29 10:51:55,540 [Worker-12: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource from src\main\resources to target\classes
+2025-01-29 10:51:55,544 [Worker-12: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory C:\Users\mayur\OneDrive\Desktop\CDAC_PROJECT\CDAC_FinalProject_KD3_KDJ020\Backend\Admin-Panel\src\test\resources
+2025-01-29 10:52:07,151 [Worker-4: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource from src\main\resources to target\classes
+2025-01-29 10:52:07,156 [Worker-4: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource from src\main\resources to target\classes
+2025-01-29 10:52:07,161 [Worker-4: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory C:\Users\mayur\OneDrive\Desktop\CDAC_PROJECT\CDAC_FinalProject_KD3_KDJ020\Backend\Admin-Panel\src\test\resources
+2025-01-29 10:53:10,712 [Worker-10: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource from src\main\resources to target\classes
+2025-01-29 10:53:10,718 [Worker-10: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource from src\main\resources to target\classes
+2025-01-29 10:53:10,722 [Worker-10: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory C:\Users\mayur\OneDrive\Desktop\CDAC_PROJECT\CDAC_FinalProject_KD3_KDJ020\Backend\Admin-Panel\src\test\resources
+2025-01-29 10:53:21,487 [Worker-11: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource from src\main\resources to target\classes
+2025-01-29 10:53:21,494 [Worker-11: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource from src\main\resources to target\classes
+2025-01-29 10:53:21,502 [Worker-11: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory C:\Users\mayur\OneDrive\Desktop\CDAC_PROJECT\CDAC_FinalProject_KD3_KDJ020\Backend\Admin-Panel\src\test\resources
+2025-01-29 10:53:26,764 [Worker-8: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource from src\main\resources to target\classes
+2025-01-29 10:53:26,767 [Worker-8: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource from src\main\resources to target\classes
+2025-01-29 10:53:26,770 [Worker-8: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory C:\Users\mayur\OneDrive\Desktop\CDAC_PROJECT\CDAC_FinalProject_KD3_KDJ020\Backend\Admin-Panel\src\test\resources
+2025-01-29 10:53:30,885 [Worker-1: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource from src\main\resources to target\classes
+2025-01-29 10:53:30,892 [Worker-1: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource from src\main\resources to target\classes
+2025-01-29 10:53:30,898 [Worker-1: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory C:\Users\mayur\OneDrive\Desktop\CDAC_PROJECT\CDAC_FinalProject_KD3_KDJ020\Backend\Admin-Panel\src\test\resources
+2025-01-29 10:57:12,342 [Worker-2: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource from src\main\resources to target\classes
+2025-01-29 10:57:12,415 [Worker-2: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource from src\main\resources to target\classes
+2025-01-29 10:57:12,422 [Worker-2: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory C:\Users\mayur\OneDrive\Desktop\CDAC_PROJECT\CDAC_FinalProject_KD3_KDJ020\Backend\Admin-Panel\src\test\resources
+2025-01-29 10:57:18,766 [Worker-10: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource from src\main\resources to target\classes
+2025-01-29 10:57:18,773 [Worker-10: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource from src\main\resources to target\classes
+2025-01-29 10:57:18,777 [Worker-10: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory C:\Users\mayur\OneDrive\Desktop\CDAC_PROJECT\CDAC_FinalProject_KD3_KDJ020\Backend\Admin-Panel\src\test\resources
+2025-01-29 10:58:40,357 [Worker-1: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource from src\main\resources to target\classes
+2025-01-29 10:58:40,368 [Worker-1: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource from src\main\resources to target\classes
+2025-01-29 10:58:40,370 [Worker-1: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory C:\Users\mayur\OneDrive\Desktop\CDAC_PROJECT\CDAC_FinalProject_KD3_KDJ020\Backend\Admin-Panel\src\test\resources
+2025-01-29 10:59:25,711 [Worker-11: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource from src\main\resources to target\classes
+2025-01-29 10:59:25,716 [Worker-11: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource from src\main\resources to target\classes
+2025-01-29 10:59:25,718 [Worker-11: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory C:\Users\mayur\OneDrive\Desktop\CDAC_PROJECT\CDAC_FinalProject_KD3_KDJ020\Backend\Admin-Panel\src\test\resources
+2025-01-29 11:00:33,458 [Worker-0: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource from src\main\resources to target\classes
+2025-01-29 11:00:33,464 [Worker-0: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource from src\main\resources to target\classes
+2025-01-29 11:00:33,467 [Worker-0: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory C:\Users\mayur\OneDrive\Desktop\CDAC_PROJECT\CDAC_FinalProject_KD3_KDJ020\Backend\Admin-Panel\src\test\resources
+2025-01-29 11:00:43,804 [Worker-4: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource from src\main\resources to target\classes
+2025-01-29 11:00:43,811 [Worker-4: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource from src\main\resources to target\classes
+2025-01-29 11:00:43,815 [Worker-4: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory C:\Users\mayur\OneDrive\Desktop\CDAC_PROJECT\CDAC_FinalProject_KD3_KDJ020\Backend\Admin-Panel\src\test\resources
+2025-01-29 11:01:01,420 [Worker-7: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource from src\main\resources to target\classes
+2025-01-29 11:01:01,426 [Worker-7: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource from src\main\resources to target\classes
+2025-01-29 11:01:01,430 [Worker-7: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory C:\Users\mayur\OneDrive\Desktop\CDAC_PROJECT\CDAC_FinalProject_KD3_KDJ020\Backend\Admin-Panel\src\test\resources
+2025-01-29 11:01:07,575 [Worker-9: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource from src\main\resources to target\classes
+2025-01-29 11:01:07,579 [Worker-9: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource from src\main\resources to target\classes
+2025-01-29 11:01:07,582 [Worker-9: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory C:\Users\mayur\OneDrive\Desktop\CDAC_PROJECT\CDAC_FinalProject_KD3_KDJ020\Backend\Admin-Panel\src\test\resources
+2025-01-29 11:01:25,330 [Worker-12: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource from src\main\resources to target\classes
+2025-01-29 11:01:25,337 [Worker-12: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource from src\main\resources to target\classes
+2025-01-29 11:01:25,341 [Worker-12: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory C:\Users\mayur\OneDrive\Desktop\CDAC_PROJECT\CDAC_FinalProject_KD3_KDJ020\Backend\Admin-Panel\src\test\resources
+2025-01-29 11:01:46,439 [Worker-5: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource from src\main\resources to target\classes
+2025-01-29 11:01:46,446 [Worker-5: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource from src\main\resources to target\classes
+2025-01-29 11:01:46,449 [Worker-5: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory C:\Users\mayur\OneDrive\Desktop\CDAC_PROJECT\CDAC_FinalProject_KD3_KDJ020\Backend\Admin-Panel\src\test\resources
