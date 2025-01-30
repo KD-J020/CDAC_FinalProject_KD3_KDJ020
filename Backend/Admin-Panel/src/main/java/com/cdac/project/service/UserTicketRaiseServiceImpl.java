@@ -7,6 +7,7 @@ import org.modelmapper.ModelMapper;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
+import com.cdac.project.custom_exception.ResourceNotFoundException;
 import com.cdac.project.dto.ApiResponse;
 import com.cdac.project.dto.UserTicketRaiseDto;
 import com.cdac.project.dto.UserTicketResponseDto;
@@ -14,6 +15,7 @@ import com.cdac.project.entity.Product;
 import com.cdac.project.entity.Ticket;
 import com.cdac.project.entity.TicketStatus;
 import com.cdac.project.entity.User;
+import com.cdac.project.repository.ProductRepository;
 import com.cdac.project.repository.TicketRepository;
 import com.cdac.project.repository.UserRepository;
 
@@ -26,6 +28,9 @@ import jakarta.validation.constraints.Min;
 public class UserTicketRaiseServiceImpl implements UserTicketRaiseService {
 	@Autowired
 	private TicketRepository tktRepository;
+	
+	@Autowired
+	private ProductRepository productRepository;
 	
 	@Autowired 
 	private UserRepository userRepository;
@@ -54,23 +59,23 @@ public class UserTicketRaiseServiceImpl implements UserTicketRaiseService {
 					.map(ticket -> modelMapper.map(ticket, UserTicketResponseDto.class))
 					.collect(Collectors.toList());
 		} else {
-			return null;
+			throw new ResourceNotFoundException("Invalid Customer ID !!!!!!!!");
 		}
 	}
 
-//	@Override
-//	public List<UserTicketResponseDto> getAllTicketByProductId(Long p_id) {
-//		Product product  = productRepository.findById(p_id).orElseThrow();
-//		if(product != null) {
-//			return 	tktRepository.findAllByProductId(p_id)
-//					.stream()
-//					.map(ticket -> modelMapper.map(ticket, UserTicketResponseDto.class))
-//					.collect(Collectors.toList());
-//		} else {
-//			return null;
-//		}
-//		return null;
-//	}
+	@Override
+	public List<UserTicketResponseDto> getAllTicketByProductId(Long p_id) {
+		Product product  = productRepository.findById(p_id).orElseThrow();
+		if(product != null) {
+			return 	tktRepository.findAllByProductId(p_id)
+					.stream()
+					.map(ticket -> modelMapper.map(ticket, UserTicketResponseDto.class))
+					.collect(Collectors.toList());
+		} else {
+			throw new ResourceNotFoundException("Invalid Product ID !!!!!!!!");
+		}
+		
+	}
 	
 	@Override
 	public List<UserTicketResponseDto> getAllTicketByExecutiveId(Long e_id) {
@@ -81,7 +86,7 @@ public class UserTicketRaiseServiceImpl implements UserTicketRaiseService {
 					.map(ticket -> modelMapper.map(ticket, UserTicketResponseDto.class))
 					.collect(Collectors.toList());
 		} else {
-			return null;
+			throw new ResourceNotFoundException("Invalid Executive ID !!!!!!!!");
 		}
 	}
 
