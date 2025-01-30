@@ -1,3 +1,4 @@
+
 package com.cdac.project.service;
 
 import java.util.List;
@@ -11,7 +12,9 @@ import org.springframework.stereotype.Service;
 import com.cdac.project.custom_exception.ResourceNotFoundException;
 import com.cdac.project.dto.ApiResponse;
 import com.cdac.project.dto.ProductDto;
+import com.cdac.project.entity.Category;
 import com.cdac.project.entity.Product;
+import com.cdac.project.repository.CategoryRepository;
 import com.cdac.project.repository.ProductRepository;
 
 import jakarta.transaction.Transactional;
@@ -23,20 +26,57 @@ public class ProductServiceImpl implements ProductService{
 	ProductRepository productRepository;
 	@Autowired
 	ModelMapper modelMapper;
+	@Autowired
+	CategoryRepository categoryRepository;
 
-
+	/*
+	 * @Override public ApiResponse addProduct(ProductDto pd) {
+	 * 
+	 * try { Category category=categoryRepository.findById(pd.getId()).
+	 * orElseThrow(() -> new ResourceNotFoundException("Invalid category id!!!!"));
+	 * 
+	 * Product productEntity=modelMapper.map(pd, Product.class);
+	 * category.addProduct(productEntity); productRepository.save(productEntity);
+	 * 
+	 * 
+	 * 
+	 * return new
+	 * ApiResponse("Added new Product Successfully with id: "+productEntity.getId())
+	 * ;
+	 * 
+	 * 
+	 * } catch (Exception e) { return new ApiResponse("something went wrong "+
+	 * e.getMessage()); } }
+	 */
 	@Override
 	public ApiResponse addProduct(ProductDto pd) {
-		 
-		try {
-		Product productEntity=modelMapper.map(pd, Product.class);
-		Product p=productRepository.save(productEntity);
-		return new ApiResponse("Added new Product Successfully with id: "+p.getId());
-		}
-		catch (Exception e) {
-			return new ApiResponse("something went wrong "+ e.getMessage());
-		}
+	    try {
+	        // Check if categoryId is null before proceeding
+	        if (pd.getCid() == null) {
+	            throw new IllegalArgumentException("Category ID cannot be null.");
+	        }
+
+	        // Find category using categoryId (not product ID)
+	        Category category = categoryRepository.findById(pd.getCid())
+	                .orElseThrow(() -> new ResourceNotFoundException("Invalid category ID!"));
+
+	        // Convert DTO to entity
+	        Product productEntity = modelMapper.map(pd, Product.class);
+
+	        // Associate product with category
+	        category.addProduct(productEntity);
+	        productEntity.setCategory(category); // Ensure bidirectional mapping
+
+	        // Save product
+	        productRepository.save(productEntity);
+
+	        return new ApiResponse("Added new Product Successfully with id: " + productEntity.getId());
+	    } catch (Exception e) {
+	        e.printStackTrace();
+	        return new ApiResponse("Something went wrong: " + e.getMessage());
+	    }
 	}
+
 	@Override
 	public List<ProductDto> getAllProduct() {
 
@@ -69,12 +109,10 @@ public class ProductServiceImpl implements ProductService{
 	public ApiResponse deleteProductDetails(Long id) {
 	
 		Optional<Product> p=productRepository.findById(id);
-		if(p!=null)
-		{
-			p.get().setActive(false);
-			return new ApiResponse("product deleted successfully");
-		}
-		return new ApiResponse("Invalid product Id");
+		Category c=p.get().getCategory();
+		p.get().setActive(false);
+		c.removeProduct(p.get());
+		return new ApiResponse("product deleted successfully");
 	}
 	@Override
 	public List<ProductDto> getAllActiveProduct() {
