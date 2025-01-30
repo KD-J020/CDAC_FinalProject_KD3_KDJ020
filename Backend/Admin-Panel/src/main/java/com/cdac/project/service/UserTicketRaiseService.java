@@ -23,5 +23,5 @@ public interface UserTicketRaiseService {
 
 	ApiResponse deleteCategory(Long tktId);
 	
-	//List<UserTicketResponseDto> getAllTicketByProductId(Long p_id);
+	List<UserTicketResponseDto> getAllTicketByProductId(Long p_id);
 }
