@@ -54,4 +54,24 @@ public class AddressServiceImpl implements AddressService {
 		return new ApiResponse("Address not found");
 	}
 
+	@Override
+	public ApiResponse updateAddress(long addressId, AddressDto addressDto) {
+		// TODO Auto-generated method stub
+		Optional<Address> optional = addressRepository.findById(addressId);
+		if(optional.isPresent()) {
+			Address address = optional.get();
+			address.setAdrLine1(addressDto.getAdrLine1());
+			address.setAdrLine2(addressDto.getAdrLine2());
+			address.setCity(addressDto.getCity());
+			address.setDistrict(addressDto.getDistrict());
+			address.setState(addressDto.getState());
+			address.setCountry(addressDto.getCountry());
+			address.setZipCode(addressDto.getZipCode());
+			return new ApiResponse("Address update successfully found");
+		}
+			return new ApiResponse("Address not found");
+		
+		
+	}
+
 }
