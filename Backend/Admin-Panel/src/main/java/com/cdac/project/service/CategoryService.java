@@ -18,4 +18,8 @@ public interface CategoryService {
 
 	public CategoryDto getCategoryById(Long id);
 
+	public ApiResponse updateCategory(Long id, CategoryDto dto);
+	public ApiResponse softDeleteCategory(Long id);
+
+	public List<CategoryDto> getActiveCategories();
 }

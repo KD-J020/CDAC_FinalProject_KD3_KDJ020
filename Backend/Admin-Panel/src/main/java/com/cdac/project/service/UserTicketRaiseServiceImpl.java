@@ -7,6 +7,7 @@ import org.modelmapper.ModelMapper;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
+import com.cdac.project.custom_exception.ResourceNotFoundException;
 import com.cdac.project.dto.ApiResponse;
 import com.cdac.project.dto.UserTicketRaiseDto;
 import com.cdac.project.dto.UserTicketResponseDto;

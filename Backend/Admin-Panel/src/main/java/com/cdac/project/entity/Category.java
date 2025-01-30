@@ -2,6 +2,7 @@ package com.cdac.project.entity;
 
 import java.util.List;
 
+import jakarta.persistence.CascadeType;
 import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
 import jakarta.persistence.OneToMany;
@@ -26,7 +27,17 @@ public class Category extends BaseEntity{
 	@Column(name = "is_active")
 	private boolean isActive;
 	
-	@OneToMany(mappedBy = "category")
+	@OneToMany(mappedBy = "category",cascade = CascadeType.ALL,orphanRemoval = true)
 	private List<Product> products;
+	
+	public void addProduct(Product product) {
+		this.products.add(product);
+		product.setCategory(this);
+	}
+
+	public void removeProduct(Product product) {
+		this.products.remove(product);
+		product.setCategory(null);
+	}
 	
 }
