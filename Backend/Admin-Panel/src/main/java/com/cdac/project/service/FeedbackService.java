@@ -14,7 +14,7 @@ import jakarta.transaction.Transactional;
 @Transactional
 public interface FeedbackService {
 @Autowired
-public ApiResponse addFeedback(FeedbackDto feedbackDto);
+public ApiResponse addFeedback(long userId, long productId, FeedbackDto feedbackDto);
 
 public List<FeedbackDto> getAllFeedback();
 public FeedbackDto getById(Long id);

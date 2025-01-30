@@ -3,6 +3,7 @@ package com.cdac.project.service;
 import java.util.Optional;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
 
 import com.cdac.project.custom_exception.ResourceNotFoundException;
 import com.cdac.project.dto.ApiResponse;
@@ -11,6 +12,10 @@ import com.cdac.project.entity.User;
 import com.cdac.project.repository.AdminRepository;
 import com.cdac.project.repository.UserRepository;
 
+import jakarta.transaction.Transactional;
+
+@Service
+@Transactional
 public class AdminServiceImpl implements AdminService {
 
 	@Autowired

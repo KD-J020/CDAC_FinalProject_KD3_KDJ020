@@ -2,6 +2,7 @@ package com.cdac.project.service;
 
 import java.util.Collections;
 import java.util.List;
+import java.util.Optional;
 import java.util.stream.Collectors;
 
 import org.modelmapper.ModelMapper;
@@ -12,7 +13,11 @@ import org.springframework.stereotype.Service;
 import com.cdac.project.dto.ApiResponse;
 import com.cdac.project.dto.FeedbackDto;
 import com.cdac.project.entity.Feedback;
+import com.cdac.project.entity.Product;
+import com.cdac.project.entity.User;
 import com.cdac.project.repository.FeedbackRepository;
+import com.cdac.project.repository.ProductRepository;
+import com.cdac.project.repository.UserRepository;
 
 import jakarta.transaction.Transactional;
 @Service
@@ -20,12 +25,29 @@ import jakarta.transaction.Transactional;
 public class FeedbackServiceImpl implements FeedbackService {
 @Autowired
 private FeedbackRepository feedbackRepository;
+
+	@Autowired
+	private UserRepository userRepository;
+	
+	@Autowired
+	private ProductRepository productRepository;
+
 @Autowired
 ModelMapper mapper;
 @Override
-public ApiResponse addFeedback(FeedbackDto feedbackDto) {
+public ApiResponse addFeedback(long userId, long productId, FeedbackDto feedbackDto) {
     try {
+    	
+    	Optional<User> user = userRepository.findById(userId);
+    	Optional<Product> product = productRepository.findById(productId);
+    	
         Feedback feedback = mapper.map(feedbackDto, Feedback.class);
+        feedback.setUser(user.get());
+        feedback.setProduct(product.get());
+        
+        product.get().getFeedbacks().add(feedback);
+        user.get().getFeedbacks().add(feedback);
+        
         feedbackRepository.save(feedback);
         return new ApiResponse("Feedback added: " + feedback.getId());
     } catch (Exception e) {

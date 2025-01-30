@@ -12,6 +12,7 @@ import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.DeleteMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.PutMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 
 
@@ -34,6 +35,15 @@ public class AddressController {
 		
 		return ResponseEntity.status(HttpStatus.CREATED)
 				.body(addressService.deleteAddress(addressId).getMessage());
+	}
+	
+	@PutMapping("/update/{addressId}")
+	public ResponseEntity<?> updateAddress(@PathVariable long addressId, @RequestBody AddressDto addressDto) {
+		//TODO: process PUT request
+		
+		return ResponseEntity.status(HttpStatus.OK)
+				.body(addressService.updateAddress(addressId,addressDto));
+		
 	}
 	
 	
