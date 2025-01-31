@@ -1,6 +1,7 @@
 package com.cdac.project.service;
 
 import java.util.List;
+import java.util.Optional;
 import java.util.stream.Collectors;
 
 import org.modelmapper.ModelMapper;
@@ -117,6 +118,18 @@ public class UserTicketRaiseServiceImpl implements UserTicketRaiseService {
 			return new ApiResponse("Deleted Ticket Details");
 		}
 		throw new ResourceNotFoundException("Invalid Ticket ID !!!!!!!!");
+	}
+
+	@Override
+	public ApiResponse closeTicketStutus(Long id) {
+		Optional<Ticket> ticket=tktRepository.findById(id);
+		if(ticket.isPresent())
+		{
+			ticket.get().setStatus(TicketStatus.CLOSED);
+			return new ApiResponse("Ticket Closed successfully");
+		}
+		
+		return new ApiResponse("Ticket Not Found");
 	}
 	
 	

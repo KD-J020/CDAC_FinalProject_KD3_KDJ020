@@ -8,12 +8,14 @@ import org.springframework.stereotype.Service;
 import com.cdac.project.custom_exception.ResourceNotFoundException;
 import com.cdac.project.dto.ApiResponse;
 import com.cdac.project.entity.Admin;
+import com.cdac.project.entity.Ticket;
+import com.cdac.project.entity.TicketStatus;
 import com.cdac.project.entity.User;
 import com.cdac.project.repository.AdminRepository;
+import com.cdac.project.repository.TicketRepository;
 import com.cdac.project.repository.UserRepository;
 
 import jakarta.transaction.Transactional;
-
 @Service
 @Transactional
 public class AdminServiceImpl implements AdminService {
@@ -21,7 +23,9 @@ public class AdminServiceImpl implements AdminService {
 	@Autowired
 	private AdminRepository adminRepository;
 	@Autowired
-	private UserRepository us;
+	private UserRepository userRepository;
+	@Autowired
+	private TicketRepository ticketRepository;
 	@Override
 	public Admin getDetails(Long id) {
 		
@@ -30,12 +34,13 @@ public class AdminServiceImpl implements AdminService {
 		return admin;
 	}
 	@Override
-	public ApiResponse assignTicket(Long eid,Long tid) {
-		 User executor=us.findById(eid).orElseThrow(()-> new ResourceNotFoundException("Executor not present"));
+	public ApiResponse assignTicket(Long executorId,Long ticketId) {
+		 User executor=userRepository.findById(executorId).orElseThrow(()-> new ResourceNotFoundException("Executor not present"));
+		 Ticket ticket=ticketRepository.findById(ticketId).orElseThrow(()-> new ResourceNotFoundException("Ticket not present"));
 		 
-		 
-		
-		return null;
+		 ticket.setExecutive(executor);
+		 ticket.setStatus(TicketStatus.INPROGRESS);
+		return new ApiResponse("Ticket Assign to execuore Id "+ executorId);
 	}
 
 }
