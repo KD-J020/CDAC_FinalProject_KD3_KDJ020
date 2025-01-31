@@ -9,8 +9,8 @@ function Categories() {
 
   const onLoadCategories = async () => {
     const result = await getCategoryList();
+    setCategories(result);
     if (result["status"] == "success") {
-      setCategories(result["data"]);
     } else {
       //   toast.error(result["error"]);
     }

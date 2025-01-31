@@ -1,10 +1,10 @@
-import axios from 'axios'
-import { createUrl } from '../utils'
+import axios from 'axios';
+import {createUrl} from '../utils';
 
 export async function addCategory(title, details) {
   try {
     const body = { title, details }
-    const url = createUrl('category/')
+    const url = createUrl('Category/')
     const response = await axios.post(url, body)
     return response.data
   } catch (ex) {

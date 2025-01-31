@@ -27,6 +27,7 @@ ModelMapper modelMapper;
 		// TODO Auto-generated method stub
 		  try {
 		        Category category = modelMapper.map(dto, Category.class);
+		        category.setActive(true);
 		        categoryRepository.save(category);
 		        return new ApiResponse("Feedback added: " + category.getId());
 		    } catch (Exception e) {

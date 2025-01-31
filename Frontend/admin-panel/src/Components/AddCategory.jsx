@@ -16,9 +16,10 @@ function AddCategory() {
       // toast.warn("Please enter details");
     } else {
       const result = await addCategory(title, details);
-      if (result["status"] == "success") {
+      console.log(title + details);
+      if (result == "success") {
         // toast.success("Successfully added a category");
-        navigate(-1);
+        navigate("/home/categories");
       } else {
         // toast.error(result["error"]);
       }
