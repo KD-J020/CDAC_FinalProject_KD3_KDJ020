@@ -4,6 +4,7 @@ import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
+import org.springframework.http.HttpStatusCode;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.PutMapping;
@@ -24,7 +25,7 @@ import org.springframework.web.bind.annotation.RequestParam;
 @RestController
 @RequestMapping("/user")
 public class UserController {
-
+	
 	@Autowired
 	private UserService userService;
 	
@@ -32,6 +33,7 @@ public class UserController {
 	public ResponseEntity<?> postUser(@RequestBody UserDto user) {
 		//TODO: process POST request
 //		 userService.createUser(user);
+		
 		return ResponseEntity.status(HttpStatus.CREATED).body(userService.createUser(user).getMessage());
 	}
 	
@@ -115,6 +117,12 @@ public class UserController {
 		if(executives.isEmpty())
 			return ResponseEntity.ok(new ApiResponse("Not Any Inactive Executive"));
 		return ResponseEntity.ok(executives);
+	}
+	
+	@PatchMapping("/answer/{ticketId}")
+	public ResponseEntity<?> giveAnswerToTicket(@PathVariable Long id, @RequestBody String answer)
+	{
+		return ResponseEntity.status(HttpStatus.OK).body(userService.ticketAnswer(id,answer).getMessage());
 	}
 	
 	
