@@ -12,6 +12,7 @@ import com.cdac.project.custom_exception.ResourceNotFoundException;
 import com.cdac.project.dto.ApiResponse;
 import com.cdac.project.dto.ProductDto;
 import com.cdac.project.entity.Product;
+import com.cdac.project.repository.CategoryRepository;
 import com.cdac.project.repository.ProductRepository;
 
 import jakarta.transaction.Transactional;
@@ -23,13 +24,19 @@ public class ProductServiceImpl implements ProductService{
 	ProductRepository productRepository;
 	@Autowired
 	ModelMapper modelMapper;
+	
+	@Autowired
+	CategoryRepository categoryRepository;
 
 
 	@Override
 	public ApiResponse addProduct(ProductDto pd) {
 		 
 		try {
+			//Category c=categoryRepository.findById(pd.getCid());
+			
 		Product productEntity=modelMapper.map(pd, Product.class);
+		
 		Product p=productRepository.save(productEntity);
 		return new ApiResponse("Added new Product Successfully with id: "+p.getId());
 		}
