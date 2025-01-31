@@ -62,7 +62,7 @@ public class User extends BaseEntity {
 	@JsonIgnore
 	private List<Product> products;
 	
-	@OneToOne
+    @OneToOne(cascade = CascadeType.ALL)
 	@JoinColumn(name = "cart_id")
 	@JsonIgnore
 	private Cart cart;

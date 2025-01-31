@@ -28,7 +28,7 @@ import org.springframework.web.bind.annotation.RequestParam;
 
 
 @RestController
-@RequestMapping
+@RequestMapping("/ticket")
 public class TicketController {
 	@Autowired
 	private UserTicketRaiseService ticketRaiseService;
@@ -52,7 +52,7 @@ public class TicketController {
 
 	}
 	
-	@GetMapping()
+	@GetMapping("/user")
 	public ResponseEntity<?> getAllTicketByUserId(@RequestParam Long c_id) {
 		try {
 			List<UserTicketResponseDto> tickets = ticketRaiseService.getAllTicketByCustomerId(c_id);
@@ -78,7 +78,7 @@ public class TicketController {
 //		}
 //	}
 	
-	@GetMapping()
+	@GetMapping("/executive")
 	public ResponseEntity<?> getAllTicketByExecutiveId(@RequestParam Long e_id) {
 		try {
 			List<UserTicketResponseDto> tickets = ticketRaiseService.getAllTicketByExecutiveId(e_id);
@@ -94,7 +94,7 @@ public class TicketController {
 	
 	
 	@PutMapping("/{tktId}")
-	public ResponseEntity<?> updateCategoryDetails(@PathVariable Long tktId, @RequestBody UserTicketRaiseDto ticket) {
+	public ResponseEntity<?> updateTicketDetails(@PathVariable Long tktId, @RequestBody UserTicketRaiseDto ticket) {
 
 		return ResponseEntity.ok(ticketRaiseService.updateTicket(tktId, ticket));
 

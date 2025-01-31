@@ -27,6 +27,9 @@ public class Ticket extends BaseEntity {
 	@Column(name = "description")
 	private String description;
 	
+	@Column(name="answer")
+	private String answer;
+	
 	@Enumerated(EnumType.STRING)
 	private TicketStatus status;
 	
