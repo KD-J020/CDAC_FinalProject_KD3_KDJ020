@@ -10,6 +10,8 @@ import Product from './Screens/Product';
 import { Routes, Route } from 'react-router-dom';
 import Feedback from './Screens/Feedback';
 import AddProduct from './Components/AddProduct';
+import Categories from './Screens/Categories';
+import AddCategory from './Components/AddCategory';
 function App() {
   return (
     <div>
@@ -23,6 +25,8 @@ function App() {
           <Route path='ticket' element={<Ticket/>}/>
           <Route path='feddback' element={<Feedback/>}/>
           <Route path='add-product' element={<AddProduct/>}/>
+          <Route path='categories' element={<Categories/>}/>
+          <Route path='add-category' element={<AddCategory/>}/>
         </Route>
       </Routes>
 

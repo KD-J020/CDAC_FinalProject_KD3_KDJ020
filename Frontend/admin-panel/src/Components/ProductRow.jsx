@@ -1,4 +1,17 @@
-function ProductRow({ id, title, details, price, tags, image }) {
+import { useState } from "react";
+
+function ProductRow({ id, title, details, price, tags, image, onDelete }) {
+  const [product, setProduct] = useState({
+    id,
+    title,
+    details,
+    price,
+    tags,
+    image,
+  });
+  const handleEditClick = () => {
+    // setIsEditing(true);
+  };
   return (
     <tr>
       <td>{id}</td>
@@ -10,8 +23,15 @@ function ProductRow({ id, title, details, price, tags, image }) {
       <td>{price}</td>
       <td>{tags}</td>
       <td>
-        <button className="btn btn-success btn-sm">Edit</button>
-        <button className="btn btn-danger btn-sm ms-3">Delete</button>
+        <button className="btn btn-success btn-sm" onClick={handleEditClick}>
+          Edit
+        </button>
+        <button
+          className="btn btn-danger btn-sm ms-3"
+          onClick={() => onDelete(id)}
+        >
+          Delete
+        </button>
       </td>
     </tr>
   );
