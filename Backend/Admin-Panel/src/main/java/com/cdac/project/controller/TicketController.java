@@ -65,6 +65,7 @@ public class TicketController {
 		}
 	}
 	
+
 //	@GetMapping()
 //	public ResponseEntity<?> getAllTicketByProductId(@RequestParam Long p_id) {
 //		try {
@@ -77,6 +78,20 @@ public class TicketController {
 //			return ResponseEntity.status(HttpStatus.NOT_FOUND).body(new ApiResponse(e.getMessage()));
 //		}
 //	}
+
+	@GetMapping()
+	public ResponseEntity<?> getAllTicketByProductId(@RequestParam Long p_id) {
+		try {
+			List<UserTicketResponseDto> tickets = ticketRaiseService.getAllTicketByProductId(p_id);
+			if(tickets.isEmpty())
+				return ResponseEntity.status(HttpStatus.NOT_FOUND).body(new ApiResponse("No Tickets Found"));
+			
+			return ResponseEntity.ok(tickets);
+		} catch (RuntimeException e) {
+			return ResponseEntity.status(HttpStatus.NOT_FOUND).body(new ApiResponse(e.getMessage()));
+		}
+	}
+
 	
 	@GetMapping("/executive")
 	public ResponseEntity<?> getAllTicketByExecutiveId(@RequestParam Long e_id) {

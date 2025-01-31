@@ -20,13 +20,14 @@ import com.cdac.project.service.FeedbackService;
 import io.swagger.v3.oas.models.responses.ApiResponse;
 
 @RestController
-@RequestMapping
+@RequestMapping("/feedback")
 public class FeedbackController {
 	@Autowired
 private FeedbackService fservice;
-	@PostMapping
-	public ResponseEntity<?>addFeedback(@RequestBody FeedbackDto dto){
-		return ResponseEntity.status(HttpStatus.CREATED).body(fservice.addFeedback(dto));
+	
+	@PostMapping("/{userId}/{productId}")
+	public ResponseEntity<?>addFeedback(@PathVariable long userId,@PathVariable long productId, @RequestBody FeedbackDto feedbackDto){
+		return ResponseEntity.status(HttpStatus.CREATED).body(fservice.addFeedback(userId,productId,feedbackDto));
 	}
 	@GetMapping
 	public ResponseEntity<?>getAllFeedback(){

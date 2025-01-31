@@ -9,4 +9,6 @@ public interface AddressService {
 
 	ApiResponse deleteAddress(long addressId);
 
+	ApiResponse updateAddress(long addressId, AddressDto addressDto);
+
 }

@@ -26,5 +26,5 @@ public interface UserTicketRaiseService {
 
 	ApiResponse closeTicketStutus(Long id);
 	
-	//List<UserTicketResponseDto> getAllTicketByProductId(Long p_id);
+	List<UserTicketResponseDto> getAllTicketByProductId(Long p_id);
 }
