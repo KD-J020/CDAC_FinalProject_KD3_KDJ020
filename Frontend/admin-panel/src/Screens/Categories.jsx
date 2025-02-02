@@ -1,7 +1,11 @@
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import { useEffect, useState } from "react";
-import { deleteCategory, getCategoryList } from "../services/categoryService";
-import Row from "../Components/Row";
+import CategoryRow from "../Components/CategoryRow";
+import {
+  deleteCategory,
+  getCategoryList,
+  updateCategory,
+} from "../services/categoryService";
 
 function Categories() {
   // used to load all the categories
@@ -23,15 +27,22 @@ function Categories() {
 
   const onDeleteCategory = async (id) => {
     const result = await deleteCategory(id);
+    onLoadCategories();
     if (result["status"] == "success") {
       //   toast.success("Successfully deleted selected category");
-
       // refresh the screen
-      onLoadCategories();
     } else {
       //   toast.error(result["error"]);
     }
   };
+
+  const onEditCategory = async (id) => {
+    navigate(`/home/edit-category/${id}`);
+    // const result = await updateCategory(id, title, details);
+    onLoadCategories();
+  };
+
+  const navigate = useNavigate();
 
   return (
     <div>
@@ -60,10 +71,12 @@ function Categories() {
             <tbody>
               {categories.map((category) => {
                 return (
-                  <Row
+                  <CategoryRow
+                    key={category["id"]}
                     id={category["id"]}
                     title={category["title"]}
                     details={category["details"]}
+                    onEdit={onEditCategory}
                     onDelete={onDeleteCategory}
                   />
                 );

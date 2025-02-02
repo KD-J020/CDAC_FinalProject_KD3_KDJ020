@@ -12,9 +12,11 @@ export async function addCategory(title, details) {
   }
 }
 
+
+
 export async function getCategoryList() {
   try {
-    const url = createUrl('category/')
+    const url = createUrl('categories/active')
     const response = await axios.get(url)
     return response.data
   } catch (ex) {
@@ -24,8 +26,29 @@ export async function getCategoryList() {
 
 export async function deleteCategory(id) {
   try {
-    const url = createUrl('category/' + id)
-    const response = await axios.delete(url)
+    const url = createUrl(`category/delete/${id}`)
+    const response = await axios.patch(url)
+    return response.data
+  } catch (ex) {
+    return { status: 'error', error: ex }
+  }
+}
+
+export async function updateCategory (id, title, details) {
+  try {
+    const body = { title, details }
+    const url = createUrl(`category/${id}`)
+    const response = await axios.put(url, body)
+    return response.data
+  } catch (ex) {
+    return { status: 'error', error: ex }
+  }
+}
+
+export async function getCategory(id) {
+  try {
+    const url = createUrl(`category/${id}`)
+    const response = await axios.get(url)
     return response.data
   } catch (ex) {
     return { status: 'error', error: ex }

@@ -1,22 +1,39 @@
-import { useState } from "react";
-import { useNavigate } from "react-router-dom";
-import { addCategory } from "../services/categoryService";
+import { useEffect, useState } from "react";
+import { useNavigate, useParams } from "react-router-dom";
+import {
+  addCategory,
+  getCategory,
+  updateCategory,
+} from "../services/categoryService";
 
-function AddCategory() {
-  const [title, setTitle] = useState("");
-  const [details, setDetails] = useState("");
+function EditCategoty() {
+  const { id } = useParams();
+
+  const [title, setTitle] = useState();
+  const [details, setDetails] = useState();
 
   // get navigate function
   const navigate = useNavigate();
 
-  const onSave = async () => {
+  const effect = useEffect(() => {
+    getCategorie();
+  }, []);
+
+  const getCategorie = async () => {
+    const result = await getCategory(id);
+    console.log(result);
+    setTitle(result["title"]);
+    setDetails(result["details"]);
+  };
+
+  const onUpdate = async () => {
     if (title.length == 0) {
       // toast.warn("Please enter title");
     } else if (details.length == 0) {
       // toast.warn("Please enter details");
     } else {
-      const result = await addCategory(title, details);
-      console.log(title + details);
+      const result = await updateCategory(id, title, details);
+
       navigate("/home/categories");
       if (result == "success") {
         // toast.success("Successfully added a category");
@@ -34,10 +51,11 @@ function AddCategory() {
   return (
     <div>
       <div className="container">
-        <h2 className="header">Add Category</h2>
+        <h2 className="header">Edit Category</h2>
         <div className="mb-3">
           <label htmlFor="">Title</label>
           <input
+            value={title}
             onChange={(e) => setTitle(e.target.value)}
             type="text"
             className="form-control"
@@ -46,6 +64,7 @@ function AddCategory() {
         <div className="mb-3">
           <label htmlFor="">Details</label>
           <input
+            value={details}
             onChange={(e) => setDetails(e.target.value)}
             type="text"
             className="form-control"
@@ -53,8 +72,8 @@ function AddCategory() {
         </div>
 
         <div className="mb-3">
-          <button onClick={onSave} className="btn btn-success">
-            Save
+          <button className="btn btn-success" onClick={onUpdate}>
+            Update
           </button>
           <button onClick={onCancel} className="btn btn-danger ms-2">
             Cancel
@@ -65,4 +84,4 @@ function AddCategory() {
   );
 }
 
-export default AddCategory;
+export default EditCategoty;
