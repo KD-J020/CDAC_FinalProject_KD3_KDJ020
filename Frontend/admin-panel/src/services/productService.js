@@ -21,3 +21,18 @@ export const deleteProduct = async (id) => {
         return { status: 'error', error: ex }
     }
 }
+
+export const addProduct = async (title,
+    cid,
+    description,
+    price,
+    image) => {
+    try {
+        const body = { title,cid, description,price, image };
+        const url = createUrl('product');
+        const response = await axios.post(url, body);
+        return response.data;
+    } catch (ex) {
+        return { status: 'error', error: ex }
+    }
+}

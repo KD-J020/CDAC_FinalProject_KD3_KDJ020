@@ -1,5 +1,6 @@
 package com.cdac.project.service;
 
+
 import java.util.List;
 import java.util.Optional;
 import java.util.stream.Collectors;
@@ -30,6 +31,11 @@ public class ProductServiceImpl implements ProductService{
 		 
 		try {
 		Product productEntity=modelMapper.map(pd, Product.class);
+		System.out.println(pd.getDescription()+" ");
+		System.out.println(pd.getCid()+" ");
+		
+		
+		productEntity.setActive(true);
 		Product p=productRepository.save(productEntity);
 		return new ApiResponse("Added new Product Successfully with id: "+p.getId());
 		}
@@ -61,6 +67,7 @@ public class ProductServiceImpl implements ProductService{
 				product.setDescription(pd.getDescription());
 				product.setImage(pd.getImage());
 				product.setPrice(pd.getPrice());
+				product.setActive(true);
 				return new ApiResponse("Product updated Successfully");
 			}
 			return new ApiResponse("Invalid id");
