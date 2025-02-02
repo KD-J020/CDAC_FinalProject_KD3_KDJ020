@@ -10,6 +10,9 @@ import Product from './Screens/Product';
 import { Routes, Route } from 'react-router-dom';
 import Feedback from './Screens/Feedback';
 import AddProduct from './Components/AddProduct';
+import { ToastContainer } from 'react-toastify'
+import 'react-toastify/dist/ReactToastify.css'
+import Executive from './Screens/Executive';
 function App() {
   return (
     <div>
@@ -23,9 +26,11 @@ function App() {
           <Route path='ticket' element={<Ticket/>}/>
           <Route path='feddback' element={<Feedback/>}/>
           <Route path='add-product' element={<AddProduct/>}/>
+          <Route path='executive' element={<Executive/>}/>
         </Route>
       </Routes>
 
+<ToastContainer/>
 
       
 

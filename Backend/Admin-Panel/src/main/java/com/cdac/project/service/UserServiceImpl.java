@@ -93,7 +93,11 @@ public class UserServiceImpl implements UserService {
 	public ApiResponse deleteUser(Long userId) {
 		if(userRepository.existsById(userId)) {
 			Optional<User> user = userRepository.findById(userId);
+			if(user.get().isActive()==true) {
 			user.get().setActive(false);
+			}else {
+				user.get().setActive(true);
+			}
 			userRepository.save(user.get());
 			return new ApiResponse("User Deleted !");
 		}
