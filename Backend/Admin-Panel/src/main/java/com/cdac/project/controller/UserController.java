@@ -22,11 +22,13 @@ import org.springframework.web.bind.annotation.PatchMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestParam;
 
-@CrossOrigin( origins = "http://localhost:3000")
+
+@CrossOrigin(origins = "*")
+
 @RestController
 @RequestMapping("/user")
 public class UserController {
-
+	
 	@Autowired
 	private UserService userService;
 	
@@ -40,6 +42,7 @@ public class UserController {
 	        } catch (Exception e) {
 	            return ResponseEntity.status(HttpStatus.BAD_REQUEST).body(new ApiResponse("Registration failed: " + e.getMessage()));
 	        }
+		
 	}
 	
 	@GetMapping
@@ -124,11 +127,9 @@ public class UserController {
 		return ResponseEntity.ok(executives);
 	}
 	
-	
-	
-	
-	
-	
-	
-	
+	@PatchMapping("/answer/{ticketId}")
+	public ResponseEntity<?> giveAnswerToTicket(@PathVariable Long id, @RequestBody String answer)
+	{
+		return ResponseEntity.status(HttpStatus.OK).body(userService.ticketAnswer(id,answer).getMessage());
+	}
 }

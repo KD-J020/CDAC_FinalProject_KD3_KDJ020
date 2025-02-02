@@ -26,28 +26,11 @@ public class ProductServiceImpl implements ProductService{
 	ProductRepository productRepository;
 	@Autowired
 	ModelMapper modelMapper;
+
 	@Autowired
 	CategoryRepository categoryRepository;
 
-	/*
-	 * @Override public ApiResponse addProduct(ProductDto pd) {
-	 * 
-	 * try { Category category=categoryRepository.findById(pd.getId()).
-	 * orElseThrow(() -> new ResourceNotFoundException("Invalid category id!!!!"));
-	 * 
-	 * Product productEntity=modelMapper.map(pd, Product.class);
-	 * category.addProduct(productEntity); productRepository.save(productEntity);
-	 * 
-	 * 
-	 * 
-	 * return new
-	 * ApiResponse("Added new Product Successfully with id: "+productEntity.getId())
-	 * ;
-	 * 
-	 * 
-	 * } catch (Exception e) { return new ApiResponse("something went wrong "+
-	 * e.getMessage()); } }
-	 */
+	
 	@Override
 	public ApiResponse addProduct(ProductDto pd) {
 	    try {

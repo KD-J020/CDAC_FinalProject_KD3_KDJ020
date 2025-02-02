@@ -21,14 +21,22 @@ import lombok.ToString;
 @Table(name = "cart")
 @ToString(callSuper = true,exclude = {"user","likedProduct"} )
 public class Cart extends BaseEntity {
-
 	@OneToOne(mappedBy = "cart")
-	@JsonIgnore
 	private User user;
 	
 	@OneToMany(mappedBy = "cart", cascade = CascadeType.ALL)
 	@JsonIgnore
 	private List<Product> likedProduct;
 	
+	public void addProduct(Product p)
+	{
+		likedProduct.add(p);
+		p.setCart(this);
+	}
+	public void removeProduct(Product p)
+	{
+		likedProduct.remove(p);
+		p.setCart(null);
+	}
 	
 }

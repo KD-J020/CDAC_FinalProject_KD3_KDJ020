@@ -7,6 +7,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.HttpStatusCode;
 import org.springframework.http.ResponseEntity;
+import org.springframework.web.bind.annotation.CrossOrigin;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PatchMapping;
 import org.springframework.web.bind.annotation.PathVariable;
@@ -19,6 +20,7 @@ import org.springframework.web.bind.annotation.RestController;
 import com.cdac.project.dto.ProductDto;
 import com.cdac.project.service.ProductService;
 
+@CrossOrigin(origins = "*")
 @RestController
 @RequestMapping("/product")
 public class ProductController {
@@ -51,9 +53,9 @@ public class ProductController {
 		return ResponseEntity.status(HttpStatus.CREATED).body(productService.updateProductDetails(id,pd));
 	}
 	@PatchMapping("/{pId}")
-	public ResponseEntity<?> deleteProduct(@PathVariable Long id)
+	public ResponseEntity<?> deleteProduct(@PathVariable Long pId)
 	{
-		return ResponseEntity.status(HttpStatus.OK).body(productService.deleteProductDetails(id));
+		return ResponseEntity.status(HttpStatus.OK).body(productService.deleteProductDetails(pId));
 	}
 	@GetMapping("/active")
 	public ResponseEntity<?> getActiveProducts()

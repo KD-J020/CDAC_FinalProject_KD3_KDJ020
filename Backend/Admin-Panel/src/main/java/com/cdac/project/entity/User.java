@@ -9,6 +9,7 @@ import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
 import jakarta.persistence.EnumType;
 import jakarta.persistence.Enumerated;
+import jakarta.persistence.FetchType;
 import jakarta.persistence.JoinColumn;
 import jakarta.persistence.Lob;
 import jakarta.persistence.ManyToMany;
@@ -53,16 +54,16 @@ public class User extends BaseEntity {
 	@Column(name = "is_Active")
 	private boolean isActive;
 	
-	@OneToOne
+	@OneToOne(fetch = FetchType.LAZY)
 	@JoinColumn(name = "address_id")
 	@JsonIgnore
 	private Address userAddress;
 	
-	@ManyToMany(mappedBy = "users")
+	@ManyToMany(mappedBy = "users",fetch = FetchType.LAZY)
 	@JsonIgnore
 	private List<Product> products;
 	
-	@OneToOne
+	@OneToOne(cascade = CascadeType.ALL,fetch=FetchType.LAZY)
 	@JoinColumn(name = "cart_id")
 	@JsonIgnore
 	private Cart cart;

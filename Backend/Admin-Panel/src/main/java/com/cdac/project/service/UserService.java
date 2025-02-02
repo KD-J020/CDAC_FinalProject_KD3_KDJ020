@@ -30,4 +30,7 @@ public interface UserService {
 
 	List<UserResponseDto> getAllInActiveExecutive();
 
+	ApiResponse ticketAnswer(Long id,String answer);
+
+
 }

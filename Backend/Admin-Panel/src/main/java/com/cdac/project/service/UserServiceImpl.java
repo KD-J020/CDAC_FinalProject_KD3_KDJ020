@@ -12,8 +12,12 @@ import com.cdac.project.custom_exception.ResourceNotFoundException;
 import com.cdac.project.dto.ApiResponse;
 import com.cdac.project.dto.UserDto;
 import com.cdac.project.dto.UserResponseDto;
+import com.cdac.project.entity.Cart;
+import com.cdac.project.entity.Ticket;
 import com.cdac.project.entity.User;
 import com.cdac.project.entity.UserRole;
+import com.cdac.project.repository.CartRepository;
+import com.cdac.project.repository.TicketRepository;
 import com.cdac.project.repository.UserRepository;
 
 import jakarta.transaction.Transactional;
@@ -25,16 +29,23 @@ public class UserServiceImpl implements UserService {
 	@Autowired
 	private UserRepository userRepository;
 	
+	
 	@Autowired
 	private ModelMapper modelMapper;
 	
+	@Autowired
+	private TicketRepository ticketRepository;
+	
 	@Override
 	public ApiResponse createUser(UserDto userDto) {
+		
 		try {
-            User userEntity = modelMapper.map(userDto, User.class);
-            userEntity.setActive(true);
-            userEntity.setRole(UserRole.CUSTOMER);
-            User persistentUser = userRepository.save(userEntity);
+             User userEntity = modelMapper.map(userDto, User.class);
+             userEntity.setActive(true);
+             Cart cart = new Cart();
+             cart.setUser(userEntity); 
+             userEntity.setCart(cart);
+             User persistentUser = userRepository.save(userEntity);
             return new ApiResponse("New User Added with ID = " + persistentUser.getId());
         } catch (Exception e) {
             return new ApiResponse("Failed to create user. Please try again.");
@@ -82,7 +93,11 @@ public class UserServiceImpl implements UserService {
 	public ApiResponse deleteUser(Long userId) {
 		if(userRepository.existsById(userId)) {
 			Optional<User> user = userRepository.findById(userId);
+			if(user.get().isActive()==true) {
 			user.get().setActive(false);
+			}else {
+				user.get().setActive(true);
+			}
 			userRepository.save(user.get());
 			return new ApiResponse("User Deleted !");
 		}
@@ -141,6 +156,13 @@ public class UserServiceImpl implements UserService {
 				.stream()
 				.map(user -> modelMapper.map(user, UserResponseDto.class))
 				.collect(Collectors.toList());
+	}
+
+	@Override
+	public ApiResponse ticketAnswer(Long id,String answer) {
+		Ticket ticket=ticketRepository.findById(id).orElseThrow(()-> new ResourceNotFoundException("Ticket not found"));
+		ticket.setAnswer(answer);
+		return new ApiResponse("Answer added successfully");
 	}
 
 }

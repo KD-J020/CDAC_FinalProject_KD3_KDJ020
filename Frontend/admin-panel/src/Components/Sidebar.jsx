@@ -18,6 +18,11 @@ function Sidebar() {
           </Link>
         </li>
         <li className="nav-item">
+          <Link to="/home/executive" className="nav-link text-white">
+            Executive
+          </Link>
+        </li>
+        <li className="nav-item">
           <Link to="/home/Ticket" className="nav-link text-white">
             Tickets
           </Link>

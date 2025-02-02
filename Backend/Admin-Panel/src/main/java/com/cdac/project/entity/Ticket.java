@@ -29,6 +29,11 @@ public class Ticket extends BaseEntity {
 	
 	@Enumerated(EnumType.STRING)
 	private TicketStatus status;
+	@Column(name="answer")
+	private String answer;
+	
+	@Column(name = "answer")
+	private String answer;
 	
 	@ManyToOne
 	@JoinColumn(name = "customer_id")
