@@ -1,9 +1,6 @@
 
 package com.cdac.project.controller;
-
-import java.net.ResponseCache;
 import java.util.List;
-
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
@@ -74,6 +71,5 @@ public ResponseEntity<List<CategoryDto>> getActiveCategories() {
     List<CategoryDto> activeCategories = categoryService.getActiveCategories();
     return ResponseEntity.ok(activeCategories);
 }
-
 
 }
