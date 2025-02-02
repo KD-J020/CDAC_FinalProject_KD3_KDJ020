@@ -13,6 +13,8 @@ public class OrderResponseDto extends BaseDTO {
 	private Long user_id;
 
     private Long product_id; 
+    private String productName; 
+    private String productImage;
 
     private int quantity; 
      

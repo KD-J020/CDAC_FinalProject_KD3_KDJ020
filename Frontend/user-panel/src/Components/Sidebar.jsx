@@ -1,5 +1,6 @@
 import React from "react";
 import {Link} from "react-router-dom"
+import { Dropdown} from 'react-bootstrap';
 import "../Styles/sidebar.css"; 
 
 function Sidebar(){
@@ -19,29 +20,22 @@ function Sidebar(){
         <Link to="/home/Answer" className="nav-link text-white">Inquiry Answer</Link>
         </li>
         <li className="nav-item dropdown">
-          <button
-            className="nav-link dropdown-toggle text-white bg-transparent border-0"
-            id="historyDropdown"
-            data-bs-toggle="dropdown"
-            aria-expanded="false"
-          >
-            History
-          </button>
-          <ul
-            className="dropdown-menu custom-dropdown-menu"
-            aria-labelledby="historyDropdown"
-          >
-            <li>
-              <Link to="/home/History/Purchases" className="dropdown-item" >
-                Purchases
-              </Link>
-            </li>
-            <li>
-              <Link to="/home/History/Tickets" className="dropdown-item">
-                Tickets
-              </Link>
-            </li>
-          </ul>
+          <Dropdown>
+              <Dropdown.Toggle
+                id="historyDropdown"
+                className="nav-link dropdown-toggle text-white bg-transparent border-0"
+              >
+                History
+              </Dropdown.Toggle>
+              <Dropdown.Menu>
+                <Dropdown.Item as={Link} to="/home/History/Purchases">
+                  Purchases
+                </Dropdown.Item>
+                <Dropdown.Item as={Link} to="/home/History/Tickets">
+                  Tickets
+                </Dropdown.Item>
+              </Dropdown.Menu>
+            </Dropdown>
         </li>
       </ul>
     </div>

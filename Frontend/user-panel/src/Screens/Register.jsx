@@ -1,6 +1,7 @@
 import { useState } from "react";
 import { Link, useNavigate } from "react-router-dom";
 import { toast } from "react-toastify";
+import "../Styles/Register.css";
 
 function Register() {
   const [firstName, setFirstName] = useState("");
@@ -12,7 +13,41 @@ function Register() {
 
   const navigate = useNavigate();
 
-  const onSignUp = async () => {
+  const onSignUp = async (firstName, lastName, email, password, phone) => {
+    const user = {
+        firstName,
+        lastName,
+        email,
+        password,
+        phone,
+        role: "CUSTOMER"
+    };
+
+    try {
+        const response = await fetch("http://localhost:8090/user/post", {
+            method: "POST",
+            headers: {
+                "Content-Type": "application/json",
+            },
+            body: JSON.stringify(user),
+        });
+
+        const data = await response.json();
+
+        if (response.ok) {
+            return { status: "success", message: data.message };
+        } else {
+            return { status: "error", message: data.message || "Registration failed" };
+        }
+    } catch (error) {
+        console.error("Error in registration:", error);
+        return { status: "error", message: error.message };
+    }
+  };
+    
+
+  const handleRegister = async (e) => {
+    e.preventDefault();
     if (firstName.length === 0) {
       toast.warn("Please enter the first name");
     } else if (lastName.length === 0) {
@@ -31,133 +66,94 @@ function Register() {
       toast.warn("Passwords do not match");
     }  else {
       const result = await onSignUp(firstName, lastName, email, password, phone);
-      if (result["status"] === "success") {
-        toast.success("New admin registered successfully");
-        navigate(-1);
-      } else {
-        toast.error(result["error"]);
-      }
+      if (result.status === "success") {
+        toast.success(result.message);
+        navigate("/login");
+    } else {
+        toast.error(result.message);
     }
+    }
+  };
+   
+  const handleCancel = () => {
+    navigate("/"); 
   };
 
   return (
-    <div
-      style={{
-        display: "flex",
-        justifyContent: "center",
-        alignItems: "center",
-        height: "100vh",
-        backgroundColor: "#f7f9fc",
-      }}
-    >
-      <div
-        style={{
-          width: "400px",
-          padding: "20px",
-          backgroundColor: "#ffffff",
-          borderRadius: "10px",
-          boxShadow: "0 4px 6px rgba(0, 0, 0, 0.1)",
-        }}
-      >
-        <h2 className="text-center mb-4" style={{ fontWeight: "bold" }}>
-          Register User
-        </h2>
-        <div>
-          <div className="mb-3" style={{ display: "flex", flexDirection: "column" }}>
-            <label htmlFor="firstName" style={{ marginBottom: "5px", fontWeight: "bold" }}>
-              First Name
-            </label>
-            <input
-              onChange={(e) => setFirstName(e.target.value)}
-              type="text"
-              className="form-control"
-              placeholder="Enter your first name"
-              style={{ padding: "8px" }}
-            />
-          </div>
-
-          <div className="mb-3" style={{ display: "flex", flexDirection: "column" }}>
-            <label htmlFor="lastName" style={{ marginBottom: "5px", fontWeight: "bold" }}>
-              Last Name
-            </label>
-            <input
-              onChange={(e) => setLastName(e.target.value)}
-              type="text"
-              className="form-control"
-              placeholder="Enter your last name"
-              style={{ padding: "8px" }}
-            />
-          </div>
-
-          <div className="mb-3" style={{ display: "flex", flexDirection: "column" }}>
-            <label htmlFor="email" style={{ marginBottom: "5px", fontWeight: "bold" }}>
-              Email
-            </label>
-            <input
-              onChange={(e) => setEmail(e.target.value)}
-              type="email"
-              className="form-control"
-              placeholder="Enter your email"
-              style={{ padding: "8px" }}
-            />
-          </div>
-
-          <div className="mb-3" style={{ display: "flex", flexDirection: "column" }}>
-            <label htmlFor="phone" style={{ marginBottom: "5px", fontWeight: "bold" }}>
-              Phone
-            </label>
-            <input
-              onChange={(e) => setPhone(e.target.value)}
-              type="tel"
-              className="form-control"
-              placeholder="Enter your phone number"
-              style={{ padding: "8px" }}
-            />
-          </div>
-
-          <div className="mb-3" style={{ display: "flex", flexDirection: "column" }}>
-            <label htmlFor="password" style={{ marginBottom: "5px", fontWeight: "bold" }}>
-              Password
-            </label>
-            <input
-              onChange={(e) => setPassword(e.target.value)}
-              type="password"
-              className="form-control"
-              placeholder="Enter your password"
-              style={{ padding: "8px" }}
-            />
-          </div>
-
-          <div className="mb-3" style={{ display: "flex", flexDirection: "column" }}>
-            <label htmlFor="confirmPassword" style={{ marginBottom: "5px", fontWeight: "bold" }}>
-              Confirm Password
-            </label>
-            <input
-              onChange={(e) => setConfirmPassword(e.target.value)}
-              type="password"
-              className="form-control"
-              placeholder="Confirm your password"
-              style={{ padding: "8px" }}
-            />
-          </div>
-
-          <button
-            onClick={onSignUp}
-            className="btn btn-success w-100"
-            style={{ padding: "10px", marginTop: "10px" }}
-          >
+    <div className="register-container">
+      <form onSubmit={handleRegister} className="register-form">
+        <h2 className="text-center">Register</h2>
+        <div className="form-group">
+          <label>First Name</label>
+          <input
+            type="text"
+            className="form-control"
+            value={firstName}
+            onChange={(e) => setFirstName(e.target.value)}
+          />
+        </div>
+        <div className="form-group">
+          <label>Last Name</label>
+          <input
+            type="text"
+            className="form-control"
+            value={lastName}
+            onChange={(e) => setLastName(e.target.value)}
+          />
+        </div>
+        <div className="form-group">
+          <label>Email</label>
+          <input
+            type="email"
+            className="form-control"
+            value={email}
+            onChange={(e) => setEmail(e.target.value)}
+          />
+        </div>
+        <div className="form-group">
+          <label>Phone</label>
+          <input
+            type="text"
+            className="form-control"
+            value={phone}
+            onChange={(e) => setPhone(e.target.value)}
+          />
+        </div>
+        <div className="form-group">
+          <label>Password</label>
+          <input
+            type="password"
+            className="form-control"
+            value={password}
+            onChange={(e) => setPassword(e.target.value)}
+          />
+        </div>
+        <div className="form-group">
+          <label>Confirm Password</label>
+          <input
+            type="password"
+            className="form-control"
+            value={confirmPassword}
+            onChange={(e) => setConfirmPassword(e.target.value)}
+          />
+        </div>
+        <div className="d-flex justify-content-between">
+          <button type="submit" className="btn btn-primary">
             Sign Up
           </button>
-          <p className="text-center mt-3">
-            Already have an account?{" "}
-            <Link to="/login" className="text-decoration-none text-primary">
-              Login here
-            </Link>
-          </p>
+          <button type="button" className="btn btn-secondary" onClick={handleCancel}>
+            Cancel
+          </button>
         </div>
-      </div>
+        <p className="text-center mt-3">
+          Already have an account?{" "}
+          <Link to="/login" className="text-decoration-none text-primary">
+            Login here
+          </Link>
+        </p>
+      </form>
     </div>
-  );
+  );    
 }
 
 export default Register;

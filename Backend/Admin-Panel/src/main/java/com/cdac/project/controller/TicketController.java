@@ -21,6 +21,7 @@ import com.cdac.project.service.UserTicketRaiseService;
 import jakarta.validation.constraints.Max;
 import jakarta.validation.constraints.Min;
 
+import org.springframework.web.bind.annotation.CrossOrigin;
 import org.springframework.web.bind.annotation.DeleteMapping;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
@@ -28,7 +29,8 @@ import org.springframework.web.bind.annotation.RequestParam;
 
 
 @RestController
-@RequestMapping("/ticket")
+@CrossOrigin( origins = "http://localhost:3000")
+@RequestMapping("/Home")
 public class TicketController {
 	@Autowired
 	private UserTicketRaiseService ticketRaiseService;
@@ -52,7 +54,7 @@ public class TicketController {
 
 	}
 	
-	@GetMapping("/user")
+	@GetMapping("/tickets")
 	public ResponseEntity<?> getAllTicketByUserId(@RequestParam Long c_id) {
 		try {
 			List<UserTicketResponseDto> tickets = ticketRaiseService.getAllTicketByCustomerId(c_id);

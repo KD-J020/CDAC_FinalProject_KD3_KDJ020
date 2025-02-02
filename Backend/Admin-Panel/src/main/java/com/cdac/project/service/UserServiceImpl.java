@@ -33,6 +33,7 @@ public class UserServiceImpl implements UserService {
 		try {
             User userEntity = modelMapper.map(userDto, User.class);
             userEntity.setActive(true);
+            userEntity.setRole(UserRole.CUSTOMER);
             User persistentUser = userRepository.save(userEntity);
             return new ApiResponse("New User Added with ID = " + persistentUser.getId());
         } catch (Exception e) {
