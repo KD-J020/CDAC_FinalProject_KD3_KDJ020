@@ -1,5 +1,8 @@
 import { useEffect, useState } from "react";
 import { useNavigate } from "react-router-dom";
+import { getCategoryList } from "../Service/categoryService";
+import { toast } from "react-toastify";
+import { addProduct } from "../Service/productService";
 
 function AddProduct() {
   const [categories, setCategories] = useState([]);
@@ -14,6 +17,62 @@ function AddProduct() {
   const [image, setImage] = useState(null);
 
   const navigate = useNavigate();
+
+  const onLoadCategories = async () => {
+    const result = await getCategoryList();
+    setCategories(result);
+    if (result["status"] == "success") {
+    } else {
+      //   toast.error(result["error"]);
+    }
+  };
+
+  const handleImageChange = (e) => {
+    const file = e.target.files[0];
+    const reader = new FileReader();
+    reader.onloadend = () => {
+      const arrayBuffer = reader.result;
+      const bytes = new Uint8Array(arrayBuffer);
+      setImage(Array.from(bytes));
+    };
+    reader.readAsArrayBuffer(file);
+  };
+
+  const onSave = async () => {
+    if (title.length == 0) {
+      toast.warn("Please enter title");
+    } else if (details.length == 0) {
+      toast.warn("Please enter details");
+    } else if (tags.length == 0) {
+      toast.warn("Please enter tags");
+    } else if (price.length == 0) {
+      toast.warn("Please enter price");
+    } else if (categoryId.length == 0) {
+      console.log(categoryId);
+      toast.warn("Please select category");
+    } else if (!image) {
+      toast.warn("Please select image");
+    } else {
+      // console.log(title, Number(cid), description, price, image);
+      const result = await addProduct(
+        title,
+        Number(categoryId),
+        details,
+        price,
+        image
+      );
+      if (result["status"] == "success") {
+        toast.success("Successfully added a product");
+        navigate(-1);
+      } else {
+        toast.error(result["error"]);
+      }
+    }
+  };
+
+  const effect = useEffect(() => {
+    onLoadCategories();
+  }, []);
 
   return (
     <div>
@@ -45,19 +104,6 @@ function AddProduct() {
                   return (
                     <option value={category["id"]}>{category["title"]}</option>
                   );
-                })}
-              </select>
-            </div>
-          </div>
-          <div className="col">
-            <div className="mb-3">
-              <label htmlFor="">Brand</label>
-              <select
-                onChange={(e) => setBrandId(e.target.value)}
-                className="form-control"
-              >
-                {brands.map((brand) => {
-                  return <option value={brand["id"]}>{brand["title"]}</option>;
                 })}
               </select>
             </div>
@@ -105,10 +151,11 @@ function AddProduct() {
             <div className="mb-3">
               <label htmlFor="">Image</label>
               <input
-                onChange={(e) => {
-                  // get the first image selected by user
-                  setImage(e.target.files[0]);
-                }}
+                // onChange={(e) => {
+                //   // get the first image selected by user
+                //   setImage(e.target.files[0]);
+                // }}
+                onChange={handleImageChange}
                 type="file"
                 className="form-control"
                 accept="image/*"
@@ -119,7 +166,9 @@ function AddProduct() {
 
         <div className="row">
           <div className="col">
-            <button className="btn btn-success">Save</button>
+            <button className="btn btn-success" onClick={onSave}>
+              Save
+            </button>
             <button className="btn btn-danger ms-3">Cancel</button>
           </div>
         </div>

@@ -32,8 +32,6 @@ public class Ticket extends BaseEntity {
 	@Column(name="answer")
 	private String answer;
 	
-	@Column(name = "answer")
-	private String answer;
 	
 	@ManyToOne
 	@JoinColumn(name = "customer_id")

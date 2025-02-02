@@ -51,6 +51,7 @@ public class ProductServiceImpl implements ProductService{
 	        productEntity.setCategory(category); // Ensure bidirectional mapping
 
 	        // Save product
+	    	productEntity.setActive(true);
 	        productRepository.save(productEntity);
 
 	        return new ApiResponse("Added new Product Successfully with id: " + productEntity.getId());
@@ -84,6 +85,7 @@ public class ProductServiceImpl implements ProductService{
 				product.setDescription(pd.getDescription());
 				product.setImage(pd.getImage());
 				product.setPrice(pd.getPrice());
+				product.setActive(true);
 				return new ApiResponse("Product updated Successfully");
 			}
 			return new ApiResponse("Invalid id");
