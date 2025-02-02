@@ -1,0 +1,24 @@
+.custom-table {
+    background-color: #343a40; 
+    color: #ffffff; 
+}
+
+.custom-table th,
+.custom-table td {
+    border: 1px solid #ccc;
+    padding: 8px;
+}
+
+.custom-table th {
+    background-color: #438a84; 
+    color: #ffffff; 
+}
+
+.custom-table tbody tr:hover {
+    background-color: #495057; 
+}
+
+.custom-table img {
+    width: 100px;
+    height: 100px;
+}
