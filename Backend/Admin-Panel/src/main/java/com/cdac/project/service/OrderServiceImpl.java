@@ -47,6 +47,8 @@ public class OrderServiceImpl implements OrderService{
 	                        .orElseThrow(() -> new ResourceNotFoundException("Product not found!"));
 
 	                dto.setProductName(product.getTitle());
+	                dto.setProduct_id(product.getId());
+	                dto.setUser_id(customerId);
 	            
 	                dto.setProductImage(product.getImage() != null ? new String(product.getImage()) : "");
 

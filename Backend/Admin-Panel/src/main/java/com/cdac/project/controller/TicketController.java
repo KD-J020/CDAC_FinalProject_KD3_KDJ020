@@ -29,14 +29,13 @@ import org.springframework.web.bind.annotation.RequestParam;
 
 
 @RestController
-@CrossOrigin( origins = "http://localhost:3000")
 @RequestMapping("/Home")
 public class TicketController {
 	@Autowired
 	private UserTicketRaiseService ticketRaiseService;
 
 	
-	@PostMapping
+	@PostMapping("/newticket")
 	public ResponseEntity<?> raiseNewTicket(@RequestBody UserTicketRaiseDto tktDto){
 		try {
 			return ResponseEntity.status(HttpStatus.CREATED).body(ticketRaiseService.RaiseTicket(tktDto));
@@ -120,7 +119,7 @@ public class TicketController {
 	@DeleteMapping
 	public ResponseEntity<?> deleteTicketDetails(@RequestParam() Long tktId) {
 
-		return ResponseEntity.ok(ticketRaiseService.deleteCategory(tktId));
+		return ResponseEntity.ok(ticketRaiseService.deleteTicket(tktId));
 	}
 	
 	
