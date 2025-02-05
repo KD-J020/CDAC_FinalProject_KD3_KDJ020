@@ -18,7 +18,10 @@ import org.springframework.web.bind.annotation.RestController;
 
 import com.cdac.project.dto.ProductDto;
 import com.cdac.project.service.ProductService;
-@CrossOrigin(origins = "http://localhost:3000")
+
+
+@CrossOrigin(origins = "*")
+
 @RestController
 @RequestMapping("/product")
 public class ProductController {
@@ -51,9 +54,9 @@ public class ProductController {
 		return ResponseEntity.status(HttpStatus.CREATED).body(productService.updateProductDetails(id,pd));
 	}
 	@PatchMapping("/{pId}")
-	public ResponseEntity<?> deleteProduct(@PathVariable Long id)
+	public ResponseEntity<?> deleteProduct(@PathVariable Long pId)
 	{
-		return ResponseEntity.status(HttpStatus.OK).body(productService.deleteProductDetails(id));
+		return ResponseEntity.status(HttpStatus.OK).body(productService.deleteProductDetails(pId));
 	}
 	@GetMapping("/active")
 	public ResponseEntity<?> getActiveProducts()

@@ -28,6 +28,7 @@ ModelMapper modelMapper;
 public ApiResponse addCategory(CategoryDto dto) {
     try {
         Category category = modelMapper.map(dto, Category.class);
+        category.setActive(true);
         categoryRepository.save(category);
         return new ApiResponse("Category added: " + category.getId());
     } catch (Exception e) {
@@ -67,6 +68,7 @@ public ApiResponse updateCategory(Long id, CategoryDto dto) {
                 .orElseThrow(() -> new ResourceNotFoundException("Invalid category ID, update failed!"));
 
         modelMapper.map(dto, category);
+        category.setActive(true);
         categoryRepository.save(category);
         return new ApiResponse("Category updated successfully!");
     } catch (Exception e) {

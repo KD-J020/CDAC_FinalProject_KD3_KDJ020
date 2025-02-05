@@ -18,7 +18,8 @@ public class UserTicketResponseDto extends BaseDTO {
 	private String description;
 	private TicketStatus status;
 	
-	private Long user_id;
+	private String executive_name;
 	private Long product_id;
+	private String product_name; 
 	
 }

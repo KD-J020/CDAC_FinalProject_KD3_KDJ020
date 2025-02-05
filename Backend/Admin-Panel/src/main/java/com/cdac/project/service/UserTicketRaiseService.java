@@ -2,6 +2,7 @@ package com.cdac.project.service;
 
 import java.util.List;
 
+import org.springframework.http.ResponseEntity;
 
 import com.cdac.project.dto.ApiResponse;
 import com.cdac.project.dto.UserTicketRaiseDto;
@@ -21,7 +22,10 @@ public interface UserTicketRaiseService {
 
 	ApiResponse updateTicket(Long tktId, UserTicketRaiseDto dto);
 
-	ApiResponse deleteCategory(Long tktId);
+
+	ApiResponse closeTicketStutus(Long id);
 	
 	List<UserTicketResponseDto> getAllTicketByProductId(Long p_id);
+
+	ApiResponse deleteTicket(Long tktId);
 }

@@ -1,24 +1,25 @@
 import { useEffect, useState } from "react";
 import { toast } from 'react-toastify';
-import { getCustomerList, deleteCustomer } from "../Service/customer";
+import { getExecutiveList, deleteExecutive } from "../Service/executive";
 
-function Customer() {
-    const [customers, setCustomers] = useState([]);
+function Executive() {
+    const [executives, setExecutives] = useState([]);
     const [sortOption, setSortOption] = useState("active");
 
-    const onLoadCustomer = async () => {
+    const onLoadExecutives = async () => {
         console.log(sortOption);
-        const result = await getCustomerList(sortOption);
+        const result = await getExecutiveList(sortOption);
         if (result.status === 'error') {
             toast.error(result.error);
         } else {
-            setCustomers(result.data);
+            setExecutives(result.data);
         }
     };
 
     const onToggleCustomer = async (userId, status) => {
-        const result = await deleteCustomer(userId)
-        onLoadCustomer();
+        console.log(userId, status);
+        const result = await deleteExecutive(userId)
+        onLoadExecutives();
         
       }
 
@@ -31,22 +32,22 @@ function Customer() {
    
 
     useEffect(() => {
-        onLoadCustomer();
+        onLoadExecutives();
     }, [sortOption]);
 
     return (
         <div className="container mt-4">
-            <h2 className="header">Customers</h2>
+            <h2 className="header"> Executives</h2>
             <div className="d-flex justify-content-end mb-3">
                
                 <select className="form-control w-auto h-5" value={sortOption} onChange={handleSortChange}>
-                    <option value="active">Active Customers</option>
-                    <option value="inactive">InActive Customers</option>
-                    <option value="all">All Customers</option>
+                    <option value="active">Active Executives</option>
+                    <option value="inactive">InActive Executives</option>
+                    <option value="all">All Executives</option>
                 </select>
             </div>
             <div className="table-responsive">
-                {customers.length > 0 && (
+                {executives.length > 0 && (
                     <table className="table table-hover">
                         <thead>
                             <tr>
@@ -59,7 +60,7 @@ function Customer() {
                             </tr>
                         </thead>
                         <tbody>
-                            {customers.map((customer, index) => (
+                            {executives.map((customer, index) => (
                                 <tr key={customer.id}>
                                     <td>{index + 1}</td>
                                     <td>{customer.firstName}</td>
@@ -94,4 +95,4 @@ function Customer() {
     );
 }
 
-export default Customer;
+export default Executive;

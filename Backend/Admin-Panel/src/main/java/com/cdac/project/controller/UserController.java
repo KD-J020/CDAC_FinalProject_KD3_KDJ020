@@ -15,24 +15,34 @@ import com.cdac.project.dto.ApiResponse;
 import com.cdac.project.dto.UserDto;
 import com.cdac.project.dto.UserResponseDto;
 import com.cdac.project.service.UserService;
+
+import org.springframework.web.bind.annotation.CrossOrigin;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PatchMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestParam;
 
 
+@CrossOrigin(origins = "*")
+
 @RestController
 @RequestMapping("/user")
 public class UserController {
-
+	
 	@Autowired
 	private UserService userService;
 	
 	@PostMapping("/post")
 	public ResponseEntity<?> postUser(@RequestBody UserDto user) {
 		//TODO: process POST request
-//		 userService.createUser(user);
-		return ResponseEntity.status(HttpStatus.CREATED).body(userService.createUser(user).getMessage());
+		//userService.createUser(user);
+		 try {
+	            userService.createUser(user);
+	            return ResponseEntity.status(HttpStatus.CREATED).body(new ApiResponse("User registered successfully"));
+	        } catch (Exception e) {
+	            return ResponseEntity.status(HttpStatus.BAD_REQUEST).body(new ApiResponse("Registration failed: " + e.getMessage()));
+	        }
+		
 	}
 	
 	@GetMapping
@@ -117,11 +127,9 @@ public class UserController {
 		return ResponseEntity.ok(executives);
 	}
 	
-	
-	
-	
-	
-	
-	
-	
+	@PatchMapping("/answer/{ticketId}")
+	public ResponseEntity<?> giveAnswerToTicket(@PathVariable Long id, @RequestBody String answer)
+	{
+		return ResponseEntity.status(HttpStatus.OK).body(userService.ticketAnswer(id,answer).getMessage());
+	}
 }

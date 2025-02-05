@@ -21,6 +21,7 @@ import com.cdac.project.service.UserTicketRaiseService;
 import jakarta.validation.constraints.Max;
 import jakarta.validation.constraints.Min;
 
+import org.springframework.web.bind.annotation.CrossOrigin;
 import org.springframework.web.bind.annotation.DeleteMapping;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
@@ -28,13 +29,13 @@ import org.springframework.web.bind.annotation.RequestParam;
 
 
 @RestController
-@RequestMapping("/ticket")
+@RequestMapping("/Home")
 public class TicketController {
 	@Autowired
 	private UserTicketRaiseService ticketRaiseService;
 
 	
-	@PostMapping
+	@PostMapping("/newticket")
 	public ResponseEntity<?> raiseNewTicket(@RequestBody UserTicketRaiseDto tktDto){
 		try {
 			return ResponseEntity.status(HttpStatus.CREATED).body(ticketRaiseService.RaiseTicket(tktDto));
@@ -52,7 +53,7 @@ public class TicketController {
 
 	}
 	
-	@GetMapping("/user")
+	@GetMapping("/tickets")
 	public ResponseEntity<?> getAllTicketByUserId(@RequestParam Long c_id) {
 		try {
 			List<UserTicketResponseDto> tickets = ticketRaiseService.getAllTicketByCustomerId(c_id);
@@ -65,6 +66,20 @@ public class TicketController {
 		}
 	}
 	
+
+//	@GetMapping()
+//	public ResponseEntity<?> getAllTicketByProductId(@RequestParam Long p_id) {
+//		try {
+//			List<UserTicketResponseDto> tickets = ticketRaiseService.getAllTicketByProductId(p_id);
+//			if(tickets.isEmpty())
+//				return ResponseEntity.status(HttpStatus.NOT_FOUND).body(new ApiResponse("No Tickets Found"));
+//			
+//			return ResponseEntity.ok(tickets);
+//		} catch (RuntimeException e) {
+//			return ResponseEntity.status(HttpStatus.NOT_FOUND).body(new ApiResponse(e.getMessage()));
+//		}
+//	}
+
 	@GetMapping()
 	public ResponseEntity<?> getAllTicketByProductId(@RequestParam Long p_id) {
 		try {
@@ -77,6 +92,7 @@ public class TicketController {
 			return ResponseEntity.status(HttpStatus.NOT_FOUND).body(new ApiResponse(e.getMessage()));
 		}
 	}
+
 	
 	@GetMapping("/executive")
 	public ResponseEntity<?> getAllTicketByExecutiveId(@RequestParam Long e_id) {
@@ -94,7 +110,7 @@ public class TicketController {
 	
 	
 	@PutMapping("/{tktId}")
-	public ResponseEntity<?> updateCategoryDetails(@PathVariable Long tktId, @RequestBody UserTicketRaiseDto ticket) {
+	public ResponseEntity<?> updateTicketDetails(@PathVariable Long tktId, @RequestBody UserTicketRaiseDto ticket) {
 
 		return ResponseEntity.ok(ticketRaiseService.updateTicket(tktId, ticket));
 
@@ -103,7 +119,7 @@ public class TicketController {
 	@DeleteMapping
 	public ResponseEntity<?> deleteTicketDetails(@RequestParam() Long tktId) {
 
-		return ResponseEntity.ok(ticketRaiseService.deleteCategory(tktId));
+		return ResponseEntity.ok(ticketRaiseService.deleteTicket(tktId));
 	}
 	
 	
