@@ -1,24 +1,96 @@
-.custom-table {
-    background-color: #343a40; 
-    color: #ffffff; 
+/* Purchase History Card Styling */
+.purchase-card {
+    border-radius: 10px;
+    overflow: hidden;
+    transition: transform 0.3s ease-in-out;
+    height: 320px; /* Adjusted height for better fit */
+    display: flex;
+    flex-direction: column;
 }
 
-.custom-table th,
-.custom-table td {
-    border: 1px solid #ccc;
+/* Increase Image Size */
+.image-container {
+    position: relative;
+    overflow: hidden;
+    height: 160px; /* Increased image height */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #f8f9fa;
+}
+
+.image-container img {
+    max-height: 100%;
+    width: auto;
+}
+
+/* Favorite (Heart) Icon */
+.favorite-icon {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    background: rgba(255, 255, 255, 0.8);
+    border-radius: 50%;
+    padding: 5px;
+    font-size: 14px;
+    cursor: pointer;
+}
+
+/* Compact Card Body */
+.card-body-compact {
     padding: 8px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    flex-grow: 1; /* Fills the remaining space */
 }
 
-.custom-table th {
-    background-color: #438a84; 
-    color: #ffffff; 
+/* Product Title */
+.product-title {
+    font-size: 14px;
+    font-weight: bold;
+    margin-bottom: 5px;
 }
 
-.custom-table tbody tr:hover {
-    background-color: #495057; 
+/* Price Styling */
+.price {
+    font-size: 14px;
+    font-weight: bold;
+    color: #333;
+    margin-bottom: 5px;
 }
 
-.custom-table img {
-    width: 100px;
-    height: 100px;
+/* Order Date */
+.order-date {
+    font-size: 12px;
+    color: #555;
+    margin-bottom: 0;
+}
+
+/* Responsive Grid for 3-4 Products Per Row */
+@media (max-width: 1200px) {
+    .purchase-card {
+        height: 300px;
+    }
+    .image-container {
+        height: 140px;
+    }
+}
+
+@media (max-width: 992px) {
+    .purchase-card {
+        height: 280px;
+    }
+    .image-container {
+        height: 130px;
+    }
+}
+
+@media (max-width: 768px) {
+    .purchase-card {
+        height: 260px;
+    }
+    .image-container {
+        height: 120px;
+    }
 }

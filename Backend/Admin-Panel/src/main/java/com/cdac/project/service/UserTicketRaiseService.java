@@ -22,9 +22,10 @@ public interface UserTicketRaiseService {
 
 	ApiResponse updateTicket(Long tktId, UserTicketRaiseDto dto);
 
-	ApiResponse deleteCategory(Long tktId);
 
 	ApiResponse closeTicketStutus(Long id);
 	
 	List<UserTicketResponseDto> getAllTicketByProductId(Long p_id);
+
+	ApiResponse deleteTicket(Long tktId);
 }

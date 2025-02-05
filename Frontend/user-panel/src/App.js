@@ -14,6 +14,7 @@ import PurchaseHistory from "./Screens/PurchasedHistory";
 import RaiseTicket from "./Screens/RaiseTicket";
 import Inquiry from "./Screens/Inquiry";
 import TicketAnswer from "./Screens/TicketAnswer";
+import TicketHistory from "./Screens/TicketHistory";
 
 function App() {
   return (
@@ -30,7 +31,7 @@ function App() {
           <Route path='newticket' element={<RaiseTicket/>}/>
           <Route path="history/purchases/user/2" element={<PurchaseHistory />} />
           <Route path='inquiry' element={<Inquiry/>}/>
-          <Route path="answer" element={<TicketAnswer />} />
+          <Route path="history/tickets" element={<TicketHistory />} /> 
         </Route>
       </Routes>
       <ToastContainer />
