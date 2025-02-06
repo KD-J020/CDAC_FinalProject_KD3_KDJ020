@@ -47,6 +47,7 @@ public class TicketController {
 		}
 	}
 	
+
 	@GetMapping("/all")
 	public ResponseEntity<?> getAllTickets()
 	{
@@ -78,7 +79,8 @@ public class TicketController {
 		}
 	}
 	
-	@GetMapping("/{tktId}")
+  
+	@GetMapping("ticket/{tktId}")
 	public ResponseEntity<?> getTicketDetails(@PathVariable @Min(1) @Max(100) Long tktId) {
 
 		// invoke service layer method
