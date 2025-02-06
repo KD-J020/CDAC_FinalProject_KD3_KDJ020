@@ -80,7 +80,7 @@ public class TicketController {
 	}
 	
   
-	@GetMapping("ticket/{tktId}")
+	@GetMapping("/{tktId}")
 	public ResponseEntity<?> getTicketDetails(@PathVariable @Min(1) @Max(100) Long tktId) {
 
 		// invoke service layer method
@@ -89,8 +89,8 @@ public class TicketController {
 
 	}
 	
-	@GetMapping("/tickets")
-	public ResponseEntity<?> getAllTicketByUserId(@RequestParam Long c_id) {
+	@GetMapping("/user/{c_id}")
+	public ResponseEntity<?> getAllTicketByUserId(@PathVariable Long c_id) {
 		try {
 			List<UserTicketResponseDto> tickets = ticketRaiseService.getAllTicketByCustomerId(c_id);
 			if(tickets.isEmpty())
@@ -104,7 +104,7 @@ public class TicketController {
 	
 
 
-	@GetMapping()
+	@GetMapping("/product")
 	public ResponseEntity<?> getAllTicketByProductId(@RequestParam Long p_id) {
 		try {
 			List<UserTicketResponseDto> tickets = ticketRaiseService.getAllTicketByProductId(p_id);

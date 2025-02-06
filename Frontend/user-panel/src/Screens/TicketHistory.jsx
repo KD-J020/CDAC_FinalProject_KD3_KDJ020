@@ -10,7 +10,7 @@ function TicketHistory() {
     useEffect(() => {
         const fetchTickets = async () => {
             try {
-                const response = await fetch(createUrl(`Home/tickets?c_id=${userId}`));
+                const response = await fetch(createUrl(`ticket/user/${userId}`));
                 const result = await response.json();
                 console.log("Fetched tickets data:", result);
 
