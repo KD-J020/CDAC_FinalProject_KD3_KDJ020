@@ -2,28 +2,29 @@ import { useEffect, useState } from "react";
 
 import ProductRow from "../Components/ProductRow";
 import { Link } from "react-router-dom";
+import { deleteProduct, getProducts } from "../Service/productService";
 
 function Product() {
   const [products, setProducts] = useState([]);
 
-  //   const onLoadProducts = async () => {
-  //     const result = await getProductList();
-  //     console.log(result);
-  //     if (result["status"] == "success") {
-  //       setProducts(result["data"]);
-  //     } else {
-  //       toast.error(result["error"]);
-  //     }
-  //   };
+  const onLoadProducts = async () => {
+    const result = await getProducts();
+    console.log(result);
+    setProducts(result);
+  };
 
-  //   useEffect(() => {
-  //     onLoadProducts();
-  //   }, []);
+  const onDelete = async (id) => {
+    const result = await deleteProduct(id);
+    onLoadProducts();
+  };
+
+  useEffect(() => {
+    onLoadProducts();
+  }, []);
 
   return (
-    <div>
-
-      <div className="container">
+    <div className="container-fluid">
+      <div className="container ">
         <h2 className="header">Products</h2>
 
         <Link className="btn btn-success mb-3" to="/home/add-product">
@@ -49,12 +50,15 @@ function Product() {
               {products.map((product) => {
                 return (
                   <ProductRow
+                    key={product["id"]}
                     id={product["id"]}
                     title={product["title"]}
-                    details={product["details"]}
+                    details={product["description"]}
                     price={product["price"]}
                     image={product["image"]}
-                    tags={product["tags"]}
+                    tags={""}
+                    cid={product["cid"]}
+                    onDelete={onDelete}
                   />
                 );
               })}
@@ -62,7 +66,6 @@ function Product() {
           </table>
         )}
       </div>
-
     </div>
   );
 }

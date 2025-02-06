@@ -51,7 +51,7 @@ function Navbar() {
                 </Link>
                 <ul className="dropdown-menu dropdown-menu-end">
                   <li>
-                    <Link className="dropdown-item" href="#">
+                    <Link className="dropdown-item" to="/home/profile">
                       Edit Profile
                     </Link>
                   </li>
