@@ -4,6 +4,7 @@ import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
+import org.springframework.http.HttpStatusCode;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.PutMapping;
@@ -29,8 +30,8 @@ import org.springframework.web.bind.annotation.RequestParam;
 
 
 @RestController
-@CrossOrigin( origins = "http://localhost:3000")
-@RequestMapping("/Home")
+@CrossOrigin( origins = "*")
+@RequestMapping("/ticket")
 public class TicketController {
 	@Autowired
 	private UserTicketRaiseService ticketRaiseService;
@@ -42,6 +43,37 @@ public class TicketController {
 			return ResponseEntity.status(HttpStatus.CREATED).body(ticketRaiseService.RaiseTicket(tktDto));
 		} catch (RuntimeException e) {
 			return ResponseEntity.status(HttpStatus.BAD_REQUEST).body(new ApiResponse(e.getMessage()));
+		}
+	}
+	
+	@GetMapping("/all")
+	public ResponseEntity<?> getAllTickets()
+	{
+		try {
+			return ResponseEntity.status(HttpStatus.OK).body(ticketRaiseService.getAllTicket());
+		}
+		catch (Exception e) {
+			 return ResponseEntity.status(HttpStatus.BAD_REQUEST).body(new ApiResponse(e.getMessage()));
+		}
+	}
+	@GetMapping("/notassigned")
+	public ResponseEntity<?> getNotAssignedTickets()
+	{
+		try {
+			return ResponseEntity.status(HttpStatus.OK).body(ticketRaiseService.getNotAssignTicket());
+		}
+		catch (Exception e) {
+			 return ResponseEntity.status(HttpStatus.BAD_REQUEST).body(new ApiResponse(e.getMessage()));
+		}
+	}
+	@GetMapping("/assigned")
+	public ResponseEntity<?> getAssignedTickets()
+	{
+		try {
+			return ResponseEntity.status(HttpStatus.OK).body(ticketRaiseService.getAssignTicket());
+		}
+		catch (Exception e) {
+			 return ResponseEntity.status(HttpStatus.BAD_REQUEST).body(new ApiResponse(e.getMessage()));
 		}
 	}
 	
@@ -68,18 +100,6 @@ public class TicketController {
 	}
 	
 
-//	@GetMapping()
-//	public ResponseEntity<?> getAllTicketByProductId(@RequestParam Long p_id) {
-//		try {
-//			List<UserTicketResponseDto> tickets = ticketRaiseService.getAllTicketByProductId(p_id);
-//			if(tickets.isEmpty())
-//				return ResponseEntity.status(HttpStatus.NOT_FOUND).body(new ApiResponse("No Tickets Found"));
-//			
-//			return ResponseEntity.ok(tickets);
-//		} catch (RuntimeException e) {
-//			return ResponseEntity.status(HttpStatus.NOT_FOUND).body(new ApiResponse(e.getMessage()));
-//		}
-//	}
 
 	@GetMapping()
 	public ResponseEntity<?> getAllTicketByProductId(@RequestParam Long p_id) {

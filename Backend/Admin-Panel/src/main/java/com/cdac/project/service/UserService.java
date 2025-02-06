@@ -32,5 +32,7 @@ public interface UserService {
 
 	ApiResponse ticketAnswer(Long id,String answer);
 
+	ApiResponse createExecutive(UserDto user);
+
 
 }

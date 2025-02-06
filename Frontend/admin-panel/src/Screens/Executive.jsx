@@ -1,6 +1,7 @@
 import { useEffect, useState } from "react";
 import { toast } from 'react-toastify';
 import { getExecutiveList, deleteExecutive } from "../Service/executive";
+import { Link } from "react-router-dom";
 
 function Executive() {
     const [executives, setExecutives] = useState([]);
@@ -22,24 +23,18 @@ function Executive() {
         onLoadExecutives();
         
       }
-
-
-
     const handleSortChange = (e) => {
         setSortOption(e.target.value);
     };
-
-   
-
     useEffect(() => {
         onLoadExecutives();
     }, [sortOption]);
-
     return (
         <div className="container mt-4">
             <h2 className="header"> Executives</h2>
+            <Link className='btn btn-success mb-3' to='/home/add-executive'>Add</Link>
+            {executives.length === 0 && <p>No executives found,please add new Executives</p>}
             <div className="d-flex justify-content-end mb-3">
-               
                 <select className="form-control w-auto h-5" value={sortOption} onChange={handleSortChange}>
                     <option value="active">Active Executives</option>
                     <option value="inactive">InActive Executives</option>
