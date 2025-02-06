@@ -17,6 +17,8 @@ import AddFeedback from "./Screens/AddFeedback";
 
 import TicketAnswer from "./Screens/TicketAnswer";
 import TicketHistory from "./Screens/TicketHistory";
+import PurchaseHistory from "./Screens/PurchasedHistory";
+import TicketDetails from "./Screens/TicketDetails";
 
 function App() {
   return (
@@ -42,7 +44,8 @@ function App() {
           <Route path='newticket' element={<RaiseTicket/>}/>
           <Route path="history/purchases/user/2" element={<PurchaseHistory />} />
           <Route path='inquiry' element={<Inquiry/>}/>
-          <Route path="history/tickets" element={<TicketHistory />} /> 
+          <Route path="history/tickets/" element={<TicketHistory />} /> 
+          <Route path="history/tickets/:id" element={<TicketDetails />} />
         </Route>
       </Routes>
 
