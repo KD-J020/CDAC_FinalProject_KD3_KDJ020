@@ -20,6 +20,5 @@ public class UserTicketResponseDto extends BaseDTO {
 	private Long product_id;
 	private String  answer ;	
 	private String executive_name;
-	private Long product_id;
 	private String product_name; 
 }

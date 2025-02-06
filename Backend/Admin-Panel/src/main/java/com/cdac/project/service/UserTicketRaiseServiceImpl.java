@@ -39,11 +39,6 @@ public class UserTicketRaiseServiceImpl implements UserTicketRaiseService {
 	@Override
 	public ApiResponse RaiseTicket(UserTicketRaiseDto tckRaiseDto) {
 
-		User user  = userRepository.findById(tckRaiseDto.getUser_id()).orElseThrow(()-> new ResourceNotFoundException("Invalid product"));
-		Product p=productRepository.findById(tckRaiseDto.getProduct_id()).orElseThrow(() -> new ResourceNotFoundException("Invalid product"));
-		Ticket tkt = modelMapper.map(tckRaiseDto, Ticket.class);
-		tkt.setCustomer(user);
-		tkt.setProduct(p);
 		User user  = userRepository.findById(tckRaiseDto.getUser_id()).orElseThrow();
 		Product product = productRepository.findById(tckRaiseDto.getProduct_id()).orElseThrow();
 		Ticket tkt = modelMapper.map(tckRaiseDto, Ticket.class);
