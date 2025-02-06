@@ -9,7 +9,7 @@ const FeedbackList = () => {
   useEffect(() => {
     // Fetch feedbacks from the backend
     axios
-      .get("http://localhost:8090/feedback") // API endpoint to get all feedbacks
+      .get(createUrl("feedback")) // API endpoint to get all feedbacks
       .then((response) => {
         setFeedbacks(response.data); // Set the feedbacks state with the response data
       })

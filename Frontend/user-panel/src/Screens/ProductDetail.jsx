@@ -1,6 +1,7 @@
 import { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
 import axios from "axios";
+import { createUrl } from "../utils";
 
 function ProductDetail() {
   const { id } = useParams(); // Extract the ID from the URL
@@ -11,7 +12,7 @@ function ProductDetail() {
 
   const fetchProductDetails = async () => {
     try {
-      const response = await axios.get(`http://localhost:8090/product/${id}`); // Fetch product details
+      const response = await axios.get(createUrl(`product/${id}`)); // Fetch product details
       console.log(response.data);
       setProduct(response.data);
     } catch (err) {

@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from "react";
 import { Container } from "react-bootstrap";
 import TicketHistoryComp from "../Components/TicketHistoryComp";
+import { createUrl } from "../utils";
 
 function TicketHistory() {
     const [tickets, setTickets] = useState([]);
@@ -9,7 +10,7 @@ function TicketHistory() {
     useEffect(() => {
         const fetchTickets = async () => {
             try {
-                const response = await fetch(`http://localhost:8090/Home/tickets?c_id=${userId}`);
+                const response = await fetch(createUrl(`Home/tickets?c_id=${userId}`));
                 const result = await response.json();
                 console.log("Fetched tickets data:", result);
 

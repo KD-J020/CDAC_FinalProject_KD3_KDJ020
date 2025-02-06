@@ -31,7 +31,7 @@ function Sidebar() {
         </li>
         <li className="nav-item">
           <Link to="/home/add-feedback" className="nav-link text-white">Submit Feedback</Link>
-
+          </li>
         <li className="nav-item dropdown">
           <Dropdown>
               <Dropdown.Toggle

@@ -2,6 +2,7 @@ import { useState } from "react";
 import { Link, useNavigate } from "react-router-dom";
 import { toast } from "react-toastify";
 import "../Styles/Register.css";
+import { createUrl } from "../utils";
 
 function Register() {
   const [firstName, setFirstName] = useState("");
@@ -10,6 +11,7 @@ function Register() {
   const [password, setPassword] = useState("");
   const [confirmPassword, setConfirmPassword] = useState("");
   const [phone, setPhone] = useState("");
+  
 
   const navigate = useNavigate();
 
@@ -24,7 +26,7 @@ function Register() {
     };
 
     try {
-        const response = await fetch("http://localhost:8090/user/post", {
+        const response = await fetch(createUrl(`user/post"`), {
             method: "POST",
             headers: {
                 "Content-Type": "application/json",

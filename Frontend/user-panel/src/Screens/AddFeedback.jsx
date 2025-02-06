@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import axios from "axios";
 import { toast } from "react-toastify";
 import { useNavigate } from "react-router-dom";
+import { createUrl } from "../utils";
 
 const AddFeedback = () => {
   const [productId, setProductId] = useState("");
@@ -29,7 +30,7 @@ const AddFeedback = () => {
 
     // Send POST request to backend
     axios
-      .post(`http://localhost:8090/feedback/1/${productId}`, feedbackData) // 1 is the userId, change it dynamically if needed
+      .post(createUrl(`feedback/1/${productId}`, feedbackData)) // 1 is the userId, change it dynamically if needed
       .then((response) => {
         toast.success("Feedback submitted successfully!");
         navigate("/home/feedback-list"); // Navigate back to the feedback list
