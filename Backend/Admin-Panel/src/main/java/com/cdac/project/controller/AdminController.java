@@ -20,7 +20,7 @@ import org.springframework.web.bind.annotation.PathVariable;
 
 @CrossOrigin(origins = "*")
 @RestController
-@RequestMapping("/Admin")
+@RequestMapping("/admin")
 public class AdminController {
 	@Autowired
 	private AdminService adminService;

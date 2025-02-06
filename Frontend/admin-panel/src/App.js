@@ -1,8 +1,6 @@
 
 import './App.css';
-
 import Home from './Screens/Home';
-
 import Login from './Screens/Login';
 import Ticket from './Screens/Ticket';
 import Customer from './Screens/Customer';
@@ -16,8 +14,12 @@ import Executive from './Screens/Executive';
 import AddCategory from './Components/AddCategory';
 import EditCategoty from './Components/EditCategoty';
 import Categories from './Screens/Categories';
+
+import AddExecutive from './Components/AddExecutive';
+
 import EditProduct from './Components/EditProduct';
 import Profile from './Screens/Profile';
+
 function App() {
   return (
     <div>
@@ -35,8 +37,12 @@ function App() {
           <Route path='categories' element={<Categories/>}/>
           <Route path='add-category' element={<AddCategory/>}/>
           <Route path='edit-category/:id' element={<EditCategoty/>}/>
+
+          <Route path='add-executive' element={<AddExecutive/>}/>
+
           <Route path='edit-product/:id' element={<EditProduct/>}/>
           <Route path='profile' element={<Profile/>}/>
+
         </Route>
       </Routes>
 

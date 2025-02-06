@@ -1,13 +1,10 @@
 package com.cdac.project.service;
-
 import java.util.List;
 import java.util.Optional;
 import java.util.stream.Collectors;
-
 import org.modelmapper.ModelMapper;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
-
 import com.cdac.project.custom_exception.ResourceNotFoundException;
 import com.cdac.project.dto.ApiResponse;
 import com.cdac.project.dto.UserTicketRaiseDto;
@@ -41,12 +38,19 @@ public class UserTicketRaiseServiceImpl implements UserTicketRaiseService {
 
 	@Override
 	public ApiResponse RaiseTicket(UserTicketRaiseDto tckRaiseDto) {
+
+		User user  = userRepository.findById(tckRaiseDto.getUser_id()).orElseThrow(()-> new ResourceNotFoundException("Invalid product"));
+		Product p=productRepository.findById(tckRaiseDto.getProduct_id()).orElseThrow(() -> new ResourceNotFoundException("Invalid product"));
+		Ticket tkt = modelMapper.map(tckRaiseDto, Ticket.class);
+		tkt.setCustomer(user);
+		tkt.setProduct(p);
 		User user  = userRepository.findById(tckRaiseDto.getUser_id()).orElseThrow();
 		Product product = productRepository.findById(tckRaiseDto.getProduct_id()).orElseThrow();
 		Ticket tkt = modelMapper.map(tckRaiseDto, Ticket.class);
 		tkt.setCustomer(user);
 		tkt.setProduct(product);
-		//tkt.setDescription(tckRaiseDto.getDescription());
+		tkt.setDescription(tckRaiseDto.getDescription());
+
 		tkt.setStatus(TicketStatus.PENDING);
 		Ticket persistentTicket = tktRepository.save(tkt);
 		
@@ -117,8 +121,6 @@ public class UserTicketRaiseServiceImpl implements UserTicketRaiseService {
 		modelMapper.map(dto, ticketEntity);
 		tktRepository.save(ticketEntity);
 		return new ApiResponse("Ticket updated !");
-		
-
 	}
 
 	@Override
@@ -140,6 +142,72 @@ public class UserTicketRaiseServiceImpl implements UserTicketRaiseService {
 		}
 		
 		return new ApiResponse("Ticket Not Found");
+	}
+
+	@Override
+	public List<UserTicketResponseDto> getAllTicket() {
+		return tktRepository.findAll()
+		.stream()
+		.map(ticket-> {
+			UserTicketResponseDto dto= modelMapper.map(ticket, UserTicketResponseDto.class);
+			if(ticket.getCustomer()!=null)
+			{
+				dto.setUser_id(ticket.getCustomer().getId());
+			}
+			if(ticket.getExecutive()!=null)
+			{
+				dto.setExecutor_id(ticket.getExecutive().getId());
+			}
+			if(ticket.getProduct()!=null)
+			{
+				dto.setProduct_id(ticket.getProduct().getId());
+			}
+			return dto;
+			}).collect(Collectors.toList());
+	}
+
+	@Override
+	public List<UserTicketResponseDto> getNotAssignTicket() {
+		return tktRepository.findAll()
+				.stream()
+				.map(ticket-> {
+					UserTicketResponseDto dto= modelMapper.map(ticket, UserTicketResponseDto.class);
+					if(ticket.getCustomer()!=null)
+					{
+						dto.setUser_id(ticket.getCustomer().getId());
+					}
+					if(ticket.getExecutive()!=null)
+					{
+						dto.setExecutor_id(ticket.getExecutive().getId());
+					}
+					if(ticket.getProduct()!=null)
+					{
+						dto.setProduct_id(ticket.getProduct().getId());
+						}
+					return dto;
+					}).filter(userTicket-> userTicket.getExecutor_id()==null)
+				.collect(Collectors.toList());
+	}
+	@Override
+	public List<UserTicketResponseDto> getAssignTicket() {
+		return tktRepository.findAll()
+				.stream()
+				.map( ticket-> {
+					UserTicketResponseDto dto= modelMapper.map(ticket, UserTicketResponseDto.class);
+					if(ticket.getCustomer()!=null)
+					{
+						dto.setUser_id(ticket.getCustomer().getId());
+					}
+					if(ticket.getExecutive()!=null)
+					{
+						dto.setExecutor_id(ticket.getExecutive().getId());
+					}
+					if(ticket.getProduct()!=null)
+					{
+						dto.setProduct_id(ticket.getProduct().getId());}
+					return dto;
+					}).filter(userTicket-> userTicket.getExecutor_id()!=null)
+				.collect(Collectors.toList());
 	}
 	
 	

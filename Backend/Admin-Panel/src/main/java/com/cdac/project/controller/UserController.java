@@ -42,6 +42,15 @@ public class UserController {
 	        } catch (Exception e) {
 	            return ResponseEntity.status(HttpStatus.BAD_REQUEST).body(new ApiResponse("Registration failed: " + e.getMessage()));
 	        }
+	}
+	@PostMapping("/executive")
+	public ResponseEntity<?> postExecutive(@RequestBody UserDto user) {
+		 try {
+	            userService.createExecutive(user);
+	            return ResponseEntity.status(HttpStatus.CREATED).body(new ApiResponse("User registered successfully"));
+	        } catch (Exception e) {
+	            return ResponseEntity.status(HttpStatus.BAD_REQUEST).body(new ApiResponse("Registration failed: " + e.getMessage()));
+	        }
 		
 	}
 	
