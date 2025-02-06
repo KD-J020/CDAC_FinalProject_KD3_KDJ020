@@ -20,7 +20,9 @@ import com.cdac.project.service.FeedbackService;
 
 import io.swagger.v3.oas.models.responses.ApiResponse;
 
-@CrossOrigin(origins = "*")
+
+
+@CrossOrigin(origins = "http://localhost:3000")
 @RestController
 @RequestMapping("/feedback")
 public class FeedbackController {

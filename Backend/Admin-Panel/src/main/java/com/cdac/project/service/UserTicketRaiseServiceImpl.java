@@ -42,8 +42,11 @@ public class UserTicketRaiseServiceImpl implements UserTicketRaiseService {
 	@Override
 	public ApiResponse RaiseTicket(UserTicketRaiseDto tckRaiseDto) {
 		User user  = userRepository.findById(tckRaiseDto.getUser_id()).orElseThrow();
+		Product product = productRepository.findById(tckRaiseDto.getProduct_id()).orElseThrow();
 		Ticket tkt = modelMapper.map(tckRaiseDto, Ticket.class);
 		tkt.setCustomer(user);
+		tkt.setProduct(product);
+		//tkt.setDescription(tckRaiseDto.getDescription());
 		tkt.setStatus(TicketStatus.PENDING);
 		Ticket persistentTicket = tktRepository.save(tkt);
 		
@@ -53,16 +56,23 @@ public class UserTicketRaiseServiceImpl implements UserTicketRaiseService {
 
 	@Override
 	public List<UserTicketResponseDto> getAllTicketByCustomerId(Long c_id) {
-		User user  = userRepository.findById(c_id).orElseThrow();
-		if(user != null) {
-			return 	tktRepository.findAllByCustomerId(c_id)
-					.stream()
-					.map(ticket -> modelMapper.map(ticket, UserTicketResponseDto.class))
-					.collect(Collectors.toList());
-		} else {
-			throw new ResourceNotFoundException("Invalid Customer ID !!!!!!!!");
-		}
+	    User user = userRepository.findById(c_id).orElseThrow(() -> 
+	        new ResourceNotFoundException("Invalid Customer ID!"));
+
+	    return tktRepository.findAllByCustomerId(c_id)
+	            .stream()
+	            .map(ticket -> {
+	                UserTicketResponseDto dto = modelMapper.map(ticket, UserTicketResponseDto.class);
+	                dto.setProduct_id(ticket.getProduct() != null ? ticket.getProduct().getId() : null);
+	                dto.setProduct_name(ticket.getProduct() != null ? ticket.getProduct().getTitle() : null);
+	                dto.setExecutive_name(ticket.getExecutive() != null ? 
+	                    ticket.getExecutive().getFirstName() + " " + ticket.getExecutive().getLastName() : 
+	                    "Not Assigned");
+	                return dto;
+	            })
+	            .collect(Collectors.toList());
 	}
+
 
 	@Override
 	public List<UserTicketResponseDto> getAllTicketByProductId(Long p_id) {
@@ -112,7 +122,7 @@ public class UserTicketRaiseServiceImpl implements UserTicketRaiseService {
 	}
 
 	@Override
-	public ApiResponse deleteCategory(Long tktId) {
+	public ApiResponse deleteTicket(Long tktId) {
 		if (tktRepository.existsById(tktId)) {
 			tktRepository.deleteById(tktId);
 			return new ApiResponse("Deleted Ticket Details");

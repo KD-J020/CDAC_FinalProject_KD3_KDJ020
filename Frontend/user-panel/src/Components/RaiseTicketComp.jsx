@@ -17,7 +17,7 @@ function RaiseTicketComp({handleOnSubmit, handleOnChange, ticketDetails, setTick
                         <option value="" disabled>Select Product</option>
                         {products.map((product) => (
                             <option key={product.id} value={product.id}>
-                                {product.name}
+                                {product.title}
                             </option>
                         ))}
                     </Form.Select>
@@ -32,9 +32,9 @@ function RaiseTicketComp({handleOnSubmit, handleOnChange, ticketDetails, setTick
             </Form.Group>
 
             <Form.Group className="mb-3" as= {Row}>
-              <Form.Label column sm={3}>Details</Form.Label>
+              <Form.Label column sm={3}>Description</Form.Label>
               <Col sm={9}>
-                  <Form.Control as="textarea" name="details" rows= "5" value={ticketDetails.details} onChange={handleOnChange} />
+                  <Form.Control as="textarea" name="description" rows= "5" value={ticketDetails.description} onChange={handleOnChange} />
               </Col>
             </Form.Group>
 
