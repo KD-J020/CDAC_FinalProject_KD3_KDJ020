@@ -1,21 +1,23 @@
-import React from "react";
 import { Link } from "react-router-dom";
 
-const ProductCard = ({ id, name, description, image }) => {
+function ProductCard({ myproduct }) {
+  // Check if product is undefined or missing image property
+  const imageUrl = myproduct?.image || "https://via.placeholder.com/150"; // Fallback image URL
+  console.log(myproduct);
   return (
-    <div className="col-sm-6 col-md-4 col-lg-3">
+    <div className="col-md-4">
       <div className="card">
-        <Link to={`/Home/product/${id}`}>
-          <img src={image} className="card-img-top" alt={name} />
-          <div className="card-body">
-            <h5 className="card-title">{name}</h5>
-            <p className="card-text">{description}</p>
-            <button className="btn btn-primary">Buy Now</button>
-          </div>
-        </Link>
+        <img src={imageUrl} className="card-img-top" alt={myproduct?.name || "Product"} />
+        <div className="card-body">
+          <h5 className="card-title">{myproduct?.name || "Product Name"}</h5>
+          <p className="card-text">{myproduct?.description || "Product description not available."}</p>
+          <Link to={`/home/product/${myproduct?.id}`} className="btn btn-primary">
+            View Details
+          </Link>
+        </div>
       </div>
     </div>
   );
-};
+}
 
 export default ProductCard;

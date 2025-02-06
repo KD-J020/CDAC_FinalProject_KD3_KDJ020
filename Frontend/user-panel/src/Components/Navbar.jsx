@@ -1,9 +1,10 @@
 import { Link } from "react-router-dom";
+
 function Navbar() {
   return (
     <>
       <nav
-        className="navbar navbar-expand-lg navbar-light "
+        className="navbar navbar-expand-lg navbar-light"
         style={{ backgroundColor: "#438a84" }}
       >
         <div className="container-fluid w-100">
@@ -20,18 +21,15 @@ function Navbar() {
           >
             <span className="navbar-toggler-icon"></span>
           </button>
-          <div
-            className="collapse navbar-collapse justify-content-end"
-            id="navbarNav"
-          >
+          <div className="collapse navbar-collapse justify-content-end" id="navbarNav">
             <ul className="navbar-nav">
               <li className="nav-item">
-                <Link className="nav-link active" aria-current="page" to={""}>
+                <Link className="nav-link active" aria-current="page" to={"/home"}>
                   Home
                 </Link>
               </li>
               <li className="nav-item">
-                <Link className="nav-link active" aria-current="page" to={""}>
+                <Link className="nav-link active" aria-current="page" to={"/home/about"}>
                   About
                 </Link>
               </li>

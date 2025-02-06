@@ -10,11 +10,13 @@ import org.springframework.web.bind.annotation.PatchMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
+import com.cdac.project.entity.Admin;
 import com.cdac.project.service.AdminService;
 import com.cdac.project.service.UserTicketRaiseService;
 import org.springframework.web.bind.annotation.PutMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.PathVariable;
+
 
 @CrossOrigin(origins = "*")
 @RestController
@@ -24,6 +26,15 @@ public class AdminController {
 	private AdminService adminService;
 	@Autowired
 	UserTicketRaiseService userTicketService;
+	
+	@PatchMapping("/{id}")
+	public ResponseEntity<?> putMethodName(@PathVariable Long id, @RequestBody Admin admin) {
+		//TODO: process PUT request
+		
+		return ResponseEntity.status(HttpStatus.OK).body(adminService.updateAdmin(id,admin).getMessage());
+		
+	}
+	
 	@GetMapping("/{id}")
 	public ResponseEntity<?> getAdminDetails(@PathVariable Long id)
 	{

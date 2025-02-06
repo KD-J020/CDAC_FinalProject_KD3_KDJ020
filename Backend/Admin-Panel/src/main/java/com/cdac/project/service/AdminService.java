@@ -9,4 +9,6 @@ public interface AdminService {
 
 	public ApiResponse assignTicket(Long eid,Long tid);
 
+	public ApiResponse updateAdmin(Long id, Admin admin);
+
 }

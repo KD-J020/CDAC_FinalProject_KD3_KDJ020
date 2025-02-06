@@ -1,42 +1,50 @@
-import React, { useEffect, useState } from "react";
+import { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
+import axios from "axios";
+import { createUrl } from "../utils";
 
-const ProductDetail = () => {
-  const { id } = useParams(); 
+function ProductDetail() {
+  const { id } = useParams(); // Extract the ID from the URL
   const [product, setProduct] = useState(null);
+  const [loading, setLoading] = useState(true);
+  const [error, setError] = useState(null);
+  
+
+  const fetchProductDetails = async () => {
+    try {
+      const response = await axios.get(createUrl(`product/${id}`)); // Fetch product details
+      console.log(response.data);
+      setProduct(response.data);
+    } catch (err) {
+      setError("Failed to fetch product details.");
+    } finally {
+      setLoading(false);
+    }
+  };
 
   useEffect(() => {
-    
-    const fetchProductDetails = () => {
-     
-      const products = [
-        { id: 1, name: "Product 1", description: "Full details of Product 1", specs: "Specs of Product 1" },
-        { id: 2, name: "Product 2", description: "Full details of Product 2", specs: "Specs of Product 2" },
-        { id: 3, name: "Product 3", description: "Full details of Product 3", specs: "Specs of Product 3" },
-        { id: 4, name: "Product 4", description: "Full details of Product 4", specs: "Specs of Product 4" },
-        { id: 5, name: "Product 5", description: "Full details of Product 5", specs: "Specs of Product 5" },
-      ];
-
-      const product = products.find((p) => p.id === parseInt(id));
-      setProduct(product);
-    };
-
     fetchProductDetails();
-  }, [id]);
+  },[id]);
+ // Runs when `id` changes
 
-  if (!product) {
-    return <div>Loading...</div>;
-  }
+  if (loading) return <div>Loading product details...</div>;
+  if (error) return <div className="alert alert-danger">{error}</div>;
 
   return (
     <div className="container mt-5">
-      <h2>{product.name}</h2>
-      <p>{product.description}</p>
-      <h4>Specifications</h4>
-      <p>{product.specs}</p>
-      
+      {product ? (
+        <div>
+          <h2>{product.title}</h2>  
+          <p><strong>Product ID:</strong> {product.id}</p>
+          <p><strong>Created On:</strong> {product.createdOn}</p>
+          <p><strong>Updated On:</strong> {product.updatedOn}</p>
+          <p><strong>Category ID:</strong> {product.cid || "No category assigned"}</p>
+        </div>
+      ) : (
+        <p>Product not found</p>
+      )}
     </div>
   );
-};
+}
 
 export default ProductDetail;
