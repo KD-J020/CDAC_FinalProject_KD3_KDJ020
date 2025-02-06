@@ -37,3 +37,14 @@ export async function deleteCustomer(id) {
     }
     
 }
+
+export async function getExecutiveByTicketId(uid) {
+    try{
+        const url=createUrl(`user/${uid}`)
+        const response=await axios.get(url)
+        return response
+    }catch(ex)
+    {
+        return{status:'error',error:ex}
+    }
+}   

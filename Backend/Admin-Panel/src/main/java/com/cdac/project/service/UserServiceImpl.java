@@ -1,13 +1,10 @@
 package com.cdac.project.service;
-
 import java.util.List;
 import java.util.Optional;
 import java.util.stream.Collectors;
-
 import org.modelmapper.ModelMapper;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
-
 import com.cdac.project.custom_exception.ResourceNotFoundException;
 import com.cdac.project.dto.ApiResponse;
 import com.cdac.project.dto.UserDto;
@@ -16,12 +13,9 @@ import com.cdac.project.entity.Cart;
 import com.cdac.project.entity.Ticket;
 import com.cdac.project.entity.User;
 import com.cdac.project.entity.UserRole;
-import com.cdac.project.repository.CartRepository;
 import com.cdac.project.repository.TicketRepository;
 import com.cdac.project.repository.UserRepository;
-
 import jakarta.transaction.Transactional;
-
 @Service
 @Transactional
 public class UserServiceImpl implements UserService {
@@ -51,7 +45,14 @@ public class UserServiceImpl implements UserService {
             return new ApiResponse("Failed to create user. Please try again.");
         }
 	}
-
+	@Override
+	public ApiResponse createExecutive(UserDto user) {
+		 User userEntity = modelMapper.map(user, User.class);
+		 userEntity.setRole(UserRole.EXECUTIVE);
+		 userEntity.setActive(true);
+		 User persistentUser=userRepository.save(userEntity);
+		 return new ApiResponse("New Executive Added with ID = " + persistentUser.getId());
+	}
 	@Override
 	public List<UserResponseDto> getAllUsers() {
 		// TODO Auto-generated method stub
@@ -60,7 +61,6 @@ public class UserServiceImpl implements UserService {
 				.map(user -> modelMapper.map(user, UserResponseDto.class))
 				.collect(Collectors.toList());
 	}
-
 	@Override
 	public UserResponseDto getUserById(Long userId) {
 		// TODO Auto-generated method stub
@@ -69,7 +69,6 @@ public class UserServiceImpl implements UserService {
 				new ResourceNotFoundException("Invalid user ID !!!!"));
 		return modelMapper.map(userEntity, UserResponseDto.class);
 	}
-
 	@Override
 	public ApiResponse updateUser(Long userId, UserDto userDto) {
 		// TODO Auto-generated method stub
@@ -164,5 +163,7 @@ public class UserServiceImpl implements UserService {
 		ticket.setAnswer(answer);
 		return new ApiResponse("Answer added successfully");
 	}
+
+	
 
 }

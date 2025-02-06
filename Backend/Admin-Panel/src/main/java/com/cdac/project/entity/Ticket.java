@@ -1,11 +1,14 @@
 package com.cdac.project.entity;
 
+import org.hibernate.validator.constraints.Length;
+
 import com.fasterxml.jackson.annotation.JsonIgnore;
 
 import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
 import jakarta.persistence.EnumType;
 import jakarta.persistence.Enumerated;
+import jakarta.persistence.FetchType;
 import jakarta.persistence.JoinColumn;
 import jakarta.persistence.ManyToOne;
 import jakarta.persistence.OneToOne;
@@ -29,16 +32,17 @@ public class Ticket extends BaseEntity {
 	
 	@Enumerated(EnumType.STRING)
 	private TicketStatus status;
-	@Column(name="answer")
+	@Column(name="answer", length=500)
+	
 	private String answer;
 	
 	
-	@ManyToOne
+	@ManyToOne(fetch = FetchType.LAZY)
 	@JoinColumn(name = "customer_id")
 	@JsonIgnore
 	private User customer;
 	
-	@ManyToOne
+	@ManyToOne(fetch = FetchType.LAZY)
 	@JoinColumn(name = "executive_id")
 	@JsonIgnore
 	private User executive;
