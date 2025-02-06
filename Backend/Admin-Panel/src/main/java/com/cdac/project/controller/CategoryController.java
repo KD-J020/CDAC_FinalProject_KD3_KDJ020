@@ -44,7 +44,7 @@ public ResponseEntity<?> getCategory() {
     	return ResponseEntity.ok(list);
 }
 @GetMapping("/category/{id}")
-public ResponseEntity<?>getCategoryById(@RequestParam Long id) {
+public ResponseEntity<?>getCategoryById(@PathVariable Long id) {
     try {
     	CategoryDto categoryDto=categoryService.getCategoryById(id);
     	return ResponseEntity.ok(categoryDto);

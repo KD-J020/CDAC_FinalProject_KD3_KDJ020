@@ -42,5 +42,20 @@ public class AdminServiceImpl implements AdminService {
 		 ticket.setStatus(TicketStatus.INPROGRESS);
 		return new ApiResponse("Ticket Assign to execuore Id "+ executorId);
 	}
+	
+	@Override
+	public ApiResponse updateAdmin(Long id, Admin admin) {
+		// TODO Auto-generated method stub
+		Optional<Admin> myAdmin = adminRepository.findById(id);
+		if(myAdmin.isPresent()) {
+			myAdmin.get().setFirstName(admin.getFirstName());
+			myAdmin.get().setLastName(admin.getLastName());
+			myAdmin.get().setEmail(admin.getEmail());
+			myAdmin.get().setPhone(admin.getPhone());
+			myAdmin.get().setPassword(admin.getPassword());
+			return new ApiResponse("Admin updated");
+		}
+		return new ApiResponse("Admin not updated");
+	}
 
 }
