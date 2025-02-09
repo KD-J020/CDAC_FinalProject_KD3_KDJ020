@@ -7,7 +7,7 @@ import { useEffect, useState } from "react";
 //   updateCategory,
 // } from "../Service/categoryService";
 import TicketRow from "../../Components/Executive/TicketRow";
-import { getTickets } from "../../Service/ExecutiveTicketService";
+import { getTickets } from "../../service/ExecutiveTicketService";
 
 function Tickets() {
   // used to load all the categories

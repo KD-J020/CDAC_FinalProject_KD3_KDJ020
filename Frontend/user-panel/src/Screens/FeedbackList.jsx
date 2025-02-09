@@ -1,8 +1,8 @@
 import React, { useEffect, useState } from "react";
 import { toast } from "react-toastify";
 import { Link } from "react-router-dom";
-import { fetchAllFeedbacks } from "../Service/feedbackService";
-import axios from "axios";
+import { fetchAllFeedbacks } from "../service/feedbackService";
+
 import { createUrl } from "../utils";
 
 const FeedbackList = () => {
@@ -21,7 +21,7 @@ const FeedbackList = () => {
       .catch((error) => {
         toast.error("Failed to load feedbacks.");
         console.error(result.error);
-      })} else {
+      } else {
         setFeedbacks(result);
       }
     };
