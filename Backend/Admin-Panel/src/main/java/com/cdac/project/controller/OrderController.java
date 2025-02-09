@@ -17,7 +17,7 @@ import com.cdac.project.dto.OrderResponseDto;
 import com.cdac.project.service.OrderService;
 
 @RestController
-@CrossOrigin( origins = "http://localhost:3000")
+@CrossOrigin( origins = "*")
 @RequestMapping("/home/History/Purchases")
 public class OrderController {
 	@Autowired

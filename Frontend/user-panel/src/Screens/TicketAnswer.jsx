@@ -8,7 +8,8 @@ function TicketAnswer() {
       "I placed an order on December 1st, but I haven't received my product yet. Can you provide an update?",
     createdDate: "2024-12-01",
     status: "Resolved",
-    adminAnswer: "The product has been shipped and should arrive by December 31st. Apologies for the delay.",
+    adminAnswer:
+      "The product has been shipped and should arrive by December 31st. Apologies for the delay.",
   };
 
   const handleCloseTicket = () => {
@@ -52,7 +53,7 @@ function TicketAnswer() {
           <strong>Status:</strong>{" "}
           <span
             style={{
-              color: ticket.status === "Resolved" ? "green" : "red",
+              color: ticket.status === "RESOLVE" ? "green" : "red",
               fontWeight: "bold",
             }}
           >

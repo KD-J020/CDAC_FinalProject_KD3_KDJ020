@@ -92,8 +92,21 @@ public class UserTicketRaiseServiceImpl implements UserTicketRaiseService {
 		if(user != null) {
 			return 	tktRepository.findAllByExecutiveId(e_id)
 					.stream()
-					.map(ticket -> modelMapper.map(ticket, UserTicketResponseDto.class))
-					.collect(Collectors.toList());
+					.map( ticket-> {
+						UserTicketResponseDto dto= modelMapper.map(ticket, UserTicketResponseDto.class);
+						if(ticket.getCustomer()!=null)
+						{
+							dto.setUser_id(ticket.getCustomer().getId());
+						}
+						if(ticket.getExecutive()!=null)
+						{
+							dto.setExecutor_id(ticket.getExecutive().getId());
+						}
+						if(ticket.getProduct()!=null)
+						{
+							dto.setProduct_id(ticket.getProduct().getId());}
+						return dto;
+						}).collect(Collectors.toList());
 		} else {
 			throw new ResourceNotFoundException("Invalid Executive ID !!!!!!!!");
 		}
@@ -101,10 +114,21 @@ public class UserTicketRaiseServiceImpl implements UserTicketRaiseService {
 
 	@Override
 	public UserTicketResponseDto getTicketDetails(Long tktId) {
-		Ticket tktEntity = tktRepository.findById(tktId)
-				.orElseThrow(() -> new ResourceNotFoundException("Invalid Ticket ID!!!"));
-		
-		return modelMapper.map(tktEntity, UserTicketResponseDto.class);
+		 return tktRepository.findById(tktId)
+			        .map(ticket -> {
+			            UserTicketResponseDto dto = modelMapper.map(ticket, UserTicketResponseDto.class);
+			            if (ticket.getCustomer() != null) {
+			                dto.setUser_id(ticket.getCustomer().getId());
+			            }
+			            if (ticket.getExecutive() != null) {
+			                dto.setExecutor_id(ticket.getExecutive().getId());
+			            }
+			            if (ticket.getProduct() != null) {
+			                dto.setProduct_id(ticket.getProduct().getId());
+			            }
+			            return dto;
+			        })
+			        .orElseThrow(() -> new ResourceNotFoundException("Ticket not found with ID: " + tktId));
 	}
 	
 	
@@ -113,7 +137,9 @@ public class UserTicketRaiseServiceImpl implements UserTicketRaiseService {
 		Ticket ticketEntity=tktRepository.findById(tktId)
 				.orElseThrow(() -> new ResourceNotFoundException("Invalid Ticket Id -update Failed!!!"));
 		//apply the changes (like patch)
+		
 		modelMapper.map(dto, ticketEntity);
+		ticketEntity.setStatus(TicketStatus.RESOLVE);
 		tktRepository.save(ticketEntity);
 		return new ApiResponse("Ticket updated !");
 	}
@@ -202,6 +228,19 @@ public class UserTicketRaiseServiceImpl implements UserTicketRaiseService {
 					return dto;
 					}).filter(userTicket-> userTicket.getExecutor_id()!=null)
 				.collect(Collectors.toList());
+	}
+
+	@Override
+	public ApiResponse answerTicket(Long tid, UserTicketResponseDto ticket) {
+		Ticket ticketEntity=tktRepository.findById(tid)
+				.orElseThrow(() -> new ResourceNotFoundException("Invalid Ticket Id -update Failed!!!"));
+		//apply the changes (like patch)
+		
+		modelMapper.map(ticket, ticketEntity);
+		ticketEntity.setStatus(TicketStatus.RESOLVE);
+		ticketEntity.setAnswer(ticket.getAnswer());
+		tktRepository.save(ticketEntity);
+		return new ApiResponse("Ticket updated !");
 	}
 	
 	

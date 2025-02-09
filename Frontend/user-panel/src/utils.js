@@ -1,3 +1,4 @@
+import { config } from './service/config';
 import { config } from "./service/config";
 
 export function createUrl(path) {
