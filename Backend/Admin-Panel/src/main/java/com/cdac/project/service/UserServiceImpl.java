@@ -81,6 +81,7 @@ public class UserServiceImpl implements UserService {
 			user.setEmail(userDto.getEmail());
 			user.setPassword(userDto.getPassword());
 			user.setPhone(userDto.getPassword());
+			user.setImage(userDto.getImage());		
 			user.setActive(true);
 			
 			return new ApiResponse("User Updated !");

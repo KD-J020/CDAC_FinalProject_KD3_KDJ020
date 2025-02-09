@@ -1,5 +1,6 @@
 import "../Styles/login-style.css";
 import { Form, Button, Card, Container, Row, Col } from 'react-bootstrap';
+import { Link } from "react-router-dom";
 import 'bootstrap/dist/css/bootstrap.min.css';
 import PropTypes from "prop-types";
 
@@ -16,18 +17,31 @@ function LoginComp({handleOnChange,handleOnSubmit,formSwitcher, email, pass}){
 
             <Form.Group controlId="formBasicPassword" className="mb-3">
             <Form.Label>Password</Form.Label>
+            
             <Form.Control type="password" name="password" value={pass} onChange={handleOnChange} placeholder="Password" />
             </Form.Group>
-
+            <Link to="#" onClick={() => formSwitcher("reset")}>Forget Password?</Link>
+            <div className="d-flex justify-content-center gap-2">
             <Button variant="primary" type="submit" className="w-100">
-            Login
+            Login As Customer
             </Button>
+            <Button variant="primary" type="submit" className="w-100">
+             Login As Executive
+            </Button>
+            </div>
+            
         </Form>
         <hr />
         <Row>
             <Col>
-                <a href="#!" onClick={()=>formSwitcher('reset')}>Forget Password?</a>
-            </Col>
+            <p className="text-decoration ml-8">
+                       Don't have an account?    {" "}
+                   <Link to="/register" className="text-decoration-none text-primary">
+                       SignUp here
+              </Link>
+              </p>
+              </Col>
+            
         </Row>
         </Card>
     </Container>
