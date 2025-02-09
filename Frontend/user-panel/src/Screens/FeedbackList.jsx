@@ -1,13 +1,17 @@
 import React, { useEffect, useState } from "react";
 import { toast } from "react-toastify";
-import axios from "axios";
 import { Link } from "react-router-dom";
+import { fetchAllFeedbacks } from "../service/feedbackService";
+
 import { createUrl } from "../utils";
 
 const FeedbackList = () => {
   const [feedbacks, setFeedbacks] = useState([]);
 
   useEffect(() => {
+    const loadFeedbacks = async () => {
+      const result = await fetchAllFeedbacks();
+      if (result.status === "error") {
     // Fetch feedbacks from the backend
     axios
       .get(createUrl("feedback")) // API endpoint to get all feedbacks
@@ -16,8 +20,13 @@ const FeedbackList = () => {
       })
       .catch((error) => {
         toast.error("Failed to load feedbacks.");
-        console.error(error);
-      });
+        console.error(result.error);
+      } else {
+        setFeedbacks(result);
+      }
+    };
+
+    loadFeedbacks();
   }, []); // Empty dependency array ensures this effect runs only once when the component mounts
 
   return (
@@ -43,9 +52,7 @@ const FeedbackList = () => {
           </div>
         )}
       </div>
-      <Link to="/home/add-feedback" className="btn btn-primary">
-        Add New Feedback
-      </Link>
+    
     </div>
   );
 };

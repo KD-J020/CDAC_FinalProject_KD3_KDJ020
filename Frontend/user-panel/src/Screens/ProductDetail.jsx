@@ -1,5 +1,7 @@
 import { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
+import { fetchProductDetails } from "../service/ProductService";
+
 import axios from "axios";
 import { createUrl } from "../utils";
 
@@ -8,8 +10,22 @@ function ProductDetail() {
   const [product, setProduct] = useState(null);
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState(null);
-  
 
+  useEffect(() => {
+    const loadProductDetails = async () => {
+      if (!id) {
+        setError("Product ID is undefined.");
+        setLoading(false);
+        return;
+      }
+      const result = await fetchProductDetails(id);
+      console.log("Fetch result:", result); // Log the result
+      if (result.status === "error") {
+        setError("Failed to fetch product details.");
+        console.error(result.error);
+      } else {
+        setProduct(result);
+      }
   const fetchProductDetails = async () => {
     try {
       const response = await axios.get(createUrl(`product/${id}`)); // Fetch product details
@@ -19,13 +35,10 @@ function ProductDetail() {
       setError("Failed to fetch product details.");
     } finally {
       setLoading(false);
-    }
-  };
+    };
 
-  useEffect(() => {
-    fetchProductDetails();
-  },[id]);
- // Runs when `id` changes
+    loadProductDetails();
+  }, [id]); // Runs when `id` changes
 
   if (loading) return <div>Loading product details...</div>;
   if (error) return <div className="alert alert-danger">{error}</div>;
@@ -34,11 +47,8 @@ function ProductDetail() {
     <div className="container mt-5">
       {product ? (
         <div>
-          <h2>{product.title}</h2>  
-          <p><strong>Product ID:</strong> {product.id}</p>
-          <p><strong>Created On:</strong> {product.createdOn}</p>
-          <p><strong>Updated On:</strong> {product.updatedOn}</p>
-          <p><strong>Category ID:</strong> {product.cid || "No category assigned"}</p>
+          <p><strong>Title:</strong>{product.title}</p>
+        <p><strong>Specifications:</strong>{product.description}</p>
         </div>
       ) : (
         <p>Product not found</p>

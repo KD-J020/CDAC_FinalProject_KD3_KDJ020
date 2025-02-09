@@ -10,7 +10,6 @@ import NewArrivals from "./Screens/NewArrival";
 import ProductDetail from "./Screens/ProductDetail";
 import RaiseTicket from "./Screens/RaiseTicket";
 import Inquiry from "./Screens/Inquiry";
-
 import About from "./Screens/About";
 import FeedbackList from "./Screens/FeedbackList";
 import AddFeedback from "./Screens/AddFeedback";
@@ -19,6 +18,7 @@ import TicketAnswer from "./Screens/TicketAnswer";
 import TicketHistory from "./Screens/TicketHistory";
 import PurchaseHistory from "./Screens/PurchasedHistory";
 import TicketDetails from "./Screens/TicketDetails";
+
 
 function App() {
   return (
@@ -46,6 +46,7 @@ function App() {
           <Route path='inquiry' element={<Inquiry/>}/>
           <Route path="history/tickets/" element={<TicketHistory />} /> 
           <Route path="history/tickets/:id" element={<TicketDetails />} />
+
         </Route>
       </Routes>
 
