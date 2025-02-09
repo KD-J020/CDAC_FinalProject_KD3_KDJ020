@@ -3,27 +3,31 @@ import Navbar from "../Components/Navbar";
 import Sidebar from "../Components/Sidebar";
 import ProductCard from "../Components/ProductCard";
 import { useEffect, useState } from "react";
-import axios from "axios";
+import { fetchAllProducts } from "../service/ProductService";
 
 function Home() {
-  const location = useLocation(); // Get current route
+  const location = useLocation();
   const [products, setProducts] = useState([]);
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState(null);
 
   useEffect(() => {
-    const fetchProducts = async () => {
+    const loadProducts = async () => {
       try {
-        const response = await axios.get("http://localhost:8090/product");
-        setProducts(response.data);
+        const result = await fetchAllProducts();
+        if (result.status === "error") {
+          throw new Error(result.error);
+        }
+        setProducts(result);
       } catch (err) {
-        setError("Failed to fetch products.");
+        setError("Failed to fetch products. Please try again later.");
+        console.error("Fetch error:", err);
       } finally {
         setLoading(false);
       }
     };
 
-    fetchProducts();
+    loadProducts();
   }, []);
 
   return (
@@ -39,25 +43,32 @@ function Home() {
           {/* Conditionally render the product list only if we're on the /home route */}
           {location.pathname === "/home" && (
             <div>
-              {/* Show loading or error message */}
-              {loading && <p>Loading products...</p>}
-              {error && <p className="alert alert-danger">{error}</p>}
+              {loading && <p aria-live="polite">Loading products...</p>}
+              {error && (
+                <p className="alert alert-danger" aria-live="polite">
+                  {error}
+                </p>
+              )}
 
-              {/* Display products when loaded */}
               {!loading && !error && (
                 <div className="mt-4">
                   <h2>All Products</h2>
-                  <div className="row g-4">
-                    {products.map((product) => (
-                      <ProductCard myproduct={product} />
-                    ))}
-                  </div>
+                  {products.length === 0 ? (
+                    <p>No products found.</p>
+                  ) : (
+                    <div className="row g-4">
+                      {products.map((product) => (
+                        <ProductCard key={product.id} myproduct={product} />
+                      ))}
+                    </div>
+                  )}
                 </div>
               )}
             </div>
           )}
 
-          <Outlet /> {/* This will show child pages when navigated to them */}
+          {/* Render the Outlet only if the path is not /home */}
+          {location.pathname !== "/home" && <Outlet />}
         </div>
       </div>
     </div>

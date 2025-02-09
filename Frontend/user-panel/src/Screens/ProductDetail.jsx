@@ -1,30 +1,33 @@
 import { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
-import axios from "axios";
+import { fetchProductDetails } from "../service/ProductService";
 
 function ProductDetail() {
   const { id } = useParams(); // Extract the ID from the URL
   const [product, setProduct] = useState(null);
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState(null);
-  
-
-  const fetchProductDetails = async () => {
-    try {
-      const response = await axios.get(`http://localhost:8090/product/${id}`); // Fetch product details
-      console.log(response.data);
-      setProduct(response.data);
-    } catch (err) {
-      setError("Failed to fetch product details.");
-    } finally {
-      setLoading(false);
-    }
-  };
 
   useEffect(() => {
-    fetchProductDetails();
-  },[id]);
- // Runs when `id` changes
+    const loadProductDetails = async () => {
+      if (!id) {
+        setError("Product ID is undefined.");
+        setLoading(false);
+        return;
+      }
+      const result = await fetchProductDetails(id);
+      console.log("Fetch result:", result); // Log the result
+      if (result.status === "error") {
+        setError("Failed to fetch product details.");
+        console.error(result.error);
+      } else {
+        setProduct(result);
+      }
+      setLoading(false);
+    };
+
+    loadProductDetails();
+  }, [id]); // Runs when `id` changes
 
   if (loading) return <div>Loading product details...</div>;
   if (error) return <div className="alert alert-danger">{error}</div>;
@@ -33,11 +36,8 @@ function ProductDetail() {
     <div className="container mt-5">
       {product ? (
         <div>
-          <h2>{product.title}</h2>  
-          <p><strong>Product ID:</strong> {product.id}</p>
-          <p><strong>Created On:</strong> {product.createdOn}</p>
-          <p><strong>Updated On:</strong> {product.updatedOn}</p>
-          <p><strong>Category ID:</strong> {product.cid || "No category assigned"}</p>
+          <p><strong>Title:</strong>{product.title}</p>
+        <p><strong>Specifications:</strong>{product.description}</p>
         </div>
       ) : (
         <p>Product not found</p>

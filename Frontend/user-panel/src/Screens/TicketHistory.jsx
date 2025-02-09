@@ -4,7 +4,7 @@ import TicketHistoryComp from "../Components/TicketHistoryComp";
 
 function TicketHistory() {
     const [tickets, setTickets] = useState([]);
-    const userId = 2; // Replace with the actual user ID
+    const userId = 2; 
 
     useEffect(() => {
         const fetchTickets = async () => {
