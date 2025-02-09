@@ -3,7 +3,7 @@ import { useParams, useNavigate } from "react-router-dom";
 import {
   getTicketById,
   updateTicketStatus,
-} from "../../service/ExecutiveTicketService";
+} from "../../Service/ExecutiveTicketService";
 
 function AnswerTicket() {
   const { id } = useParams();

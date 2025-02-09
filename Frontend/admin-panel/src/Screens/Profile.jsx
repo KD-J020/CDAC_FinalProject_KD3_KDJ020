@@ -10,7 +10,7 @@ function Profile() {
   useEffect(() => {
     const loadProfile = async () => {
       try {
-        const result = await getUserById(1);
+        const result = await getAdminById(1);
         if (result) {
           setProfile(result);
           if (result.profileImage) {

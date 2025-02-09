@@ -3,8 +3,7 @@ import { Link } from "react-router-dom";
 import { Dropdown } from "react-bootstrap";
 import "../Styles/sidebar.css";
 
-import { Dropdown } from "react-bootstrap";
-import "../Styles/sidebar.css";
+
 
 function Sidebar() {
   return (
@@ -105,7 +104,7 @@ function Sidebar() {
             </Link>
           </li>
         </ul>
-      )}
+      ) } 
 
     <div className="d-flex flex-column vh-100 text-white p-3" style={{ width: "180px", backgroundColor: "#438a84" }}>
       <ul className="nav nav-pills flex-column">
@@ -129,10 +128,9 @@ function Sidebar() {
         </li>
         <li className="nav-item">
           <Link to="/home/add-feedback" className="nav-link text-white">Submit Feedback</Link>
-        </li>  {/* ✅ Fixed: Added missing closing tag */}
-
+        </li>  
         {/* History Dropdown */}
-          </li>
+
         <li className="nav-item dropdown">
           <Dropdown>
             <Dropdown.Toggle
@@ -153,7 +151,9 @@ function Sidebar() {
         </li>
       </ul>
     </div>
+  </div>
   );
 }
+
 
 export default Sidebar;
