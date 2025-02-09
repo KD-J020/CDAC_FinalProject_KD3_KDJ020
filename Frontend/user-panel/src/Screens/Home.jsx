@@ -3,7 +3,7 @@ import Navbar from "../Components/Navbar";
 import Sidebar from "../Components/Sidebar";
 import ProductCard from "../Components/ProductCard";
 import { useEffect, useState } from "react";
-import { fetchAllProducts } from "../service/ProductService";
+import { fetchAllProducts } from "../Service/ProductService";
 import axios from "axios";
 import { createUrl } from "../utils";
 

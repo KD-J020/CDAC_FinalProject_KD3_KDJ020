@@ -1,9 +1,9 @@
 import React, { useState } from "react";
 import { toast } from "react-toastify";
 import { useNavigate } from "react-router-dom";
-import { addFeedback } from "../service/feedbackService"; // Import service function
+import { addFeedback } from "../Service/feedbackService"; // Import service function
 import { createUrl } from "../utils";
-
+import axios from "axios";
 const AddFeedback = () => {
   const [productId, setProductId] = useState("");
   const [title, setTitle] = useState("");

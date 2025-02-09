@@ -9,7 +9,7 @@ import { useEffect, useState } from "react";
 import TicketRow from "../../Components/Executive/TicketRow";
 import Navbar from "../../Components/Navbar";
 import Sidebar from "../../Components/Sidebar";
-import { getTickets } from "../../service/ExecutiveTicketService";
+import { getTickets } from "../../Service/ExecutiveTicketService";
 import ResolveTicketRow from "../../Components/Executive/ResolveTicketRow";
 
 function AssignTickets() {
