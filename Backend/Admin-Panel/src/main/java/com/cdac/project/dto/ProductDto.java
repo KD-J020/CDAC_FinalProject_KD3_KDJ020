@@ -1,5 +1,7 @@
 package com.cdac.project.dto;
 
+import java.util.Base64;
+
 import lombok.Getter;
 import lombok.Setter;
 import lombok.ToString;
@@ -14,6 +16,5 @@ public class ProductDto extends BaseDTO {
 	private float price;
 	private boolean isActive;
 	private byte[] image;
-	
 	
 }

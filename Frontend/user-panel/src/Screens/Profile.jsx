@@ -1,32 +1,59 @@
+import React from 'react'
 import { useState, useEffect } from "react";
 import { useNavigate } from "react-router-dom";
-import { getAdminById, updateUserProfile } from "../Service/adminService";
-
+import {getUserById,updateUserProfile} from '../Service/user'
 function Profile() {
   const [profile, setProfile] = useState({});
-  const [imageSrc, setImageSrc] = useState("");
+  const [imageSrc, setImageSrc] = useState(null);
+  const[userImage,setUserImage]=useState(imageSrc)
   const navigate = useNavigate();
+  const loadProfile = async () => {
+    try {
+      const result = await getUserById(1);
+      console.log(result)
+      if (result) {
+        setProfile(result);
+        if (result.image) {
+          setImageSrc(`data:image/jpeg;base64,${result.image}`);
+        }
+      }
+    } catch (error) {
+      console.error("Error loading profile:", error);
+    }
+  };
+
 
   useEffect(() => {
-    const loadProfile = async () => {
-      try {
-        const result = await getUserById(1);
-        if (result) {
-          setProfile(result);
-          if (result.profileImage) {
-            setImageSrc(`data:image/jpeg;base64,${result.profileImage}`);
-          }
-        }
-      } catch (error) {
-        console.error("Error loading profile:", error);
-      }
-    };
     loadProfile();
-  }, []);
+    setImageSrc(`data:image/jpeg;base64,${userImage}`);
+      
+  }, [userImage]);
+
+
+  const handleImage = (e) => {
+    const file = e.target.files[0];
+    if (file) {
+      const reader = new FileReader();
+      reader.onloadend = () => {
+        const base64String=reader.result.split(",")[1]
+        setUserImage(base64String); // Set the image preview
+        setImageSrc(`data:image/jpeg;base64,${base64String}`); // Store base64 without metadata
+      };
+      reader.readAsDataURL(file); // Convert file to base64
+    }
+  };
+  const base64ToByteArray = (base64) => {
+    const binaryString = window.atob(base64);
+    const len = binaryString.length;
+    const bytes = new Uint8Array(len);
+    for (let i = 0; i < len; i++) {
+      bytes[i] = binaryString.charCodeAt(i);
+    }
+    return bytes;
+  };
 
   const handleSave = async () => {
     if (!profile.id) return;
-
     const profileData = {
       id: profile.id,
       firstName: profile.firstName || "",
@@ -34,7 +61,7 @@ function Profile() {
       email: profile.email || "",
       phone: profile.phone || "",
       password: profile.password || "",
-      profileImage: profile.profileImage || "",
+      image: userImage? base64ToByteArray(userImage):profile.image || "",
     };
 
     try {
@@ -90,8 +117,11 @@ function Profile() {
             <label htmlFor="profileImage" className="form-label">
               Profile Image
             </label>
-            <input type="file" className="form-control" id="profileImage" />
+            <input type="file" accept='image/*' onChange={handleImage} className="form-control" id="image" />
           </div>
+          <div className="mb-3">
+            <button className='btn btn-success' onClick={handleSave}>save</button>
+            </div>
         </div>
         <div className="col-md-6">
           <div className="card">
@@ -114,5 +144,4 @@ function Profile() {
     </div>
   );
 }
-
 export default Profile;

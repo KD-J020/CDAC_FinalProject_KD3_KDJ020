@@ -186,7 +186,6 @@ public class UserTicketRaiseServiceImpl implements UserTicketRaiseService {
 			return dto;
 			}).collect(Collectors.toList());
 	}
-
 	@Override
 	public List<UserTicketResponseDto> getNotAssignTicket() {
 		return tktRepository.findAll()

@@ -1,25 +1,33 @@
 import React, { useState } from "react";
-import axios from "axios";
 import { toast } from "react-toastify";
 import { useNavigate } from "react-router-dom";
+import { addFeedback } from "../service/feedbackService"; // Import service function
 import { createUrl } from "../utils";
 
 const AddFeedback = () => {
   const [productId, setProductId] = useState("");
   const [title, setTitle] = useState("");
   const [comment, setComment] = useState("");
-  const [rating, setRating] = useState(0); // Rating out of 5
+  const [rating, setRating] = useState(0);
   const navigate = useNavigate();
+  const userId = 1; // Replace with dynamic user ID if needed
 
-  const handleSubmit = (e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault();
 
-    // Check if all fields are filled
     if (!productId || !title || !comment || !rating) {
       toast.error("Please fill in all fields.");
       return;
     }
 
+    try {
+      await addFeedback(userId, productId, title, comment, rating);
+      toast.success("Feedback submitted successfully!");
+      navigate("/home/feedback-list");
+    } catch (error) {
+      toast.error("Failed to submit feedback.");
+      console.error(error);
+    }
     // Feedback data object
     const feedbackData = {
       title,
@@ -46,9 +54,7 @@ const AddFeedback = () => {
       <h2 className="my-4">Submit Feedback</h2>
       <form onSubmit={handleSubmit}>
         <div className="mb-3">
-          <label htmlFor="productId" className="form-label">
-            Product ID
-          </label>
+          <label htmlFor="productId" className="form-label">Product ID</label>
           <input
             type="number"
             className="form-control"
@@ -60,9 +66,7 @@ const AddFeedback = () => {
         </div>
 
         <div className="mb-3">
-          <label htmlFor="title" className="form-label">
-            Feedback Title
-          </label>
+          <label htmlFor="title" className="form-label">Feedback Title</label>
           <input
             type="text"
             className="form-control"
@@ -74,9 +78,7 @@ const AddFeedback = () => {
         </div>
 
         <div className="mb-3">
-          <label htmlFor="comment" className="form-label">
-            Comment
-          </label>
+          <label htmlFor="comment" className="form-label">Comment</label>
           <textarea
             className="form-control"
             id="comment"
@@ -88,9 +90,7 @@ const AddFeedback = () => {
         </div>
 
         <div className="mb-3">
-          <label htmlFor="rating" className="form-label">
-            Rating (1-5)
-          </label>
+          <label htmlFor="rating" className="form-label">Rating (1-5)</label>
           <input
             type="number"
             className="form-control"
@@ -103,9 +103,7 @@ const AddFeedback = () => {
           />
         </div>
 
-        <button type="submit" className="btn btn-primary">
-          Submit Feedback
-        </button>
+        <button type="submit" className="btn btn-primary">Submit Feedback</button>
       </form>
     </div>
   );
