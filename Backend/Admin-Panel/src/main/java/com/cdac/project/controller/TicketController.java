@@ -25,12 +25,13 @@ import jakarta.validation.constraints.Min;
 import org.springframework.web.bind.annotation.CrossOrigin;
 import org.springframework.web.bind.annotation.DeleteMapping;
 import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PatchMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestParam;
 
 
 
-@CrossOrigin( origins = "*")
+@CrossOrigin(origins = "*")
 @RestController
 @RequestMapping("/ticket")
 public class TicketController {
@@ -118,8 +119,8 @@ public class TicketController {
 	}
 
 	
-	@GetMapping("/executive")
-	public ResponseEntity<?> getAllTicketByExecutiveId(@RequestParam Long e_id) {
+	@GetMapping("/executive/{e_id}")
+	public ResponseEntity<?> getAllTicketByExecutiveId(@PathVariable Long e_id) {
 		try {
 			List<UserTicketResponseDto> tickets = ticketRaiseService.getAllTicketByExecutiveId(e_id);
 			if(tickets.isEmpty())
@@ -147,6 +148,11 @@ public class TicketController {
 	}
 	
 	
+	@PatchMapping("/{tid}")
+	public ResponseEntity<?> answerTicket(@PathVariable Long tid, @RequestBody UserTicketResponseDto ticket){
+		System.out.println(ticket.toString());
+		return ResponseEntity.ok(ticketRaiseService.answerTicket(tid, ticket));
+	}
 	
 	
 	

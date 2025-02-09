@@ -26,4 +26,6 @@ public interface UserTicketRaiseService {
 	List<UserTicketResponseDto> getAssignTicket();
 	ApiResponse deleteTicket(Long tktId);
 
+	ApiResponse answerTicket(Long tid, UserTicketResponseDto ticket);
+
 }

@@ -19,6 +19,12 @@ import TicketAnswer from "./Screens/TicketAnswer";
 import TicketHistory from "./Screens/TicketHistory";
 import PurchaseHistory from "./Screens/PurchasedHistory";
 import TicketDetails from "./Screens/TicketDetails";
+import Tickets from "./Screens/Executive/Tickets";
+import AssignTicket from "./Screens/Executive/AssignTicket";
+import PendingTickets from "./Screens/Executive/PendingTickets";
+import ResolveTicket from "./Screens/Executive/ResolveTicket";
+import ExecutiveHome from "./Screens/Executive/ExecutiveHome";
+import AnswerTicket from "./Screens/Executive/AnswerTicket";
 
 function App() {
   return (
@@ -42,11 +48,18 @@ function App() {
 
             
           <Route path='newticket' element={<RaiseTicket/>}/>
-          <Route path="history/purchases/user/2" element={<PurchaseHistory />} />
+          <Route path="history/purchases" element={<PurchaseHistory />} />
           <Route path='inquiry' element={<Inquiry/>}/>
           <Route path="history/tickets/" element={<TicketHistory />} /> 
           <Route path="history/tickets/:id" element={<TicketDetails />} />
         </Route>
+        <Route path="executive-home" element={<ExecutiveHome/>} >
+            <Route path="all-tickets" element={<Tickets/>} /> 
+            <Route path="assign-tickets" element={<AssignTicket/>} />
+            <Route path="pending-tickets" element={<PendingTickets/>} />
+            <Route path="resolve-tickets" element={<ResolveTicket/>} />
+            <Route path="ticket-answer/:id" element={<AnswerTicket/>} />
+          </Route>
       </Routes>
 
       {/* Toast Notifications */}
