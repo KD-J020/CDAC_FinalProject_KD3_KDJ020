@@ -14,6 +14,12 @@ import About from "./Screens/About";
 import FeedbackList from "./Screens/FeedbackList";
 import AddFeedback from "./Screens/AddFeedback";
 
+import TicketAnswer from "./Screens/TicketAnswer";
+import TicketHistory from "./Screens/TicketHistory";
+import PurchaseHistory from "./Screens/PurchasedHistory";
+import TicketDetails from "./Screens/TicketDetails";
+
+
 function App() {
   return (
     <div>
@@ -33,6 +39,14 @@ function App() {
           <Route path="about" element={<About />} /> {/* About page nested under /home */}
           <Route path="feedback-list" element={<FeedbackList />} /> {/* Add route for FeedbackList */}
           <Route path="add-feedback" element={<AddFeedback />} />
+
+            
+          <Route path='newticket' element={<RaiseTicket/>}/>
+          <Route path="history/purchases/user/2" element={<PurchaseHistory />} />
+          <Route path='inquiry' element={<Inquiry/>}/>
+          <Route path="history/tickets/" element={<TicketHistory />} /> 
+          <Route path="history/tickets/:id" element={<TicketDetails />} />
+
         </Route>
       </Routes>
 

@@ -3,10 +3,13 @@ import { Table, Badge } from "react-bootstrap";
 import ReactPaginate from "react-paginate";
 import PropTypes from "prop-types";
 import "../Styles/pagination-style.css";
+import { useNavigate } from "react-router-dom";
 
 function TicketHistoryComp({ tickets }) {
     const [currentPage, setCurrentPage] = useState(0);
     const ticketsPerPage = 5; 
+    const navigate = useNavigate();
+
 
     const offset = currentPage * ticketsPerPage;
     const currentTickets = tickets.slice(offset, offset + ticketsPerPage);
@@ -25,6 +28,11 @@ function TicketHistoryComp({ tickets }) {
             default:
                 return <Badge bg="secondary">Unknown</Badge>;
         }
+    };
+
+    // Handle row click
+    const handleRowClick = (ticket) => {
+        navigate(`${ticket.id}`, { state: { ticket } });
     };
 
     // Handle page click
@@ -47,7 +55,7 @@ function TicketHistoryComp({ tickets }) {
                 </thead>
                 <tbody>
                     {currentTickets.map((ticket, index) => (
-                        <tr key={ticket.id}>
+                        <tr key={ticket.id} onClick={() => handleRowClick(ticket)} style={{ cursor: "pointer" }}>
                             <td>{offset + index + 1}</td> 
                             <td>{ticket.subject}</td>
                             <td>{ticket.description}</td>

@@ -3,6 +3,7 @@ import React, { useState, useEffect }  from "react";
 import { useNavigate } from "react-router-dom";
 import RaiseTicketComp from "../Components/RaiseTicketComp";
 import { toast } from "react-toastify";
+import { createUrl } from "../utils";
 
 function RaiseTicket() {
     const [ticketDetails, setTicketDetails] = useState({
@@ -19,7 +20,7 @@ function RaiseTicket() {
         const fetchProducts = async () => {
             try {
                 const userId = 2; // Replace with the actual user ID
-                const response = await fetch(`http://localhost:8090/home/History/Purchases/user/${userId}`);
+                const response = await fetch(createUrl(`home/History/Purchases/user/${userId}`));
                 const data = await response.json();
                 if (data && Array.isArray(data)) {
                     const orderedProducts = data
@@ -58,7 +59,7 @@ function RaiseTicket() {
     const handleOnSubmit = async (e) => {
         e.preventDefault();
         try {
-            const response = await fetch("http://localhost:8090/Home/newticket", {
+            const response = await fetch(createUrl("Home/newticket"), {
                 method: "POST",
                 headers: {
                     "Content-Type": "application/json",

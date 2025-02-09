@@ -1,0 +1,45 @@
+/* Ticket Details Page */
+.ticket-details-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 80vh;
+}
+
+.ticket-card {
+    width: 100%;
+    max-width: 500px;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Ticket Title */
+.ticket-title {
+    font-size: 22px;
+    font-weight: bold;
+    color: #333;
+}
+
+/* Ticket Subject */
+.ticket-subject {
+    font-size: 18px;
+    font-weight: bold;
+    color: #438a84;
+}
+
+/* Answer Styling */
+.waiting-answer {
+    color: red;
+    font-style: italic;
+}
+
+/* Back Button */
+.back-btn {
+    background-color: #438a84;
+    border: none;
+}
+
+.back-btn:hover {
+    background-color: #365f5b;
+}

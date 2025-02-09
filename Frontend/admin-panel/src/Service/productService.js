@@ -36,3 +36,14 @@ export const addProduct = async (title,
         return { status: 'error', error: ex }
     }
 }
+
+export const updateProduct = async (product) => {
+    try {
+        const body = { title: product.title, cid: product.cid, description: product.details, price: product.price, image: product.image };
+        const url = createUrl(`product/${product.id}`);
+        const response = await axios.put(url, product);
+        return response.data;
+    } catch (ex) {
+        return { status: 'error', error: ex }
+    }
+}

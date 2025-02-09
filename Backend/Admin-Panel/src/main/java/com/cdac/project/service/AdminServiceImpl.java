@@ -11,6 +11,7 @@ import com.cdac.project.entity.Admin;
 import com.cdac.project.entity.Ticket;
 import com.cdac.project.entity.TicketStatus;
 import com.cdac.project.entity.User;
+import com.cdac.project.entity.UserRole;
 import com.cdac.project.repository.AdminRepository;
 import com.cdac.project.repository.TicketRepository;
 import com.cdac.project.repository.UserRepository;
@@ -37,10 +38,31 @@ public class AdminServiceImpl implements AdminService {
 	public ApiResponse assignTicket(Long executorId,Long ticketId) {
 		 User executor=userRepository.findById(executorId).orElseThrow(()-> new ResourceNotFoundException("Executor not present"));
 		 Ticket ticket=ticketRepository.findById(ticketId).orElseThrow(()-> new ResourceNotFoundException("Ticket not present"));
-		 
+		 if(!executor.isActive() || executor.getRole()!=UserRole.EXECUTIVE)
+		 {
+			 return new ApiResponse("Executor not Active");
+		 }else {
 		 ticket.setExecutive(executor);
 		 ticket.setStatus(TicketStatus.INPROGRESS);
-		return new ApiResponse("Ticket Assign to execuore Id "+ executorId);
+		  ticketRepository.save(ticket);
+		  return new ApiResponse("Ticket Assign to execuore Id "+ executorId);
+		 }
+		
+	}
+	
+	@Override
+	public ApiResponse updateAdmin(Long id, Admin admin) {
+		// TODO Auto-generated method stub
+		Optional<Admin> myAdmin = adminRepository.findById(id);
+		if(myAdmin.isPresent()) {
+			myAdmin.get().setFirstName(admin.getFirstName());
+			myAdmin.get().setLastName(admin.getLastName());
+			myAdmin.get().setEmail(admin.getEmail());
+			myAdmin.get().setPhone(admin.getPhone());
+			myAdmin.get().setPassword(admin.getPassword());
+			return new ApiResponse("Admin updated");
+		}
+		return new ApiResponse("Admin not updated");
 	}
 
 }

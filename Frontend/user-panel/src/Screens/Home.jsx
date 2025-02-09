@@ -4,6 +4,8 @@ import Sidebar from "../Components/Sidebar";
 import ProductCard from "../Components/ProductCard";
 import { useEffect, useState } from "react";
 import { fetchAllProducts } from "../service/ProductService";
+import axios from "axios";
+import { createUrl } from "../utils";
 
 function Home() {
   const location = useLocation();
@@ -19,6 +21,9 @@ function Home() {
           throw new Error(result.error);
         }
         setProducts(result);
+
+        const response = await axios.get(createUrl("product"));
+        setProducts(response.data);
       } catch (err) {
         setError("Failed to fetch products. Please try again later.");
         console.error("Fetch error:", err);

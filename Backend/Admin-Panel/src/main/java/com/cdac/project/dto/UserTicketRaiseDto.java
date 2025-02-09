@@ -12,14 +12,7 @@ import lombok.ToString;
 @Setter
 public class UserTicketRaiseDto {
 	private String subject;
-	
-	
 	private String description;
-	
-	
-	
-	
-	
 	private Long user_id;
 	private Long product_id;
 }

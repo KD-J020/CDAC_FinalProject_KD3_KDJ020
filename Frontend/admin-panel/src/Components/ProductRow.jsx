@@ -1,17 +1,56 @@
-function ProductRow({ id, title, details, price, tags, image }) {
+import { useState, useEffect } from "react";
+import { useNavigate } from "react-router-dom";
+
+function ProductRow({ id, title, details, price, tags, image, cid, onDelete }) {
+  const [product, setProduct] = useState({
+    id,
+    title,
+    details,
+    price,
+    tags,
+    image,
+  });
+
+  const [imageSrc, setImageSrc] = useState("");
+
+  const [productImage, setProductImage] = useState(image);
+  const navigate = useNavigate();
+  useEffect(() => {
+    if (productImage) {
+      setImageSrc(`data:image/jpeg;base64,${productImage}`);
+    }
+  }, [productImage]);
+
+  const handleEditClick = () => {
+    navigate(`/home/edit-product/${id}`, {
+      state: { id, title, details, price, tags, image, cid },
+    });
+  };
+
   return (
     <tr>
       <td>{id}</td>
       <td>
-        <img alt="" style={{ width: 70, height: 70 }} />
+        {imageSrc ? (
+          <img src={imageSrc} alt="Product" style={{ width: 70, height: 70 }} />
+        ) : (
+          <span>No Image</span>
+        )}
       </td>
-      <td>{title.length > 50 ? title.substr(0, 50) + "..." : title}</td>
-      <td>{details.length > 50 ? details.substr(0, 50) + "..." : details}</td>
+      <td>{title}</td>
+      <td>{details}</td>
       <td>{price}</td>
       <td>{tags}</td>
       <td>
-        <button className="btn btn-success btn-sm">Edit</button>
-        <button className="btn btn-danger btn-sm ms-3">Delete</button>
+        <button className="btn btn-success btn-sm" onClick={handleEditClick}>
+          Edit
+        </button>
+        <button
+          className="btn btn-danger btn-sm ms-3"
+          onClick={() => onDelete(id)}
+        >
+          Delete
+        </button>
       </td>
     </tr>
   );

@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import { toast } from "react-toastify";
 import { useNavigate } from "react-router-dom";
 import { addFeedback } from "../service/feedbackService"; // Import service function
+import { createUrl } from "../utils";
 
 const AddFeedback = () => {
   const [productId, setProductId] = useState("");
@@ -27,6 +28,25 @@ const AddFeedback = () => {
       toast.error("Failed to submit feedback.");
       console.error(error);
     }
+    // Feedback data object
+    const feedbackData = {
+      title,
+      comment,
+      rating,
+      productId,
+    };
+
+    // Send POST request to backend
+    axios
+      .post(createUrl(`feedback/1/${productId}`, feedbackData)) // 1 is the userId, change it dynamically if needed
+      .then((response) => {
+        toast.success("Feedback submitted successfully!");
+        navigate("/home/feedback-list"); // Navigate back to the feedback list
+      })
+      .catch((error) => {
+        toast.error("Failed to submit feedback.");
+        console.error(error);
+      });
   };
 
   return (

@@ -3,6 +3,10 @@ import { Link } from "react-router-dom";
 import { Dropdown } from "react-bootstrap";
 import "../Styles/sidebar.css";
 
+
+import { Dropdown} from 'react-bootstrap';
+import "../Styles/sidebar.css"; 
+
 function Sidebar() {
   return (
     <div className="d-flex flex-column vh-100 text-white p-3" style={{ width: "180px", backgroundColor: "#438a84" }}>
@@ -30,6 +34,7 @@ function Sidebar() {
         </li>  {/* ✅ Fixed: Added missing closing tag */}
 
         {/* History Dropdown */}
+          </li>
         <li className="nav-item dropdown">
           <Dropdown>
             <Dropdown.Toggle

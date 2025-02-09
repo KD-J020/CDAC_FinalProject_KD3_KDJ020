@@ -3,6 +3,7 @@ import { Container, Card, Row, Col } from "react-bootstrap";
 import ReactPaginate from "react-paginate";
 import "../Styles/PurchasedHistory.css";
 import "../Styles/pagination-style.css";
+import { createUrl } from "../utils";
 
 function PurchaseHistory() {
     const [purchases, setPurchases] = useState([]);
@@ -13,7 +14,7 @@ function PurchaseHistory() {
         const fetchPurchases = async () => {
             try {
                 const userId = 2; // Replace with the actual user ID
-                const response = await fetch(`http://localhost:8090/home/History/Purchases/user/${userId}`);
+                const response = await fetch(createUrl(`home/History/Purchases/user/${userId}`));
                 const result = await response.json();
                 console.log("Fetched purchases data:", result);
 

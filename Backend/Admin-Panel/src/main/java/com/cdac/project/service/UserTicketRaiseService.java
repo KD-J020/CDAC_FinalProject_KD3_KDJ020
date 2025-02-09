@@ -17,15 +17,13 @@ public interface UserTicketRaiseService {
 	List<UserTicketResponseDto> getAllTicketByCustomerId(Long c_id);
 
 	List<UserTicketResponseDto> getAllTicketByExecutiveId(Long e_id);
-
 	UserTicketResponseDto getTicketDetails(@Min(1) @Max(100) Long tktId);
-
 	ApiResponse updateTicket(Long tktId, UserTicketRaiseDto dto);
-
-
 	ApiResponse closeTicketStutus(Long id);
-	
 	List<UserTicketResponseDto> getAllTicketByProductId(Long p_id);
-
+	List<UserTicketResponseDto> getAllTicket();
+	List<UserTicketResponseDto> getNotAssignTicket();
+	List<UserTicketResponseDto> getAssignTicket();
 	ApiResponse deleteTicket(Long tktId);
+
 }

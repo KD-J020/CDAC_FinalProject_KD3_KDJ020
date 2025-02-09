@@ -61,18 +61,19 @@ function AddProduct() {
         price,
         image
       );
-      if (result["status"] == "success") {
-        toast.success("Successfully added a product");
-        navigate(-1);
-      } else {
-        toast.error(result["error"]);
-      }
+
+      toast.success("Successfully added a product");
+      navigate(-1);
     }
   };
 
   const effect = useEffect(() => {
     onLoadCategories();
   }, []);
+
+  const onCancel = () => {
+    navigate(-1);
+  };
 
   return (
     <div>
@@ -169,7 +170,9 @@ function AddProduct() {
             <button className="btn btn-success" onClick={onSave}>
               Save
             </button>
-            <button className="btn btn-danger ms-3">Cancel</button>
+            <button onClick={onCancel} className="btn btn-danger ms-3">
+              Cancel
+            </button>
           </div>
         </div>
       </div>
