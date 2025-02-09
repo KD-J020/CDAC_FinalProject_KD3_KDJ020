@@ -1,5 +1,7 @@
 package com.cdac.project.dto;
 
+import java.util.Base64;
+
 import com.cdac.project.entity.UserRole;
 
 import jakarta.persistence.Column;
@@ -20,7 +22,10 @@ public class UserDto extends BaseDTO {
 	private String email;
 	
 	private String password;
-	
+	private byte[] image;
+	public void setImage(String base64Image) {
+        this.image = Base64.getDecoder().decode(base64Image);
+    }
 	private String phone;
 	
 	private UserRole role;

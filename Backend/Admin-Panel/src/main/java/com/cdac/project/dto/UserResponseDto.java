@@ -20,6 +20,7 @@ public class UserResponseDto extends BaseDTO {
 	private String phone;
 	
 	private UserRole role;
+	private byte[] image;
 	
 	private boolean isActive;
 }
