@@ -1,13 +1,11 @@
 import React, { useEffect, useState } from "react";
 import { toast } from "react-toastify";
-import { Link } from "react-router-dom";
 import { fetchAllFeedbacks } from "../service/feedbackService";
 import axios from "axios";
 import { createUrl } from "../utils";
 
 const FeedbackList = () => {
   const [feedbacks, setFeedbacks] = useState([]);
-
   useEffect(() => {
     const loadFeedbacks = async () => {
       const result = await fetchAllFeedbacks();
@@ -24,7 +22,6 @@ const FeedbackList = () => {
         setFeedbacks(result);
       }
     };
-
     loadFeedbacks();
   }, []); // Empty dependency array ensures this effect runs only once when the component mounts
 

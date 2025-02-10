@@ -1,6 +1,7 @@
-import { Link, Outlet, useNavigate } from "react-router-dom";
+import {useNavigate } from "react-router-dom";
 import { useEffect, useState } from "react";
-import { getTickets } from "../../service/ExecutiveTicketService";
+import TicketRow from "../../Components/Executive/TicketRow";
+import { getTickets } from "../../Service/ExecutiveTicketService";
 import ResolveTicketRow from "../../Components/Executive/ResolveTicketRow";
 
 function AssignTickets() {

@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
-import { fetchProductDetails } from "../service/ProductService";
+import { fetchProductDetails } from "../Service/ProductService";
 
 import axios from "axios";
 import { createUrl } from "../utils";
@@ -27,6 +27,7 @@ function ProductDetail() {
         setProduct(result);
       }
     }
+
   const fetchProductDetails = async () => {
     try {
       const response = await axios.get(createUrl(`product/${id}`)); // Fetch product details
@@ -37,10 +38,9 @@ function ProductDetail() {
     } finally {
       setLoading(false);
     };
-
-    loadProductDetails();
+   loadProductDetails();
   }
-  }, [id]); // Runs when `id` changes
+  }, [id]); 
 
   if (loading) return <div>Loading product details...</div>;
   if (error) return <div className="alert alert-danger">{error}</div>;
