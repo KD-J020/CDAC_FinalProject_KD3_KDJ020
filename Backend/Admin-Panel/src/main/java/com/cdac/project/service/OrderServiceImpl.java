@@ -1,5 +1,6 @@
 package com.cdac.project.service;
 
+import java.util.Base64;
 import java.util.List;
 import java.util.stream.Collectors;
 
@@ -50,7 +51,9 @@ public class OrderServiceImpl implements OrderService{
 	                dto.setProduct_id(product.getId());
 	                dto.setUser_id(customerId);
 	            
-	                dto.setProductImage(product.getImage() != null ? new String(product.getImage()) : "");
+	                dto.setProductImage(product.getImage() != null
+	                        ? "data:image/jpeg;base64," + Base64.getEncoder().encodeToString(product.getImage())
+	                        : "");
 
 	                return dto;
 	            })

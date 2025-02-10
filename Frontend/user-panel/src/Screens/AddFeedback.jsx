@@ -1,16 +1,51 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import { toast } from "react-toastify";
 import { useNavigate } from "react-router-dom";
-import { addFeedback } from "../Service/feedbackService"; // Import service function
-import { createUrl } from "../utils";
 import axios from "axios";
+import { createUrl } from "../utils";
+import { addFeedback } from "../Service/feedbackService"; 
+
 const AddFeedback = () => {
-  const [productId, setProductId] = useState("");
+  const [orderedProducts, setOrderedProducts] = useState([]); 
+  const [productId, setProductId] = useState(""); 
   const [title, setTitle] = useState("");
   const [comment, setComment] = useState("");
   const [rating, setRating] = useState(0);
   const navigate = useNavigate();
-  const userId = 1; // Replace with dynamic user ID if needed
+  const userId = 2; 
+ 
+  useEffect(() => {
+    const fetchOrderedProducts = async () => {
+      try {
+        const response = await axios.get(createUrl(`home/History/Purchases/user/${userId}`));
+        const data = response.data;
+
+        if (data && Array.isArray(data)) {
+          const uniqueProducts = data
+            .filter((order) => order.product_id !== null && order.productName !== null) 
+            .map((order) => ({
+              id: order.product_id,
+              name: order.productName, 
+            }))
+            .reduce((acc, product) => {
+              if (!acc.some((p) => p.id === product.id)) {
+                acc.push(product); 
+              }
+              return acc;
+            }, []);
+
+          console.log("Processed products:", uniqueProducts);
+          setOrderedProducts(uniqueProducts);
+        } else {
+          console.error("Unexpected response structure:", data);
+        }
+      } catch (error) {
+        console.error("Error fetching ordered products:", error);
+      }
+    };
+
+    fetchOrderedProducts();
+  }, [userId]);
 
   const handleSubmit = async (e) => {
     e.preventDefault();
@@ -28,41 +63,29 @@ const AddFeedback = () => {
       toast.error("Failed to submit feedback.");
       console.error(error);
     }
-    // Feedback data object
-    const feedbackData = {
-      title,
-      comment,
-      rating,
-      productId,
-    };
-
-    // Send POST request to backend
-    axios
-      .post(createUrl(`feedback/1/${productId}`, feedbackData)) // 1 is the userId, change it dynamically if needed
-      .then((response) => {
-        toast.success("Feedback submitted successfully!");
-        navigate("/home/feedback-list"); // Navigate back to the feedback list
-      })
-      .catch((error) => {
-        toast.error("Failed to submit feedback.");
-        console.error(error);
-      });
   };
 
   return (
     <div className="container">
       <h2 className="my-4">Submit Feedback</h2>
       <form onSubmit={handleSubmit}>
+
         <div className="mb-3">
-          <label htmlFor="productId" className="form-label">Product ID</label>
-          <input
-            type="number"
+          <label htmlFor="productId" className="form-label">Select Product</label>
+          <select
             className="form-control"
             id="productId"
             value={productId}
             onChange={(e) => setProductId(e.target.value)}
             required
-          />
+          >
+            <option value="">Select a Product</option>
+            {orderedProducts.map((product) => (
+              <option key={product.id} value={product.id}>
+                {product.name} 
+              </option>
+            ))}
+          </select>
         </div>
 
         <div className="mb-3">

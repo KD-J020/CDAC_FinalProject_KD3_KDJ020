@@ -9,7 +9,7 @@ import Home from "./Screens/Home";
 import NewArrivals from "./Screens/NewArrival";
 import ProductDetail from "./Screens/ProductDetail";
 import RaiseTicket from "./Screens/RaiseTicket";
-import Inquiry from "./Screens/Inquiry";
+
 import About from "./Screens/About";
 import FeedbackList from "./Screens/FeedbackList";
 import AddFeedback from "./Screens/AddFeedback";
@@ -38,7 +38,7 @@ function App() {
           <Route path="newarrivals" element={<NewArrivals />} />
           <Route path="product/:id" element={<ProductDetail />} />
           <Route path="newticket" element={<RaiseTicket />} />
-          <Route path="inquiry" element={<Inquiry />} />
+          
           <Route path="about" element={<About />} /> {/* About page nested under /home */}
           <Route path="feedback-list" element={<FeedbackList />} /> {/* Add route for FeedbackList */}
           <Route path="add-feedback" element={<AddFeedback />} />
@@ -48,7 +48,7 @@ function App() {
           <Route path="history/purchases" element={<PurchaseHistory />} />
 
           <Route path="history/purchases/user/" element={<PurchaseHistory />} />
-          <Route path='inquiry' element={<Inquiry/>}/>
+        
           <Route path="history/tickets/" element={<TicketHistory />} /> 
           <Route path="history/tickets/:id" element={<TicketDetails />} />
 
