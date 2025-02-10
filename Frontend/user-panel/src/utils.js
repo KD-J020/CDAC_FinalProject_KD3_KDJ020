@@ -1,4 +1,4 @@
-import { config } from "./service/config";
+import { config } from "./Service/config";
 export function createUrl(path) {
   return `${config.serverUrl}/${path}`;
 }

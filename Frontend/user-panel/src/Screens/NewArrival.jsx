@@ -1,10 +1,7 @@
 import React, { useEffect, useState } from "react";
-import { Link } from "react-router-dom";
 import "bootstrap/dist/css/bootstrap.min.css";
-import Navbar from "../Components/Navbar";
-import Sidebar from "../Components/Sidebar";
 import ProductCard from "../Components/ProductCard"; // Import the reusable ProductCard component
-import { fetchAllProducts } from "../service/ProductService";
+import { fetchAllProducts } from "../Service/ProductService";
 import { toast } from "react-toastify";
 
 const NewArrivals = () => {

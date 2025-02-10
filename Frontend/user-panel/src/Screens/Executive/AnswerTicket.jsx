@@ -1,9 +1,6 @@
 import React, { useState, useEffect } from "react";
 import { useParams, useNavigate } from "react-router-dom";
-import {
-  getTicketById,
-  updateTicketStatus,
-} from "../../Service/ExecutiveTicketService";
+import { getTicketById,updateTicketStatus } from "../../Service/ExecutiveTicketService";
 
 function AnswerTicket() {
   const { id } = useParams();

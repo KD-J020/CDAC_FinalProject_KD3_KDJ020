@@ -1,7 +1,7 @@
 import React from 'react'
 import { useState, useEffect } from "react";
 import { useNavigate } from "react-router-dom";
-import {getUserById,updateUserProfile} from '../service/user'
+import {getUserById,updateUserProfile} from '../Service/user'
 function Profile() {
   const [profile, setProfile] = useState({});
   const [imageSrc, setImageSrc] = useState(null);

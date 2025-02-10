@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from "react";
 import { toast } from "react-toastify";
-import { fetchAllFeedbacks } from "../service/feedbackService";
+import { fetchAllFeedbacks } from "../Service/feedbackService";
 import axios from "axios";
 import { createUrl } from "../utils";
 
