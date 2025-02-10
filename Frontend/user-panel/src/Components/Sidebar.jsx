@@ -1,6 +1,6 @@
 import React from "react";
 import { Link } from "react-router-dom";
-import { Dropdown } from "react-bootstrap";
+
 import "../Styles/sidebar.css";
 function Sidebar() {
   return (
@@ -20,16 +20,6 @@ function Sidebar() {
               Raise Ticket
             </Link>
           </li>
-          <li className="nav-item">
-            <Link to="/home/Inquiry" className="nav-link text-white">
-              Product Inquiry
-            </Link>
-          </li>
-          <li className="nav-item">
-            <Link to="/home/Answer" className="nav-link text-white">
-              Inquiry Answer
-            </Link>
-          </li>
           
 
           {/* Feedback Links */}
@@ -43,23 +33,15 @@ function Sidebar() {
               Submit Feedback
             </Link>
           </li>
-          <li className="nav-item dropdown">
-            <Dropdown>
-              <Dropdown.Toggle
-                id="historyDropdown"
-                className="nav-link dropdown-toggle text-white bg-transparent border-0"
-              >
-                History
-              </Dropdown.Toggle>
-              <Dropdown.Menu>
-                <Dropdown.Item as={Link} to="/home/History/purchases">
-                  Purchases
-                </Dropdown.Item>
-                <Dropdown.Item as={Link} to="/home/History/Tickets">
-                  Tickets
-                </Dropdown.Item>
-              </Dropdown.Menu>
-            </Dropdown>
+          <li className="nav-item">
+            <Link to="/home/History/purchases" className="nav-link text-white">
+              Purchase History
+            </Link>
+          </li>
+          <li className="nav-item">
+            <Link to="/home/History/Tickets" className="nav-link text-white">
+              Ticket History
+            </Link>
           </li>
         </ul>
       ) : (

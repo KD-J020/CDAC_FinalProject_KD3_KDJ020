@@ -18,4 +18,9 @@ public class FeedbackDto extends BaseDTO{
 	private Long user_id;
 	private Long product_id;
 	
+	private String productName;
+    private String productImage; // Base64 encoded image
+    private float productPrice;
+    private String orderedDate;
+	
 }
