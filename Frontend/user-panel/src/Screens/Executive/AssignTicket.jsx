@@ -1,14 +1,5 @@
 import { Link, Outlet, useNavigate } from "react-router-dom";
 import { useEffect, useState } from "react";
-
-// import {
-//   deleteCategory,
-//   getCategoryList,
-//   updateCategory,
-// } from "../Service/categoryService";
-import TicketRow from "../../Components/Executive/TicketRow";
-import Navbar from "../../Components/Navbar";
-import Sidebar from "../../Components/Sidebar";
 import { getTickets } from "../../service/ExecutiveTicketService";
 import ResolveTicketRow from "../../Components/Executive/ResolveTicketRow";
 

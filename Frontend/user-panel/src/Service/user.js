@@ -30,5 +30,5 @@ export const updateUserProfile = async (profile) => {
     } catch (error) {
       console.error("Error fetching user profile:", error);
       throw error;
-    }
-  };
+    }
+  };

@@ -43,10 +43,7 @@ function Home() {
           <Sidebar />
         </div>
         <div className="content flex-grow-1 p-4">
-          {/* <h1>Welcome to the Support System</h1> */}
-
-          {/* Conditionally render the product list only if we're on the /home route */}
-          {location.pathname === "/home" && (
+         {location.pathname === "/home" && (
             <div>
               {loading && <p aria-live="polite">Loading products...</p>}
               {error && (
@@ -71,8 +68,6 @@ function Home() {
               )}
             </div>
           )}
-          <Outlet /> {/* This will show child pages when navigated to them */}
-
           {/* Render the Outlet only if the path is not /home */}
           {location.pathname !== "/home" && <Outlet />}
         </div>

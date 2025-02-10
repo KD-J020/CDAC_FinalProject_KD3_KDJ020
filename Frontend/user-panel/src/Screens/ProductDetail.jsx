@@ -26,6 +26,7 @@ function ProductDetail() {
       } else {
         setProduct(result);
       }
+    }
   const fetchProductDetails = async () => {
     try {
       const response = await axios.get(createUrl(`product/${id}`)); // Fetch product details
@@ -38,6 +39,7 @@ function ProductDetail() {
     };
 
     loadProductDetails();
+  }
   }, [id]); // Runs when `id` changes
 
   if (loading) return <div>Loading product details...</div>;

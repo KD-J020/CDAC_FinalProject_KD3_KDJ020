@@ -23,7 +23,6 @@ import ResolveTicket from "./Screens/Executive/ResolveTicket";
 import ExecutiveHome from "./Screens/Executive/ExecutiveHome";
 import AnswerTicket from "./Screens/Executive/AnswerTicket";
 import Profile from "./Screens/Profile";
-
 function App() {
   return (
     <div>

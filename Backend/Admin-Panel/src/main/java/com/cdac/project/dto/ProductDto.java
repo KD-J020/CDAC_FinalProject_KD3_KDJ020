@@ -1,7 +1,5 @@
 package com.cdac.project.dto;
 
-import java.util.Base64;
-
 import lombok.Getter;
 import lombok.Setter;
 import lombok.ToString;
@@ -9,7 +7,6 @@ import lombok.ToString;
 @Setter
 @ToString
 public class ProductDto extends BaseDTO {
-
 	private String title;
 	private  Long cid;
 	private String description;

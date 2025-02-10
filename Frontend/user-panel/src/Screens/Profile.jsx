@@ -1,7 +1,7 @@
 import React from 'react'
 import { useState, useEffect } from "react";
 import { useNavigate } from "react-router-dom";
-import {getUserById,updateUserProfile} from '../Service/user'
+import {getUserById,updateUserProfile} from '../service/user'
 function Profile() {
   const [profile, setProfile] = useState({});
   const [imageSrc, setImageSrc] = useState(null);
@@ -21,8 +21,6 @@ function Profile() {
       console.error("Error loading profile:", error);
     }
   };
-
-
   useEffect(() => {
     loadProfile();
     setImageSrc(`data:image/jpeg;base64,${userImage}`);
