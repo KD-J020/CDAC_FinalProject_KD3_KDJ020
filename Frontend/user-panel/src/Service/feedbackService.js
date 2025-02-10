@@ -12,12 +12,12 @@ export async function addFeedback(userId, productId, title, comment, rating) {
   }
 }
 
-export async function fetchAllFeedbacks() {
-    try {
-      const url = createUrl("feedback");
-      const response = await axios.get(url);
-      return response.data;
-    } catch (ex) {
-      return { status: "error", error: ex };
-    }
+export async function fetchAllFeedbacks(userId) {
+  try {
+    const url = createUrl(`feedback/user/${userId}`);
+    const response = await axios.get(url);
+    return response.data;
+  } catch (ex) {
+    return { status: "error", error: ex };
+  }
   }

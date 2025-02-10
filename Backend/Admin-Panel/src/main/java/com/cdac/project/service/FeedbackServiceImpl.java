@@ -1,5 +1,6 @@
 package com.cdac.project.service;
 
+import java.util.Base64;
 import java.util.Collections;
 import java.util.List;
 import java.util.Optional;
@@ -94,14 +95,28 @@ public List<FeedbackDto> getByProductId(Long pid) {
 
 @Override
 public List<FeedbackDto> getByUserId(Long user_id) {
-    try {
-        return feedbackRepository.findByUserId(user_id).stream()
-            .map(feedback -> mapper.map(feedback, FeedbackDto.class))
-            .collect(Collectors.toList());
-    } catch (Exception e) {
-        e.printStackTrace();
-        return Collections.emptyList();
-    }
+	List<Object[]> results = feedbackRepository.findFeedbackWithProductDetails(user_id);
+
+    return results.stream().map(obj -> {
+        FeedbackDto dto = new FeedbackDto();
+        dto.setId(((Number) obj[0]).longValue()); // Feedback ID
+        dto.setTitle((String) obj[1]);
+        dto.setComment((String) obj[2]);
+        dto.setRating(((Number) obj[3]).intValue());
+        dto.setProduct_id(((Number) obj[4]).longValue());
+        dto.setProductName((String) obj[5]);
+        
+        byte[] imageBytes = (byte[]) obj[6];
+        if (imageBytes != null) {
+            dto.setProductImage(Base64.getEncoder().encodeToString(imageBytes));
+        } else {
+            dto.setProductImage(null); // Or set a default image URL
+        }
+        
+        dto.setProductPrice(((Number) obj[7]).floatValue());
+        dto.setOrderedDate(obj[8].toString());
+        return dto;
+    }).collect(Collectors.toList());
 }
 
 	
