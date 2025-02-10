@@ -26,7 +26,8 @@ function ProductDetail() {
       } else {
         setProduct(result);
       }
-    };
+    }
+
   const fetchProductDetails = async () => {
     try {
       const response = await axios.get(createUrl(`product/${id}`)); // Fetch product details
@@ -37,9 +38,9 @@ function ProductDetail() {
     } finally {
       setLoading(false);
     };
-
-    loadProductDetails();
-  };}, [id])// Runs when `id` changes
+   loadProductDetails();
+  }
+  }, [id]); 
 
   if (loading) return <div>Loading product details...</div>;
   if (error) return <div className="alert alert-danger">{error}</div>;

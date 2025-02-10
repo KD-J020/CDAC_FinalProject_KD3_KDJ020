@@ -1,31 +1,27 @@
 import React, { useEffect, useState } from "react";
 import { toast } from "react-toastify";
-import { Link } from "react-router-dom";
-import { fetchAllFeedbacks } from "../Service/feedbackService";
+import { fetchAllFeedbacks } from "../service/feedbackService";
 import axios from "axios";
 import { createUrl } from "../utils";
 
 const FeedbackList = () => {
   const [feedbacks, setFeedbacks] = useState([]);
-
   useEffect(() => {
     const loadFeedbacks = async () => {
       const result = await fetchAllFeedbacks();
       if (result.status === "error") {
     // Fetch feedbacks from the backend
-    axios
-      .get(createUrl("feedback")) // API endpoint to get all feedbacks
+    axios.get(createUrl("feedback")) // API endpoint to get all feedbacks
       .then((response) => {
         setFeedbacks(response.data); // Set the feedbacks state with the response data
       })
       .catch((error) => {
         toast.error("Failed to load feedbacks.");
         console.error(result.error);
-      })} else {
+      } )}else {
         setFeedbacks(result);
       }
     };
-
     loadFeedbacks();
   }, []); // Empty dependency array ensures this effect runs only once when the component mounts
 
